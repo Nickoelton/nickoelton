@@ -1481,7 +1481,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #fff;
+		color: #daa520;
 		font-weight: 800;
 		letter-spacing: 0.225em;
 		line-height: 1em;
@@ -1931,15 +1931,15 @@
 			}
 
 		.icon.style1 {
-			color: #00ffcc;
+			color: #ffffff;
 		}
 
 		.icon.style2 {
-			color: #00f0ff;
+			color: #ffffff;
 		}
 
 		.icon.style3 {
-			color: #76ddff;
+			color: #ffffff;
 		}
 	
 /* Image */
@@ -2650,7 +2650,7 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
+			background-color: #21b25e;
 			color: #c7ebe8;
 		}
 
@@ -2683,7 +2683,7 @@
 			}
 
 			.wrapper.style1 header.major p {
-				color: #c7ebe8;
+				color: #000022;
 			}
 
 			.wrapper.style1 label {
@@ -2739,7 +2739,7 @@
 			}
 
 			.wrapper.style1 .icon.major {
-				border-color: rgba(0, 0, 0, 0.125);
+				border-color: #ffffff;
 			}
 
 			.wrapper.style1 ul.alt li {
@@ -2897,7 +2897,7 @@
 			}
 
 			.wrapper.style3 .icon.major {
-				border-color: rgba(0, 0, 0, 0.125);
+				border-color: #ffffff;
 			}
 
 			.wrapper.style3 ul.alt li {
@@ -3431,7 +3431,7 @@
 				-webkit-transition-delay: 0.25s;
 				-ms-transition-delay: 0.25s;
 				transition-delay: 0.25s;
-				background: #fff;
+				background: #daa520;
 				content: '';
 				display: block;
 				height: 2px;
