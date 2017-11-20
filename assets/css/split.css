@@ -165,10 +165,10 @@ body.page-template-page-fullsingle-split {
           padding: 40px; } }
 
 .split-intro {
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 80px;
-  letter-spacing: -2px; }
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -6px; }
   .split-intro h1 {
     font-weight: 400;
     text-transform: uppercase;
