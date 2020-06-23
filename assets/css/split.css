@@ -244,7 +244,7 @@ body.page-template-page-fullsingle-split p {
 .fs-split .split-image {
     width: 50%;
     height: 100vh;
-    background-image: url("../../images/alta.jpg");
+    background-image: url("../../images/background.jpg");
     background-position: center center;
     background-size: cover;
 }
