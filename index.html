@@ -1,49 +1,58 @@
 <!DOCTYPE html>
-<html lang="es-es">
+<html lang="es">
 
 <head>
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- SEO -->
     <title>Elton Rodriguez™</title>
-    <meta name="description" content="Engineer, lover of electronic music and emerging technologies | Traveler | #MicrosoftLover and #philanthropy 👻 : @nickoelton " />
+    <meta name="description"
+        content="Engineer, lover of electronic music and emerging technologies | Traveler | #MicrosoftLover and #philanthropy 👻 : @nickoelton " />
     <meta name="keywords" content="Elton Rodriguez" />
     <meta name="robots" content="Elton, Rodriguez, Elton Rodriguez" />
     <meta name="referrer" content="always" />
     <meta name="author" content="Elton Rodriguez™" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32" />
+
     <!-- Social & Open Graph -->
     <meta property="og:site_name" content="Elton Rodriguez" />
     <meta property="og:title" content="Elton Rodriguez™" />
-    <meta property="og:description" content="Engineer, lover of electronic music and emerging technologies | Traveler | #MicrosoftLover and #philanthropy 👻 : @nickoelton " />
-    <meta property="og:image" content="https://www.nickoelton.com/images/background.jpg" />
+    <meta property="og:description"
+        content="Engineer, lover of electronic music and emerging technologies | Traveler | #MicrosoftLover and #philanthropy 👻 : @nickoelton " />
+    <meta property="og:image" content="https://www.nickoelton.com/images/logo.png" />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="960" />
     <meta property="og:url" content="http://www.nickoelton.com/" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:title" content="Elton Rodriguez™" />
-    <meta name="twitter:description" content="Engineer, lover of electronic music and emerging technologies | Traveler | #MicrosoftLover and #philanthropy 👻 : @nickoelton " />
-    <meta name="twitter:image" content="http://www.nickoelton.com/images/background.jpg" />
+    <meta name="twitter:description"
+        content="Engineer, lover of electronic music and emerging technologies | Traveler | #MicrosoftLover and #philanthropy 👻 : @nickoelton " />
+    <meta name="twitter:image" content="http://www.nickoelton.com/images/logo.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@nickoelton" />
     <meta name="twitter:creator" content="@nickoelton" />
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32" />
-
-    <!-- Styles -->
-    <link rel='stylesheet' href='assets/css/split.css' type='text/css' media='screen' />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <!-- Facebook Pixel Code -->
     <script>
-        ! function(f, b, e, v, n, t, s) {
+        ! function (f, b, e, v, n, t, s) {
             if (f.fbq) return;
-            n = f.fbq = function() {
+            n = f.fbq = function () {
                 n.callMethod ?
                     n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
@@ -63,30 +72,27 @@
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-		src="https://www.facebook.com/tr?id=2374435469488997&ev=PageView&noscript=1"
-	/></noscript>
+            src="https://www.facebook.com/tr?id=2374435469488997&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
 
-
-    <script data-ad-client="ca-pub-7645610318476370" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-7645610318476370" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 
-
-<body id="fullsingle" class="page-template-page-fullsingle-split">
-
-
+<body>
+    
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
     <script>
-        window.fbAsyncInit = function() {
+        window.fbAsyncInit = function () {
             FB.init({
                 xfbml: true,
                 version: 'v3.2'
             });
         };
 
-        (function(d, s, id) {
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s);
@@ -97,111 +103,365 @@
     </script>
 
     <!-- Your customer chat code -->
-    <div class="fb-customerchat" attribution=setup_tool page_id="878576878965017" theme_color="#0084ff" logged_in_greeting="¡Hola! como podemos ayudarte?" logged_out_greeting="¡Hola! como podemos ayudarte?">
+    <div class="fb-customerchat" attribution=setup_tool page_id="878576878965017" theme_color="#0084ff"
+        logged_in_greeting="¡Hola! como podemos ayudarte?" logged_out_greeting="¡Hola! como podemos ayudarte?">
     </div>
 
-    <div class="fs-split">
 
-        <!-- Image Side -->
-        <div class="split-image">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
 
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <!-- <div class="offcanvas__search">
+            <form action="#">
+                <input type="text" placeholder="Search and hit enter...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div> -->
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt="nickoelton"></a>
         </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__social">
+            <!-- <div class="header__right__social"> -->
+            <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
+            <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
+            <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
+            <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
 
-        <!-- Content Side -->
-        <div class="split-content">
-
-            <div class="split-content-vertically-center">
-
-                <div class="split-intro">
-
-                    <h1>@nickoelton</h1>
-
-                    <span class="tagline">Elton Rodriguez</span>
-                    
-                </div>
-                <br>
-                <h3 class="tagline">Ingeniero, podcaster, emprendedor y futuro MBA.</h3>
-
-                <div class="split-bio">
-
-                    <p>Amante de la música electrónica y las tecnologías emergentes. Trabajé como Evangelista Técnico en Microsoft. Actualmente estoy interesado en fotografía, startups y comunidades técnicas que difundan sobre tecnologías.
-
-                        </br>#MicrosoftLover #Philanthropy #UltraFan</p>
-
-                </div>
-                <!-- Messenger Boton
-			<div>
-				<a href="https://m.me/eltonstories" style="font-size:12px;padding:5px 12px;border-radius:5px;background-color:#1787fb;color:white;text-shadow:none;">Escríbeme al Facebook</a>
-			</div>
- -->
-                <div>
-                    <a href="https://api.whatsapp.com/send?phone=51920012017" style="font-size:12px;padding:5px 12px;border-radius:5px;background-color:#189D0E;color:white;text-shadow:none;">Escríbeme al WhatsApp</a>
-                </div>
-                <div>
-                    <p>
-                        </br>
-                    </p>
-                </div>
-                <div class="split-lists">
-
-                    <div class="split-list">
-
-                        <h3>Sígueme en</h3>
-
-                        <ul>
-                            <li><a href="https://www.youtube.com/nickoelton">Youtube</a></li>
-                            <li><a href="https://www.linkedin.com/in/nickoelton">LinkedIn</a></li>
-                            <li><a href="https://www.facebook.com/eltonstories">Facebook</a></li>
-                        </ul>
-
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
                     </div>
-
-                    <div class="split-list">
-
-                        <h3> </h3>
-
+                    <nav class="header__menu mobile-menu">
                         <ul>
-                            <li><a href="https://twitter.com/nickoelton">Twitter</a></li>
-                            <li><a href="https://www.instagram.com/nickoelton">Instagram</a></li>
-                            <li><a href="https://github.com/nickoelton">GitHub</a></li>
-                        </ul>
-
-                    </div>
-
-                    <div class="split-list">
-
-                        <h3> </h3>
-
-                        <ul>
-                            <li><a href="https://nickoelton.tumblr.com">Tumblr</a></li>
-                            <li><a href="https://es.pinterest.com/nickoelton/">Pinterest</a></li>
-                            <li>
-                                <a href="#"> </a>
+                            <li class="active"><a href="./index.html">Inicio</a></li>
+                            <li><a href="./about.html">Sobre mí</a></li>
+                            <li><a href="./podcast.html">Podcast</a></li>
+                            <li><a href="./gameplays.html">Gameplays</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <!-- <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about.html">About</a></li>
+                                    <li><a href="./episodes-details.html">Episodes</a></li>
+                                    <li><a href="./blog.html">Blog</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
                             </li>
+                            <li><a href="./contact.html">Contact</a></li> -->
                         </ul>
-
-
+                    </nav>
+                </div>
+                <div class="col-lg-4">
+                    <div class="header__right">
+                        <!-- <div class="header__right__search">
+                            <form action="#">
+                                <input type="text" placeholder="Search and hit enter...">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div> -->
+                        <div class="header__right__social">
+                            <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
+                            <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
+                            <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
+                            <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
+                        </div>
                     </div>
-
                 </div>
-                <div>
-                    <!-- Inicio Canción
-	<iframe width="500" height="150" src="https://musiclab.chromeexperiments.com/Song-Maker/embed/5892761175719936" frameborder="0" allowfullscreen></iframe>
-	Fin de la Canción-->
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero spad set-bg" data-setbg="img/hero/hero-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero__text">
+                        <!-- <h5><span class="icon_calendar"></span> 10 Dec 2019</h5> -->
+                        <h2>Amante de la música electrónica y de las tecnologías emergentes.</h2>
+                        <h5>#MicrosoftLover #Philanthropy #UltraFan</h5>
+                        <a href="#" class="primary-btn">Enviar un mensaje</a>
+                        <a href="#" class="primary-btn white-btn">Suscribirse</a>
+                    </div>
                 </div>
+                <div class="col-lg-4">
+                    <div class="hero__pic set-bg">
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/9CS1mPHgDaE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <!-- <div class="hero__pic set-bg" data-setbg="img/hero/hero-video.png">
+                        <a href="https://www.youtube.com/watch?v=9CS1mPHgDaE"
+                            class="play-btn video-popup"><img src="img/hero/play-btn.png" alt=""></a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
 
-                <div class="split-credit">
+    <!-- Podcast Section Begin -->
+    <section class="podcast spad">
+        <div class="container">
+            <div class="podcast__top">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <h2>Próximamente</h2>
+                    </div>
+                    <!-- <div class="col-lg-7 col-md-7">
+                        <ul class="filter__controls">
+                            <li class="active" data-filter="*">All</li>
+                            <li data-filter=".entrepreneurship">Entrepreneurship</li>
+                            <li data-filter=".media">Media</li>
+                            <li data-filter=".tech">Tech</li>
+                            <li data-filter=".tutorials">Tutorials</li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
 
-                    <p>&copy;2020 <a href="http://www.nickoelton.com">nickoelton</a></p>
-
+            <div class="row podcast-filter">
+                <div class="col-lg-12 mix entrepreneurship">
+                    <div class="podcast__item">
+                        <div class="podcast__item__pic">
+                            <img src="img/proximamente.jpg" alt="">
+                        </div>
+                        <div class="podcast__item__text">
+                            <a href="#" class="heart-icon"><i class="fa fa-twitter"></i></a>
+                            <ul>
+                                <li><span class="icon_calendar"></span> 1 Agosto 2020 </li>
+                                <li><span class="icon_profile"></span> por Elton Rodriguez</li>
+                                <li><span class="icon_tags_alt"></span> MTDeveloper Ica</li>
+                            </ul>
+                            <h4>Evento en vivo: Deja de ser tan tóxico con tu tiempo</h4>
+                            <p>Un poco de lo que hablaré es sobre "Como dejar de ser tan tóxic@ con tu tiempo usando Office o Microsoft 365", 
+                                donde descubriremos la herramienta de Power Automate y como éste te puede hacer la vida más fácil.</p>
+                            <div class="track__option">
+                                <div class="jp-jplayer jplayer" data-ancestor=".jp_container-1"
+                                    data-url="music-files/SweetDreams-MarcusLayton.mp3"></div>
+                                <div class="jp-audio jp_container-1" role="application" aria-label="media player">
+                                    <div class="jp-gui jp-interface">
+                                        <!-- Player Controls -->
+                                        <div class="player_controls_box">
+                                            <button class="jp-play player_button" tabindex="0"></button>
+                                        </div>
+                                        <!-- Progress Bar -->
+                                        <div class="player_bars">
+                                            <div class="jp-progress">
+                                                <div class="jp-seek-bar">
+                                                    <div>
+                                                        <div class="jp-play-bar">
+                                                            <div class="jp-current-time" role="timer" aria-label="time">
+                                                                0:00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00
+                                            </div>
+                                        </div>
+                                        <!-- Volume Controls -->
+                                        <div class="jp-volume-controls">
+                                            <button class="jp-mute" tabindex="0"><span
+                                                    class="icon_volume-high"></span></button>
+                                            <div class="jp-volume-bar">
+                                                <div class="jp-volume-bar-value" style="width: 0%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="jp-btns">
+                                        <a href="#"><i class="social_share"></i> Compartir</a>
+                                        <!-- <a href="#"><i class="fa fa-download"></i> Descargar</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-
         </div>
+    </section>
+    <!-- Podcast Section End -->
 
-    </div>
+    <!-- Call To Action Section Begin -->
+    <section class="callto spad set-bg" data-setbg="img/call-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="callto__text">
+                        <h2>¡Que comience el show!</h2>
+                        <p>“No solo se trata de querer, sino también de enganchar ese deseo con un propósito”</p>
+                        <a href="./blog.html" class="primary-btn">Consulta el blog</a>
+                        <a href="./gameplays.html" class="primary-btn white-btn">Mira los Gameplays</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call To Action Section End -->
 
+    <!-- Episodes Section Begin -->
+    <section class="episodes spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Últimos Episodios del podcast</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-lg-4 col-md-6">
+                    <div class="episodes__item set-bg" data-setbg="img/episodes/episodes-1.jpg">
+                        <div class="tags"><span class="icon_tags_alt"></span> Music, Radio</div>
+                        <div class="time"><span class="icon_clock_alt"></span> 40 mins</div>
+                        <a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/249690664&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                            class="play-btn video-popup"><img src="img/play.png" alt=""></a>
+                        <div class="episodes__text">
+                            <h4>Episode 01: Dealing With Technical Support 10</h4>
+                            <p><span class="icon_calendar"></span> 16 Feb 2019</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="episodes__item set-bg" data-setbg="img/episodios/1.jpg">
+                        <iframe src="https://open.spotify.com/embed?uri=spotify:episode:4MjfBVmfCFvYZSibukdSPD"
+                            width="100%" height="100%" frameborder="0" allowtransparency="true"
+                            allow="encrypted-media"></iframe>
+                        <div class="episodes__text">
+                            <h4>Episodio 01: Piloto: Captura detonantes</h4>
+                            <p><span class="icon_calendar"></span> 10 Nov 2020</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="episodes__item set-bg" data-setbg="img/episodios/1.jpg">
+                        <iframe src="https://open.spotify.com/embed?uri=spotify:episode:4MjfBVmfCFvYZSibukdSPD"
+                            width="100%" height="100%" frameborder="0" allowtransparency="true"
+                            allow="encrypted-media"></iframe>
+                        <div class="episodes__text">
+                            <h4>Episodio 02: Próximamente</h4>
+                            <p><span class="icon_calendar"></span> En Noviembre del 2020</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="episodes__item set-bg" data-setbg="img/episodios/1.jpg">
+                        <iframe src="https://open.spotify.com/embed?uri=spotify:episode:4MjfBVmfCFvYZSibukdSPD"
+                            width="100%" height="100%" frameborder="0" allowtransparency="true"
+                            allow="encrypted-media"></iframe>
+                        <div class="episodes__text">
+                            <h4>Episodio 03: Próximamente</h4>
+                            <p><span class="icon_calendar"></span> En Noviembre del 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="load__more">
+                        <a href="./podcast.html">Más episodios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Episodes Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+        <div class="container">
+            <div class="footer__subscriber">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="footer__subscriber__text">
+                            <h3>¡Mantente en contacto!</h3>
+                            <p>Suscríbite a mis canales o empieza una charla con la comunidad en Telegram</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 offset-lg-2">
+                        <form action="#" class="footer__subscriber__form">
+                            <input type="text" readonly="readonly" placeholder="Unirme al canal de Telegram">
+                            <button type="button" class="site-btn"
+                                onclick="location.href='https://t.me/nickogameplays'">🚀</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <div class="footer__widget">
+                        <div class="footer__logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p class="footer__copyright__text">Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved <!--| Realizado con <i class="fa fa-heart-o"
+                                 aria-hidden="true"></i> por <a href="https://www.tecfines.com"
+                                target="_blank">Tecfines</a> -->
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <!-- <div class="footer__social"> -->
+                    <div class="header__right__social">
+                        <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
+                        <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
+                        <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
+                        <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Music Plugin -->
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/jplayerInit.js"></script>
 </body>
 
 </html>
