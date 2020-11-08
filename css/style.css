@@ -1848,8 +1848,8 @@ ol {
 }
 
 .blog__details__text__item p {
-	font-size: 17px;
-	line-height: 30px;
+	font-size: 15px;
+	line-height: 25px;
 }
 
 .blog__details__text__item ul {
@@ -1857,9 +1857,9 @@ ol {
 }
 
 .blog__details__text__item ul li {
-	font-size: 17px;
+	font-size: 15px;
 	color: #8d8d8d;
-	line-height: 30px;
+	line-height: 25px;
 	list-style: none;
 	margin-bottom: 10px;
 	position: relative;
