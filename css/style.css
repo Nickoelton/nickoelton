@@ -88,7 +88,7 @@ textarea:focus {
 a:hover,
 a:focus {
 	text-decoration: none;
-	outline: none;
+	outline: none !important;
 	color: #000000;
 }
 
