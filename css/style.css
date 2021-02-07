@@ -2351,9 +2351,9 @@ ol {
 	.blog__item__pic {
 		width: 280px;
 	}
-	.blog__item__text {
+	/*.blog__item__text {
 		padding: 25px 30px 27px 30px;
-	}
+	}*/
 }
 
 /* Tablet Device = 768px */
