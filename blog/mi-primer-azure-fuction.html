@@ -185,6 +185,30 @@
                                 Te invito a ver el video:
                             </p>
 
+
+                            <p>Código de ejemplo:</p>
+                            <div>
+                                <a title="¡Copiar!" onclick="copyToClipboard('#Codigo1')" class="primary-btn white-btn" style="float: right; display: inline-block; margin: 0px; padding: 10px;" >
+                                    <i class="fa fa-clone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            
+                            <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
+
+                                <code id="Codigo1" style="color: white;" >
+    i = 0;
+
+    while (!deck.isInOrder()) {
+        print 'Iteration ' + i;
+        deck.shuffle();
+        i++;
+    }
+    
+    print 'It took ' + i + ' iterations to sort the deck.';<br> 
+                                </code>
+                            </pre>
+
+
                             <div class="blog__details__text__item">
                                 <ul>
                                     <li>¿Tu compañía se apalanca de las telecomunicaciones para coordinar y lograr objetivos?</li>
@@ -321,6 +345,9 @@
 <script src="../js/jquery.slicknav.js"></script>
 <script src="../js/owl.carousel.min.js"></script>
 <script src="../js/main.js"></script>
+
+<!-- Alertas perzonalizadas: Revisar_ https://sweetalert.js.org/guides/#installation -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <!-- Music Plugin -->
 <script src="../js/jquery.jplayer.min.js"></script>
