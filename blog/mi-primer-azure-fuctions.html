@@ -186,13 +186,13 @@
                             </p>
                             <p style="text-align:justify;">
                                 Crearemos un Grupo de Recursos llamado "Personal" y dentro de este, nombraremos el Fuction App (Aplicación de funciones). En mi caso se 
-                                llamará "personalfucion.azurewebsites.net", escojeremos la pila de ejecución "Node.js" en su versión 12 dentro de la región que deseen.
+                                llamará "personalfucion.azurewebsites.net", escogeremos la pila de ejecución "Node.js" en su versión 12 dentro de la región que deseen.
                                 Ya para finalizar, daremos clic en "Revisar y crear".
                             </p>
                             <div class="blog__details__pic">
                                 <img src="../img/blog/funcion1.jpg" alt="">
                             </div>
-                            <p style="text-align:justify;"> Una vez creado nuestro recurso, se nos aperturará el centro de aplicaciones de funciones. En la barra lateral 
+                            <p style="text-align:justify;"> Una vez creado nuestro recurso, se nos apertura el centro de aplicaciones de funciones. En la barra lateral 
                                 izquierda podremos visualizar nuestra Fuction App creada y 3 opciones que dependen de ella: "Funciones, Proxies y Ranuras".
                                 Para esta demostración, daremos clic en el "+" para crear una "Nueva Función".
                             </p>
@@ -208,24 +208,24 @@
                             </div>
                             <p style="text-align:justify;"> En la siguiente ventana, Azure desea saber desde que tipo de función deseamos crear. Actualmente existen 3 
                                 tipos: Webhook y API, Temporizador, o desde una plantilla predeterminada. En este caso, seleccionaremos la primera opción "Webhook y API" 
-                                porque lo que realizacermos es recibir una solicitud HTTP, procesarla y retornar un resultado. Finalmente daremos clic en "Crear"
+                                porque lo que realizaremos es recibir una solicitud HTTP, procesarla y retornar un resultado. Finalmente daremos clic en "Crear"
                             </p>
                             <div class="blog__details__pic">
                                 <img src="../img/blog/funcion4.jpg" alt="">
                             </div>
-                            <p style="text-align:justify;"> ¡Y listo! Ya tenemos una función creada con una plantilla de ejemplo. Esta funnción lo que realiza es recibir un texto 
+                            <p style="text-align:justify;"> ¡Y listo! Ya tenemos una función creada con una plantilla de ejemplo. Esta función lo que realiza es recibir un texto 
                                 y responder con un "Hola + {El texto enviado}".
                             </p>
                             <div class="blog__details__pic">
                                 <img src="../img/blog/funcion5.jpg" alt="">
                             </div>
-                            <p style="text-align:justify;"> Ahora probemos, daremos clic en "Obtener la direccion URL de la función", la copiaremos y la pegaremos en nuestro navegador
+                            <p style="text-align:justify;"> Ahora probemos, daremos clic en "Obtener la dirección URL de la función", la copiaremos y la pegaremos en nuestro navegador
                             </p>
                             <div class="blog__details__pic">
                                 <img src="../img/blog/funcion6.jpg" alt="">
                             </div>
-                            <p style="text-align:justify;"> Nos daremos cuenta que nos responde un status 400, pero como no le enviamos valores, nos responde con una respuesta 
-                                personalizada que configuramos. Esto se debe a que si nos percatamos en la URL, esta termina con <b>==</b> dando a entender que falta un dato por enviarle.
+                            <p style="text-align:justify;"> Nos daremos cuenta de que nos responde un status 400, pero como no le enviamos valores, nos responde con una respuesta 
+                                personalizada que configuramos. Esto se debe a que, si nos percatamos en la URL, esta termina con <b>==</b> dando a entender que falta un dato por enviarle.
                             </p>
                             <div class="blog__details__pic">
                                 <img src="../img/blog/funcion7.jpg" alt="">
@@ -237,21 +237,21 @@
                                 <img src="../img/blog/funcion8.jpg" alt="">
                             </div>
                             <p style="text-align:justify;"> ¿Acabamos de ver magia? ¡Nooo! solo fue un pequeño código trabajando desde el lado del servidor. Ahora, subiremos el 
-                                nivel <b>perzonalizando la función</b>. Para ello, primero necesito que borres TODO lo que está dentro del modulo asíncrono, pero dejando 
+                                nivel <b>personalizado la función</b>. Para ello, primero necesito que borres TODO lo que está dentro del módulo asíncrono, pero dejando 
                                 las variables de context y req. Esto debe quedarte así:
                             </p>
                             <div class="blog__details__pic">
                                 <img src="../img/blog/funcion9.jpg" alt="">
                             </div>
-                            <p style="text-align:justify;"> Dentro, vamos a crear una condición. Aqui solo estamos comprobando que si la variable req es enviada como un 
+                            <p style="text-align:justify;"> Dentro, vamos a crear una condición. Aquí solo estamos comprobando que. si la variable req es enviada como un 
                                 texto, nos mostrará el mensaje de "Cuenta con pruebas Covid", de lo contrario, si solo recibe un null mostrará el mensaje de "No hay datos 
                                 sobre el Covid". 
                             </p>
                             <div class="blog__details__pic">
                                 <img src="../img/blog/funcion10.jpg" alt="">
                             </div>
-                            <p style="text-align:justify;"> Bien, ahora vamos más allá. Debtro de la condición, crearemos un switch/case donde podremos colocar mucha más 
-                                información adicional. En mi caso, estoy colocando como casos los nombres de los paises de Latinoamérica, y como resultado, estoy enviando 
+                            <p style="text-align:justify;"> Bien, ahora vamos más allá. Dentro de la condición, crearemos un switch/case donde podremos colocar mucha más 
+                                información adicional. En mi caso, estoy colocando como casos los nombres de los países de Latinoamérica, y como resultado, estoy enviando 
                                 un valor tipo tabla con información de casos positivos y fallecidos.
                             </p>
                             <p style="text-align:justify;"> A continuación, te dejo el código listo.
@@ -307,7 +307,7 @@
                                 </code>
                             </pre>
 
-                            <p style="text-align:justify;"> ¡Y listo! No te olvides que al "Obtener la direccion URL de la función", al final debes agregar los paises 
+                            <p style="text-align:justify;"> ¡Y listo! No te olvides que al "Obtener la dirección URL de la función", al final debes agregar los países 
                                 que hemos registrado en los casos. Finalmente, como a manera de ejemplo, podrías añadir <b>"&pais=Peru"</b> después del == en la URL.
                             </p>
 
