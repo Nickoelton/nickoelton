@@ -162,7 +162,7 @@
                             <li><span class="icon_profile"></span> Elton Rodriguez</li>
                             <li><span class="icon_tags_alt"></span> Microsoft Azure, Azure Fuctions, Serverless</li>
                         </ul>
-                        <h2>Mi primer Fuction en Microsoft Azure</h2>
+                        <h2>Mi primer Azure Fuctions</h2>
                     </div>
                 </div>
             </div>
@@ -189,95 +189,140 @@
                                 llamará "personalfucion.azurewebsites.net", escojeremos la pila de ejecución "Node.js" en su versión 12 dentro de la región que deseen.
                                 Ya para finalizar, daremos clic en "Revisar y crear".
                             </p>
-
+                            <div class="blog__details__pic">
+                                <img src="../img/blog/funcion1.jpg" alt="">
+                            </div>
                             <p style="text-align:justify;"> Una vez creado nuestro recurso, se nos aperturará el centro de aplicaciones de funciones. En la barra lateral 
                                 izquierda podremos visualizar nuestra Fuction App creada y 3 opciones que dependen de ella: "Funciones, Proxies y Ranuras".
                                 Para esta demostración, daremos clic en el "+" para crear una "Nueva Función".
                             </p>
-
+                            <div class="blog__details__pic">
+                                <img src="../img/blog/funcion2.jpg" alt="">
+                            </div>
                             <p style="text-align:justify;"> En la siguiente ventana, Azure desea saber desde que entorno de desarrollo vamos a crear nuestra Función. 
                                 Actualmente existen 3 formas: "Desde Visual Studio Code, desde un editor + y desde el mismo portal de Azure". Para esta demo, seleccionaremos 
                                 la última opción "En el portal" y daremos clic en "Continuar".
                             </p>
-
+                            <div class="blog__details__pic">
+                                <img src="../img/blog/funcion3.jpg" alt="">
+                            </div>
                             <p style="text-align:justify;"> En la siguiente ventana, Azure desea saber desde que tipo de función deseamos crear. Actualmente existen 3 
                                 tipos: Webhook y API, Temporizador, o desde una plantilla predeterminada. En este caso, seleccionaremos la primera opción "Webhook y API" 
-                                porque lo que realizacermos es recibir una solicitud HTTP, procesarla y retornar un resultado.
+                                porque lo que realizacermos es recibir una solicitud HTTP, procesarla y retornar un resultado. Finalmente daremos clic en "Crear"
                             </p>
-
-                            <p style="text-align:justify;">
-
+                            <div class="blog__details__pic">
+                                <img src="../img/blog/funcion4.jpg" alt="">
+                            </div>
+                            <p style="text-align:justify;"> ¡Y listo! Ya tenemos una función creada con una plantilla de ejemplo. Esta funnción lo que realiza es recibir un texto 
+                                y responder con un "Hola + {El texto enviado}".
                             </p>
-
-                            <p style="text-align:justify;">
-
+                            <div class="blog__details__pic">
+                                <img src="../img/blog/funcion5.jpg" alt="">
+                            </div>
+                            <p style="text-align:justify;"> Ahora probemos, daremos clic en "Obtener la direccion URL de la función", la copiaremos y la pegaremos en nuestro navegador
                             </p>
-
-                            <p style="text-align:justify;">
-
+                            <div class="blog__details__pic">
+                                <img src="../img/blog/funcion6.jpg" alt="">
+                            </div>
+                            <p style="text-align:justify;"> Nos daremos cuenta que nos responde un status 400, pero como no le enviamos valores, nos responde con una respuesta 
+                                personalizada que configuramos. Esto se debe a que si nos percatamos en la URL, esta termina con <b>==</b> dando a entender que falta un dato por enviarle.
                             </p>
-
-                            <p style="text-align:justify;">
-
+                            <div class="blog__details__pic">
+                                <img src="../img/blog/funcion7.jpg" alt="">
+                            </div>
+                            <p style="text-align:justify;"> Entonces, vamos a agregar la variable de tipo texto que está esperando nuestra función, para ello, al final 
+                                de la URL añadiremos "&name=Elton" y volveremos a cargar la página.
                             </p>
-
-
-                            <p style="text-align:justify;">Dejame conarte que de muy pequeño soy fanático de la Fórmula 1 ...y navegando entre algunos videos 
-                                encontré un clip que me pareció super interesante. Se trata de una de las carreras en el circuito de Indianápolis - Estados Unidos, 
-                                en el cual se celebraba la Edición N°34 de la Formula 1, allá por los años 50's. Lo curioso es que es una comparativa de como eran 
-                                los vehiculos de carreras hace 70 años atrás. En la antiguedad casi se demoraban en cambiar los 4 neumáticos en unos 67 segundos.
-                                Te invito a ver el video:
+                            <div class="blog__details__pic">
+                                <img src="../img/blog/funcion8.jpg" alt="">
+                            </div>
+                            <p style="text-align:justify;"> ¿Acabamos de ver magia? ¡Nooo! solo fue un pequeño código trabajando desde el lado del servidor. Ahora, subiremos el 
+                                nivel <b>perzonalizando la función</b>. Para ello, primero necesito que borres TODO lo que está dentro del modulo asíncrono, pero dejando 
+                                las variables de context y req. Esto debe quedarte así:
                             </p>
-
+                            <div class="blog__details__pic">
+                                <img src="../img/blog/funcion9.jpg" alt="">
+                            </div>
+                            <p style="text-align:justify;"> Dentro, vamos a crear una condición. Aqui solo estamos comprobando que si la variable req es enviada como un 
+                                texto, nos mostrará el mensaje de "Cuenta con pruebas Covid", de lo contrario, si solo recibe un null mostrará el mensaje de "No hay datos 
+                                sobre el Covid". 
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="../img/blog/funcion10.jpg" alt="">
+                            </div>
+                            <p style="text-align:justify;"> Bien, ahora vamos más allá. Debtro de la condición, crearemos un switch/case donde podremos colocar mucha más 
+                                información adicional. En mi caso, estoy colocando como casos los nombres de los paises de Latinoamérica, y como resultado, estoy enviando 
+                                un valor tipo tabla con información de casos positivos y fallecidos.
+                            </p>
+                            <p style="text-align:justify;"> A continuación, te dejo el código listo.
+                            </p>
                             <div class="row"    style="font-size: 12px; font-family: 'Nunito', sans-serif; color: #8d8d8d; ">    
                                 <div class="col-1">
-                                    <a title="¡Copiar!" onclick="copyToClipboard('#Codigo1')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
+                                    <a title="¡Copiar!" onclick="copyToClipboard('#CodigoFuction')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
                                         <i class="fa fa-clone" aria-hidden="true"></i>
                                     </a>
                                 </div>
                                 <div class="col align-self-center">
-                                    Copiar código de ejemplo
+                                    Copiar el código
                                 </div>
                             </div>
                             
                             <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
 
-                                <code id="Codigo1" style="color: white;" >
-    i = 0;
-
-    while (!deck.isInOrder()) {
-        print 'Iteration ' + i;
-        deck.shuffle();
-        i++;
-    }
+                                <code id="CodigoFuction" style="color: white;" >
+    module.exports = async function (context, req) {
     
-    print 'It took ' + i + ' iterations to sort the deck.';
+        if(req.query.pais){
+            let resultado;
+                switch(req.query.pais.toLowerCase()){
+                    case 'peru':
+                    resultado = {'Casos Positivos': '20 400',
+                            'Fallecidos': '600'};
+                    break;
+
+                    case 'colombia':
+                    resultado = {'Casos Positivos': '6 400',
+                            'Fallecidos': '100'};
+                    break;
+
+                    case 'ecuador':
+                    resultado = {'Casos Positivos': '1 400',
+                            'Fallecidos': '50'};
+                    break;
+
+                    default:
+                    resultado = {'Error': 'No tenemos información del pais'};
+                }               
+                context.res = {
+                body: JSON.stringify({'Título': 'La información sobre el Covid19 en '
+                    + (req.query.pais) + ' es:', 'result': resultado})
+            };
+        }
+        else{
+            context.res = {
+                body: JSON.stringify({'Error': 'Tienes que indicar un pais'})
+            };
+        }
+    };
                                 </code>
                             </pre>
 
+                            <p style="text-align:justify;"> ¡Y listo! No te olvides que al "Obtener la direccion URL de la función", al final debes agregar los paises 
+                                que hemos registrado en los casos. Finalmente, como a manera de ejemplo, podrías añadir <b>"&pais=Peru"</b> después del == en la URL.
+                            </p>
 
+                            <p style="text-align:justify;">En conclusión, algunos de los beneficios de utilizar Azure Fuctions dentro de nuestras aplicaciones son: 
+                            </p>
                             <div class="blog__details__text__item">
                                 <ul>
-                                    <li>¿Tu compañía se apalanca de las telecomunicaciones para coordinar y lograr objetivos?</li>
-                                    <li>¿Tus Productos pueden contar siempre con esa innovación que usas para poder fabricarlos?</li>
-                                    <li>¿Consideras que puedes lograr agilizar tus Procesos u operaciones?</li>
+                                    <li>¡No tenemos que preocuparnos por la infraestructura!</li>
+                                    <li>Está orientado para todos los programadores en C#, F#, Node.js, Java o PHP.</li>
+                                    <li>Contamos con varios tipos de Triggers, como: HTTP, Timer, CosmosBD, Blob, Queue y EventHub.</li>
                                 </ul>
                             </div>
 
-
-                            <p style="text-align:justify;">En conclusión, quiero culminar esta conversación con una frase 
-                                que hoy para mi tiene sentido, la cual es: 
-                            </p>
-                            <div class="blog__details__quote">
-                                <div class="icon"><span class="icon_quotations"></span></div>
-                                <p>Muévete rápido y rompe objetos. Si no estás rompiendo cosas, no te estás moviendo lo suficientemente rápido.</p>
-                                <h6>- Mark Zuckerberg</h6>
-                            </div>
-                            <p style="text-align:justify;">Por lo tanto, sigue aprendiendo, sigue iniciando conversaciones y sobre 
-                                todo, no te olvides de alinear tus metas a un bien común.
-                            </p>
-
                         </div>
+                        <br><br>
 
                         <div class="blog__details__tags">
                             <div class="fb-share-button" data-href="https://www.nickoelton.com/blog/mi-primer-azure-fuctions" data-layout="button" data-size="small">
