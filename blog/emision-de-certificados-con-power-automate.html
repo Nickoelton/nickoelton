@@ -179,44 +179,53 @@
                         <div class="blog__details__text">
 
 
-                            <p style="text-align:justify;">Según Smartme Analytics dentro de su estudio sobre el impacto del Covid-19 en el 
-                                uso de dispositivos móviles, se halló que hizo crecer algunos sectores hasta en un 53.2%, teniendo una media 
-                                del 2.5% en tan solo 1 mes de confinamiento.
+                            <p style="text-align:justify;">¡Hola! Si estás aquí es porque quieres saber cómo utilizar Power Automate para no emitir constancias ni 
+                                certificados editando archivos uno por uno. Hoy aprenderemos en conjunto a como podemos emitir certificados en PDF de manera virtual 
+                                para hacerlos llegar a nuestra audiencia. ¡Vamos a por ello!
+                            </p>
+                            <p style="text-align:center;font-size: 20px;"> <b>¿Cuáles son los requisitos?</b>
                             </p>
                             <div class="blog__details__text__item">
-                                <p style="text-align:justify;"><b>¿Cómo está conformado Power Automate?</b> Empecemos viendo las tres palabras que representan 
-                                    a la construcción de un flujo de trabajo en Power Automate o como antes se llamaba <i>"Microsoft Flow"</i>:
+                                <p style="text-align:justify;"> A continuación te mencionaré lo que necesitarás para construir esta demostración:
                                 </p>
                                 <ul>
-                                    <li><b>Desencadenadores </b>También conocidos  conocido como Triggers, son disparadores que reconocen de manera automática un evento.</li>
-                                    <li><b>Acciones </b>Son eventos consecuentes de los Triggers, en el cual nos ayuda a poder definir los siguientes pasos.</li>
-                                    <li><b>Conexiones </b>Son los permisos que se necesitan para acceder a las cuentas o recursos que deseo utilizar.</li>
+                                    <li><b>Un formulario en Microsoft Forms.</b></li>
+                                    <li><b>Acceso a OneDrive para Empresas.</b></li>
+                                    <li><b>Una plantilla hecha en Micrrosoft Word.</b></li>
+                                    <li><b>Acceso a Microsoft Power Automate.</b></li>
                                 </ul>
                             </div>
-                            <div class="blog__details__quote">
-                                <div class="icon"><span class="icon_quotations"></span></div>
-                                <p>Ocúpate personalmente de lo importante y automatiza el resto.</p>
-                            </div>
-
-                            <p style="text-align:justify;">Requisito 1.
-                            </p>
-                            <div class="blog__details__pic">
-                                <img src="https://dsm01pap002files.storage.live.com/y4mLGZYL1OlZQ4XQrFMJ5lYTlJfJskg35mh1lgNUvMP4uf_9mpqCKSFS_hyoSf_paB2nwtzRyJnjazxFOlDiWfviFsRzBnr1wXD0ZTEGZXQGx75m1bIV0aAxjjSLZlYTdW48e4d9a-b5TE3CpbzNtVWzfNURmaY6Qm1haQNPdE5b1NNUC1ZxoFH0fJlSt17t70G?width=1493&height=791&cropmode=none" 
-                                alt="Power Automate">
-                            </div> 
+                            <p style="text-align:justify;">Primero, necesitas una plantilla de un certificado, para ello puedes descargarla desde <a href="https://1drv.ms/w/s!ArnVwLKAqL3Qgo0AmiEt6xn1zNrDWg?e=uE1Y8k" target="_blank">aquí</a> 
+                                para poder continuar con la demostración. 
+                            </p>  
                             
-                            <p style="text-align:justify;">Requisito 2.
+                            <p style="text-align:justify;">Segundo, necesitas acceder a tu cuenta de OneDrive para Empresas y crear una carpeta llamada "Emisión de Certificados" 
+                                donde alojarás la plantilla del certificado hecha en Microsoft Word, previamente descargada.
                             </p>
                             <div class="blog__details__pic">
                                 <img src="https://dsm01pap002files.storage.live.com/y4mmXomaAZoirVedBfQZ33JVYDs5WO_5vna2LOBYtgXHFg07Vj4TRMkcHAyFQRrlUhDeQQfWuWX2PfH6plSgAM76tMCQnZXCqeKx_-f8-rnJlzhGz10eV1PqUumhCz4ig-pNDbWq5SxlNgleQ05sSEno280ORlklNLOmQ7YgcSXwwe6lvxGOYE0-S-L-xO-dBIf?width=709&height=330&cropmode=none" 
                                 alt="Power Automate">
+                            </div>      
+
+                            <div class="blog__details__text__item">
+                                <p style="text-align:justify;">Finalmente, vas a crear un Formulario en Microsoft Forms, para ello agregarás 5 preguntas, las cuales son las siguientes:
+                                </p>
+                                <ul>
+                                    <li><b>Nombre completo - </b>Campo de texto donde el participante ingresará su nombre completo, como desea que se muestre en su certificado.</li>
+                                    <li><b>Correo electrónico - </b>Campo de texto donde el participante desea que le envíen su certificado.</li>
+                                    <li><b>Selecciona el tema o programa de capacitación - </b>Campo de selección única donde podemos colocar los programas o temas disponibles.</li>
+                                    <li><b>Selecciona un número - </b>Campo numérico donde se indicará si el programa o tema durará 1, 2 o 5.</li>
+                                    <li><b>Selecciona la concurrencia - </b>Campo de texto donde se inidicará la concurrencia del programa o capacitación en horas, días o meses.</li>
+                                </ul>
+                            </div>
+                            <div class="blog__details__pic">
+                                <img src="https://dsm01pap002files.storage.live.com/y4mLGZYL1OlZQ4XQrFMJ5lYTlJfJskg35mh1lgNUvMP4uf_9mpqCKSFS_hyoSf_paB2nwtzRyJnjazxFOlDiWfviFsRzBnr1wXD0ZTEGZXQGx75m1bIV0aAxjjSLZlYTdW48e4d9a-b5TE3CpbzNtVWzfNURmaY6Qm1haQNPdE5b1NNUC1ZxoFH0fJlSt17t70G?width=1493&height=791&cropmode=none" 
+                                alt="Power Automate">
                             </div> 
 
-                            <p style="text-align:justify;">Puedes descargar la plantilla del certificado desde <a href="https://1drv.ms/w/s!ArnVwLKAqL3Qgo0AmiEt6xn1zNrDWg?e=uE1Y8k" target="_blank">aquí</a> 
-                                para poder continuar con la demostración. 
-                            </p>                            
-
-                            <p style="text-align:justify;">Según Texto demo 1.
+                            <p style="text-align:center;font-size: 20px;"> <b>¡Ahora sí, empecemos!</b>
+                            </p>
+                            <p style="text-align:justify;"> Según Texto demo 1.
                             </p>
 
                             <div class="blog__details__pic">
@@ -428,6 +437,11 @@
                             </div> 
                             <p style="text-align:justify;">FIN.
                             </p>
+
+                            <div class="blog__details__quote">
+                                <div class="icon"><span class="icon_quotations"></span></div>
+                                <p>Ocúpate personalmente de lo importante y automatiza el resto.</p>
+                            </div>
                             
                             <p style="text-align:justify;">Para poder empezar solo debes dirigirte <a href="https://flow.microsoft.com/es-es/" target="_blank">aquí</a> 
                                 para luego iniciar sesión en una cuenta Microsoft <i>(de preferencia una cuenta empresarial)</i> donde podrás probar alguna de 
