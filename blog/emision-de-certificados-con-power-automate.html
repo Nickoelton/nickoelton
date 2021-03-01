@@ -296,28 +296,32 @@
                             </div> 
                             <p style="text-align:justify;">Estos campos llamados "número, persona, programa y selección" son campos de ingreso de texto que tiene nuestro archivo 
                                 de Microsoft Word previamente descargado, estos campos de texto se pueden crear activando la pestaña de desarrollador de Microsoft Word <i>(Puedes encontrar 
-                                un tutorial <a href="#" target="_blank">aquí</a>)</i>.
+                                un tutorial <a href="https://support.microsoft.com/es-es/office/crear-formularios-que-los-usuarios-rellenan-o-imprimen-en-word-040c5cc1-e309-445b-94ac-542f732c8c8b?ui=es-ES&rs=es-ES&ad=ES#DevTabTopic=Windows" target="_blank">aquí</a>)</i>.
+                                Finalmente, en Power Automate agregaremos el contenido dinámico que hemos obtenido con el detalle de la respuesta de Microsoft Form, y para ello los colocaremos en su respectivo orden. 
                             </p>
                             
                             <div class="blog__details__pic">
                                 <img src="https://dsm01pap002files.storage.live.com/y4m-L0XS5Uafrm8ZrVGmjE-chiOtnsneHC7udUqR9P3n51wofuj1CgVR4KQybLfwIvddnIV7twHEiiDeRXHEm_wdIWGCW_zw4dHeMGHi1_HpXbp9PFNJdWnlU7cD8OcdeIKsNlsxwFYDoGkF6XrBrM-6gdLNDYfcm-CmCxH55YTymWTi-8IUlx0V2sICET_6n9C?width=1631&height=843&cropmode=none" 
                                 alt="Power Automate">
                             </div> 
-                            <p style="text-align:justify;">Según Texto demo 10.
+                            <p style="text-align:justify;">Una vez referenciados los campos de la plantilla con el contenido dinámico, daremos clic a "Nuevo Paso" y buscaremos "OneDrive", de la lista de acciones seleccionaremos "Crear un archivo". Esta acción 
+                                debe crear un archivo en una carpeta en OneDrive y para ello tendremos que brindarle unos datos dinámicos que veremos a continuación.
                             </p>
                             
                             <div class="blog__details__pic">
                                 <img src="https://dsm01pap002files.storage.live.com/y4mhOaek8wiEE4NaKkJpI9HXIMWC5oRlHY4-xv8x2C25wa26cCVqDBY-R9k7HF8AR69WM3evqFQVcSMhwSS9KZNFqfpf4n-oUyQfyjvVNrA4-EydR3ebIvSLh7cnbpFDlvWICOABtVA5jOV2WZdJ9JW4tyUKnHRbtxpaD0BzIirWlLP4zT3ENPFXJMZlpJVIKtb?width=1646&height=1015&cropmode=none" 
                                 alt="Power Automate">
                             </div> 
-                            <p style="text-align:justify;">Según Texto demo 11.
+                            <p style="text-align:justify;">Primero indicaremos la ruta donde se alamcenará el archivo, para ello seleccionaremos la carpeta y seleccionaremos la carptea que hemos creado (Que en mi caso se llama "Emisión de certificados"). Luego, añadiremos 
+                                un contenido dinámico en el campo de "Nombre del archivo" y seleccionaremos el "Nombre completo".
                             </p>
                             
                             <div class="blog__details__pic">
                                 <img src="https://dsm01pap002files.storage.live.com/y4m3TT_hIpBPP2HGJPE9-Bidwk8x4kfSTV4L4xhsiQkh3ItWOC89QSB8sibHW57PH-dJOopUcVF_xOUdHZRanaHHj5U1B-kGM3Jc9ilXSqZl93YByuP4cN_1LxYVZP-uhVg9vd7XQ8I8sHKXgp3RvnzKBNAfoslsj-GcrbL4sFM73rSN82A-QhNNAnLr0RElfv8?width=1599&height=821&cropmode=none" 
                                 alt="Power Automate">
                             </div> 
-                            <p style="text-align:justify;">Según Texto demo 12.
+                            <p style="text-align:justify;">Adicionalmente del contenido dinámico, tendremos que indicarle la extención del archivo, el cual deberá ser <b>".docx"</b>, finalmente en contenido del archivo, 
+                                agregaremos el contenido dinámico "Documento de Microsoft Word" que fué creado en el paso anterior al "Rellenar una plantilla de Microsoft Word".
                             </p>
                             
                             <div class="blog__details__pic">
