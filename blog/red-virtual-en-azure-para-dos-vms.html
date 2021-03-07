@@ -162,7 +162,7 @@
                             <li><span class="icon_profile"></span> Elton Rodriguez</li>
                             <li><span class="icon_tags_alt"></span> Tecnolgía, Microsoft Azure, Azure Virtual Networks</li>
                         </ul>
-                        <h2>Red virtual en Azure para dos Virtual Machines</h2>
+                        <h2>Red Virtual en Azure para dos Máquinas Virtuales</h2>
                     </div>
                 </div>
             </div>
@@ -179,92 +179,244 @@
                         <div class="blog__details__text">
 
 
-                            <p style="text-align:justify;">Según Smartme Analytics dentro de su estudio sobre el impacto del Covid-19 en el 
-                                uso de dispositivos móviles, se halló que hizo crecer algunos sectores hasta en un 53.2%, teniendo una media 
-                                del 2.5% en tan solo 1 mes de confinamiento.
+                            <p style="text-align:justify;">¡Hola! ...hoy vamos a crear una demostración conectando 2 máquinas virtuales en Azure a través de una red virtual. 
+                                si no conoces que es una <b>Red Virtual de Azure</b> puedes revisar <a href="https://azure.microsoft.com/es-es/services/virtual-network/" target="_blank">este</a> enlace, 
+                                así que antes de empezar describamos un poco el escenario que vamos a implementar:
+                            </p>
+                            <p style="text-align:justify;"> Resulta que la empresa donde trabajamos necesita implementar 2 servidores, los cuales deben estar conectadas 
+                                por una misma red, debido a que un servidor se hospedará la aplicación que vamos a desarrollar y en el otro nuestro motor y base de datos. Esto quiere decir que el servidor de 
+                                aplicaciones debe comunicarse con el servidor de datos, pero ¿Qué solución le deberíamos proponer a la empresa para que pueda lograrlo? <br>
+                                Podemos crear una red virtual de Azure, la cual tenga un cierto límite de espacios de direcciones y así nuestros dos servidores puedan conectarse a 
+                                esta red, pero ¿Cómo haríamos ello?
+                            </p>
+
+                            <p style="text-align:justify;">Primero necesitamos acceder a nuestra cuenta en Azure y crear un grupo de recursos, en mi caso el grupo de recursos se llamará 
+                                "BlogdeVMs". Como se puede apreciar este grupo de recursos se encuentra en la región del "Este de EE.UU".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mn7nAodqyh94pMPc6wKTGGFGth2-2JtXVsKDnK0LYpvG19LuQMjyvaJDlNpTfHoTVeFTeRX-NwkDWaTT7nIsnvVVYtCrVyVAzIn27JKh6o4OSVIqYj3UgpD_9faZ9D4Q5mzGwAKAd5MIOowvKgFcb9Y2NQg2yOw6-JBKXzpbWdihMW2hSwsRzy2neTxj-pJqs?width=1917&height=889&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Luego tenemos que añadir un nuevo recurso dentro del grupo de recurso ya creado, este nuevo recurso debe ser una "Red Virtual" o 
+                                "Virtual Network".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mIJ5W49Wt2itXzYPBxO_SrOi9pjuq22Te-jUKNnRIDfRMQsXQskSEIMv3GLEpPvoPNzo7NG1D-JqvGJ2aklmOpCyzp1rPg3q3tDFjMFZo5Db0swgx-BP9arAi9XYTyxUd_tXQl8JoUxmziX6fGTi5Ey64_SJsMBtK-VYEEAjw7HAnoAGIKXa08pFLrOvjFiXd?width=743&height=483&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Luego de seleccionarlo, daremos clic en "Crear".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mX4lvW3fmI5w6hC6m4UhP18O3B22lfccjsGSRN1dmgFo4ocYWGQntKWmpomdqkwKXiB0buJ6TN9dT3BvYhFv5Qb_5OALjOshqSCxJCxjZsVeelUvC9FLrwHQqXpZKvoRJHnEfkf2We3mgGJDLYDL1PrpvBYrISqlyxXfkmr9jUmt1X5lXkjygKboohiy_Cqbx?width=1328&height=774&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Al crear la Red Virtual, tendremos que colocarle un nombre, que en mi caso se llamará "BlogVM-vnet1". Como siguiente paso 
+                                daremos clic en "Siguiente: Direcciones IP".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mY6pEFdYdQ_1rwut4hT1SNsQaG8eDHQtbgNxMFWbEP7IERkStq7ESP55fhQziUmvUcSsOaJlwLwl6Y06QeO556O4enduWHSoh-VhoOQ-sr62BCUExCY5A9UB8trFDEtV7Di9shNE4gcxn-kuJY7mKGIjpGgMVlmJ9r2oTYiC-NFycG4lmV65KI7eGgLyOqaHo?width=1140&height=928&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">En la siguiente ventana podremos especificar los espacios de direcciones IPv4 que queramos utilizar. 
+                                Así mismo, Azure nos creará una subred por defecto, que, si se da el caso, pueden personalizar o crear nuevas subredes. En mi caso dejaré ambas opciones por defecto y 
+                                daremos clic en "Revisar y crear".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4m6hHPzmLURySy8iYnbxmQ5WlxlQ6H0xYClHwvrgC_ZH6hMI8R9-8rpD2YO2p_ozxSyD-TVXePkpXEksuR2gUlizcQxhW4XoMPvC8gP4CkAc5BaLk_jSc7OHicyapZ5ItflomwgzdBECZaumetQlL5Z6q95tvxQvjo1wpEKZ_pG2-3A9UfBHz8T-_pYx3b0-0f?width=1095&height=926&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Una vez revisada y validada por Azure, daremos clic en "Crear".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mZysh9wmWToFx7m7lR-RMEzgkAazNjM1bpogAYM3RrUX3trjRi9Oh-acmpleEfQef7MoFpZxtmens1M-dX68OgUkZjTsSKgBrxMNRcm8jjqxgp4T-k3fanvf1YO-vVxZ-k9f5WMtqsJ41hD_tZW5nYSSV89beGd0dfmHiuqt5SjZZmXpK3dE2CDaHBHCcGFwC?width=1061&height=919&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Una vez finalizada la implementación, Azure nos notificará que la creación de la red virtual se realizó exitosamente. Finalmente 
+                                daremos clic la "X" de "Cerrar".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mEvk4jNBQ1_Evn8LjJ5eo4tLnYUnvdP3GbONKbrqinXqE8Hmt8GoPgEAFOPBUtnvuh5tsOFM_RUfKYPs7K0wSxSNUvfEOssyWrE4AXCTmf18DC9mQpj6UB_V1NMqDDyUinEBL1sL4pGs7GX-t6wUuZcF3RXRSOVarm5bgzSBV7MkuV0LX8a4Vxnr6aGovP0kV?width=1920&height=729&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Ahora dentro del mismo grupo de recursos, vamos a crear los dos servidores. En mi caso creare un Windows Server, el cual lo buscaré 
+                                desde el Marketplace.
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mLKenmQSkGIR5jHTg25Dys5DqoHmG6hZlzOweTU-llY_GryzI3G3geWpyhyfpX1ImSHsunBk_W_YucI5M2WigtlgmaKgD8N4CDQ9Ked2R7FbHPk8xD_dKMuoFh1zV4uS8shkXRft7XC-YutVOCFJVsWQXYO7su6ghoZlcwlHw5w1C0qklfy78ccs0neyTXjH9?width=1479&height=752&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Seleccionaremos la imagen de "Windows Server 2019 DataCenter" y daremos clic en "Crear".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mAlLxSKiQ_-Ztlo_gPGCI1YUx7eQAZ0fIrg8YTGIHBbvs9YI4rKOHswXDkzr1GTXjBJVBRbW8-AGcGAlJpYPKRrKiLrWZqVwOp4UUgXQGTv9TZazuQbtqNjWGPNIE9UNf7ZpO-iKM7KxvqX2SnVSB8qqaKVzDT8Hl_w0VH9t5ed3WGH2J7PRMCJlYGkwR-BJS?width=1235&height=856&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">En la ventana de creación de la máquina virtual nos aseguraremos que esté dentro del mismo grupo de recursos, le brindaremos un nombre a 
+                                la máquina virtual, que en mi caso se llamará "BlogVM1", nos percatamos de que esté en la misma región que nuestro grupo de recursos <i>(Hacemos un Scroll Down)</i>...
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mSKbA5LttbxMAf4w3idiXU8s65MxMEsTXWnapl2YJJgRX5xwnQjc-l-4q6TwTazh_A31x8YUSDAolZW3lDluJKjjapbQ3nL5CF7Kea3QYN_C2mbV14iJW6YAdaEaU0rveNoEW_IPfuXBzPBQsS1QAjg9i0YfwJ8Qm_2X9HVv8xsWfP8Kt5QMVHaLJQdyWBUIe?width=1076&height=926&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">...y crearemos la cuenta de administrador para acceder a la máquina, en mi caso el usuario será "azureuser", así mismo 
+                                activaremos los puertos HTTP (80) y RDP (3389), finalmente daremos clic en "Siguiente: Discos".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4m7kYp02MLoPaQPqEHpdtyIOMxrsXCPoNjwa-ZsvQ5JhBUjB-Dl6grdL0wATu9_5kruCSCbNSYySLRiNfqqd2TfHpHJi_KR0UPes6sqWsyeuQZsHF8V725Qgi-0k7Lpo-h9tu967PMCFictTV0TsNdfG2NaVp1WV8X-zlqihACmfWSiqcRH2wzZInjp7Ewb5gX?width=945&height=927&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">En esta sección nosotros podemos agregar o asociar discos o almacenamiento que tengamos en Azure, en mi caso dejaré las opciones por defecto y 
+                                daré clic en "Siguiente: Redes".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mDZevZiAkKciwOfkO9pFNmlWZ0BUeIr7LlPuEwCJEmgi-C2JkFdHg3b7PGZxYBsoSQHf2XkGN8gElMS1h0Z09_GboQao_ETfyKFVw8vLG3RR3CXBXNPc2uOqiqgnx5m1CrG2UCJ1Be-pafdxsnNn7GIwKxcp9mqeFyLpnefgWxC9DFNMOM3tjsJA6mvCLDlVY?width=932&height=921&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">En esta sección es donde buscaremos la Red Virtual que hemos creado anteriormente llamado "BlogVM-vnet1" y seleccionando la Subred por 
+                                defecto que Azure creó por defecto en el primer paso. Listo, ahora daremos clic en "Revisar y crear". 
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mSInPywmVs_WLVJRPf4E7Bpt3wfYZq2et4V3SBbWaFIyXBYZc-V-OaWoy1ypKyWqdQexxw3u0A5tmgv0CaWodM4fdDwptslbyzAfepEhnPUhtXELk0evXui309UbenPo-pikVJ-FkeYwZ-jz_f4Xc_V_IwcTdjoUqoA-gLvQD0DM46b5PG4e9jTu2Uoayp6yE?width=928&height=922&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Una vez revisada y validada por Azure, daremos clic en "Crear".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mvN42rTBgLwxde6Je6GbdSi3-lQwbf_0K7MMQT8AfH8U38Fs6LCGxDil5NXSWYomMH-xFKhhQ_KXtd5kvY39ytcJOaKHK8noQZQ4nv2t3gbwxTj_IkQa-zKG3sp3OanXkoXwzVax5ZhjqFSIpRSCMJxl4Wk2P5U9RaNAJDArAF8zmkmKVJGgB6hDcoUpRTCV5?width=934&height=934&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Una vez finalizada la implementación, Azure nos notificará que la creación de primera máquina virtual se realizó exitosamente. 
+                                Ahora, debemos crear la segunda máquina virtual, para ello, daremos clic en "Crear otra VM".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mMQgd-jLp62PrOnlB-o2b3BUXBWdyZ7kFZrAvQY0scN8L6l7O8_PxQzC96Nkbj5Ot_yHxtWLEFc3AMVzuknAx0vzkcSEDA_nOZI2Q5qIiGrc_exatXsdlgytBq_SDyVUsYPHVKWZDnUdhNUtCzd26Js8dIP4DXZJSeZWratUJAglU7jm7hsosraDERpZVixRE?width=1920&height=671&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Ahora crearemos la segunda máquina virtual llamada "BlogVM2", nos aseguramos de que esté en el mismo grupo de recursos y la misma región, 
+                                también abrimos los mismos puertos, finalmente creamos el usuario para acceder a la segunda máquina virtual y daremos clic en "Siguiente: Discos".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4m0vctqzNXuEoldxbYTHIZo5bf9yD6PWZ9Df1M6zOow1_ZWMLSErhivj_5uuzMDDXr70g_Tlf61_FRz-L_VRMTkvi2SfL2ok5OjG07co5WMruuGA9OSSKBfPZBAkraFBwW1z8nEZJT1KtqXqVO3kkgQjkk5T3JRli8MkQiUKAkTU4ztlwxTiZ-OrNGas2CnrHM?width=1052&height=1125&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Para esta segunda máquina virtual, también dejaremos las opciones por defecto en la sección de Discos, y daremos clic en 
+                                "Siguiente: Redes".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mQV1PgCo9XHQzSlCzJDbczugUS1UCqA5ggPE2jogadNm3BZGjZ94JGW_i-diJBOnnDVNf9cMfHMAUk0eUXYfqwgFW5rIoJ_Nb7KfLgXLszdOUnz3Ba7E-coxJGqgJ3ayUW729oAdZ0XFM6nEliyrQlhiVjsTqjr3fftNY1AvJvK313ieTKGLrM0G3FVVHSy9Q?width=941&height=931&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">En esta sección hay que seleccionar la Red Virtual que hemos creado antes, la cual se llama "BlogVM-vnet1".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mSaKtP03A5ROZWTDT91v30pMO7ixhpi70AKDOxh-e7Z0RRXQR6VFBRLQduLpBW-75IuG80AjpA9ewyUhbHXWjmiOFqIzfx-1HWOrxFqC-ILPozelLnQHOlEKAjXuAvRS1hiC3jHObilj5X1eB98ThloxKZC3m-BGqeSetWvThk1pn8OHhnoHOhWwiv0z2nb6T?width=869&height=285&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Validamos la Subred y los demás campos por defectos y daremos clic en "Revisar y crear".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4m9w6eIEieJqdw31So-rm5IlvX4Z0URi3JWIb5h3txMW2v91WvL3hz4sIqFUceEltM_fT0iN-Qa-PbNOa8mBoq49_NA2rmLNbSPeyPXnOjcfniidxgQ74nvq29W__U4SMVcYuOgIpvibmo-hWOuZsf0N1cjD_Y_7MFgwOEiCNHb-PotGH-tAm0YvGmHXzDjO-N?width=831&height=929&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Una vez revisada y validada por Azure, daremos clic en "Crear".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mR7F2MFv2Z8qOsM2mkRSynT1izH0tFS2fpTOmebT_85sGrCXKXqzwLK2D8KyAn-Jk61Cwwl5M3lwoonX5Y4rBn8wvSdahhNndYGLQRFnypUWqt4j3l1ni0TPYEOn9eoGA-sX_evjNSQg86PyDLf13UFmpuJUGEnxp_z7i_ETyMcucRcDFlMXpG2IRQlcij8oo?width=1245&height=920&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Una vez finalizada la implementación, Azure nos notificará que la creación de nuestra segunda máquina virtual se realizó exitosamente. 
+                                Ahora, daremos clic en "Ir al recurso" para acceder a la segunda máquina virtual llamada "BlogVM2".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4m1uoWy5h_EcKmNCchMxuYc83bResO3U4oQeqU7XxP73zwFShY4sQYyB8NaGJrZAlEiylgMl84AkDM4YWSh04GGQ13j637_AqwWwVaRt8GnQcfC0JjQr9vfd6yz4ghgYATBzGZmOHku0cZaEOV-aCzaYgnIV8mysPpJkPuZybSZ1-cS4oAFig6a90G_bMf9Ao2?width=1920&height=669&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Ahora tenemos que conectarnos a la segunda máquina virtual, para ello daremos clic en "Conectar" y seleccionaremos el tipo de conexión por "RDP". 
+                                Al hacerlo se nos abrirá una nueva ventana.
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4movrLV-jqpEjyh0uZ6SzSenITYHeGVXUoCg9uHjUqkKA9Oig-jvEor8c9T02V60CkAvaUo7w9K5RZLe49OnR4SKPr7WgvQxozZod6joRmL3zHiTz9bAAjwbAqlAvMiCIhaQDvThAFETk2TXushb4DnefNR6BmiTEbw_kFgQlwbibnB8dJJ8qh0SoF6fhMHsOI?width=1920&height=855&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">En esta ventana daremos clic a "Descargar archivo RDP". Una vez descargado, ejecutaremos o abriremos el archivo.
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mHVP5ckYVROQ-OWY7BJhYCrB8rKyqeOKtPdPAU_HqbNickVt2ssMm4VqA71I7Y7ry9xJv254IXROH8yOFK8Q-T5Sd_TqHR9JUs-Ldshp90O7FZP2jHAPQOy2-7r9oEtfknZZhBXVwn0qzisLon0mIVLgFBd7u2j3egdllwc9emgLkzcZ0vH8fv7HXiw1f8TsF?width=1268&height=754&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Al ejecutarlo, nos solicitarán las credenciales que configuramos para acceder a la máquina virtual, en mi caso el usuario fue ".\azureuser".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mZ_cwXb17qnBM1V53BmT6utzQ7rwsEQsCDtnw0c6rtzQB8g9V7erdBcQmTjZAeUfynZcCCF4zBHA396ViMHIZN6sQXVoOy7qucbhiZv5bD-tdLGkgjc3-8V_gHyDFEmFLP9DAytVb-k3-KjDt8d378EwAfT5UHqb8xa7wBxh_8hqw00tFF685UYVDy4lOxKL8?width=1907&height=840&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Ya en la máquina virtual, tendremos que ejecutar una línea de comando en PowerShell, para ello, debemos ejecutar "Windows PowerShell" como administradores.
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mk7jIG8CcTN33hT_1jFoeSD1m1Co5fX5i97wtfNPDvEJZPzsR8BFHtfho1Gu7NoHlRAuhGg3wxUkPsgSAzzHWsY-AQdqiCwko_wpg4WJtWspVdIEI53o0fGTTWdNrfr1byBtboyeeOyf9Jc-rXIlYuifOIvIrvY0s_4D6TVDwMM9G4ROJPQMxN0NupRALaDKX?width=1918&height=1080&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Al hacerlo, ejecutaremos el siguiente código con la finalidad de crear una regla de firewall para que el servidor pueda aceptar/responder un ping desde 
+                                la otra máquina virtual.
+                            </p>
+                            <div class="row"    style="font-size: 12px; font-family: 'Nunito', sans-serif; color: #8d8d8d; ">    
+                                <div class="col-1">
+                                    <a title="¡Copiar!" onclick="copyToClipboard('#CodigoFuction')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
+                                        <i class="fa fa-clone" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col align-self-center">
+                                    Copiar el Comando de PowerShell
+                                </div>
+                            </div>
+                            
+                            <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
+
+                                <code id="CodigoFuction" style="color: white;" >
+    New-NetFirewallRule -DisplayName "Allow ICMPv4-In" -Protocol ICMPv4
+                                </code>
+                            </pre>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mEc-YBjNiRxJJtMvTUEcWRjvTiSVCylaHKWyQUPohRXbM_OMLKPnJ3EOOAtcj-hqVNycZj7l8GH9OtcEsKaIbk1p9Hn4c-_5E7wFAR4s9LOsmz2PWrxzvdsJaCBao9crSNNdKzI0bTHsUr8sUJeVF02a7ZtYnzd0B_Av7OpXvS_QaRXWtoZazH_Vw2c9hcdfs?width=1920&height=1080&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+    
+                            <p style="text-align:justify;">Y listo, ahora regresamos a Azure, nos dirigimos a nuestra primera máquina virtual, que en mi caso se llama "BlogVM1", buscaremos en la barra 
+                                lateral izquierda la sección de "Operaciones" y ejecutaremos un comando llamado "RunPowerShellScript".
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mmkzhVbl77H2gMY7oovJVcZdxnclCsOLfRzveYU8hohMgbJ6GghKb2n9QAcQSFyxJRhTeN9qOCDfIbljR5mO7j5ij8vS0yk-r9NJpFBDmlBK1Hjyzci9Ez3cEqUXa7Dml0Mseues1IUeNe9EYFwA5vN8cNH6ArB_KpQSpROF-D6erQKzhrq6_NWzzxWmIrNOB?width=1896&height=762&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">El comando es sencillo, solo será un Ping a la segunda máquina virtual, para ello solo colocaremos "ping BlogVM2" y daremos clic en "Ejecutar". 
+                                Tras esperar unos segundos, en la parte inferior o en la sección de "Salida" veremos que se Enviaron 4 paquetes, se recibieron 4 y no se perdió ninguno. Esto significa 
+                                que desde nuestra VM1 podemos comunicarnos con la VM2 gracias a que están en una misma red virtual.
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4myB5C_v4wDaBnksqSofhueBKVYG4ozOnNudIEmOo6uC7ygTOepPSQiDzDPtMCrOo1LjEqeXPfaZEggjHbSvkKsmc9MXiYhV34359bg7ieYXSfwvQi2XhfPeSp40cHdGjVcgDvLE4JSQ6P63c0AwiOrdSqDoPqVWCf3aq14l6LOjJzUlzwAlm9dR6FmW1llPjp?width=1900&height=886&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            <p style="text-align:justify;">Finalmente, te muestro como quedó el grupo de recursos "BlogdeVMs", donde podemos hallar solo una Red Virtual, con 2 máquinas virtuales, cada una con sus direcciones IP pública 
+                                su disco, interfaz de red y su grupo de seguridad de red.
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mC2VMTOJ-qr9U0BzpP0pKGJIfYVf_v2CfdfrfqzbfCkROatvMm3yO0UleC40e85oEe1Pqq69DExEEcYi0rMO0Aml-CDdqRpEP_l1GX6fRgftQaDqUSuwiQxF4HnsB4hU_fin0ooGciGIUfzw6y1oRvU3e0IruBCA68mDMY4zRygD5gDHJKqxpiXLY8iHFP9rZ?width=1519&height=868&cropmode=none" 
+                                alt="Microsoft Azure">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora la empresa podrá conectar el servidor de aplicaciones con el servidor de datos a través de una red virtual.
                             </p>
 
                             <div class="blog__details__text__item">
-                                <p style="text-align:justify;"><b>¿Cómo está conformado Power Automate?</b> Empecemos viendo las tres palabras que representan 
-                                    a la construcción de un flujo de trabajo en Power Automate o como antes se llamaba <i>"Microsoft Flow"</i>:
+                                <p style="text-align:justify;">Hemos aprendido mucho hoy, pero finalmente<b> ¿Cuáles son los beneficios de una Red Virtual en Azure?</b>
                                 </p>
                                 <ul>
-                                    <li><b>Desencadenadores </b>También conocidos  conocido como Triggers, son disparadores que reconocen de manera automática un evento.</li>
-                                    <li><b>Acciones </b>Son eventos consecuentes de los Triggers, en el cual nos ayuda a poder definir los siguientes pasos.</li>
-                                    <li><b>Conexiones </b>Son los permisos que se necesitan para acceder a las cuentas o recursos que deseo utilizar.</li>
+                                    <li>Brinda <b>aislamiento </b> de red a nuestras soluciones hospedadas en un servidor.</li>
+                                    <li>Permite crear aplicaciones <b>híbridas </b>conectando centros de datos on-premisse con nuestros entornos en Azure.</li>
+                                    <li>Es <b>multimodelo </b>ya que podemos conectar nuestras soluciones IaaS y PaaS para obtener mayor flexibilidad y escalabilidad al crear aplicaciones.</li>
                                 </ul>
                             </div>
-                            <div class="blog__details__quote">
-                                <div class="icon"><span class="icon_quotations"></span></div>
-                                <p>Ocúpate personalmente de lo importante y automatiza el resto.</p>
-                            </div>
-
-                            <p style="text-align:justify;">Texto1.
-                            </p>
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-                            <p style="text-align:justify;">Texto2.
-                            </p>
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-                            <p style="text-align:justify;">Texto3.
-                            </p>
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-                            <p style="text-align:justify;">Texto4.
-                            </p>
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-                            <p style="text-align:justify;">Texto5.
-                            </p>
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-                            <p style="text-align:justify;">Texto6.
-                            </p>
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-                            <p style="text-align:justify;">Texto7.
-                            </p>
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-                            <p style="text-align:justify;">Texto8.
-                            </p>
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-                            <p style="text-align:justify;">Texto9.
-                            </p>
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-                            <p style="text-align:justify;">Texto 10.
-                            </p>
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-
-
-                            </p>
-                            <p style="text-align:justify;">Por lo tanto, sigue aprendiendo, sigue iniciando conversaciones y, sobre 
-                                todo, no te olvides de alinear tus metas a un bien común.
-                            </p>
+                            <br>
 
                         </div>
 
@@ -275,7 +427,7 @@
                             </div>
                             <br><br>
                             <span>Iniciar una conversación desde: </span>
-                            <a target="_blank" href="http://twitter.com/share?text=¡Deja%20de%20ser%20tan%20tóxico%20con%20tu%20tiempo!%20a%20través%20de:%20-%20https://www.nickoelton.com/blog/red-virtual-en-azure-para-dos-vms"> <i class="fa fa-twitter"></i> </a>
+                            <a target="_blank" href="http://twitter.com/share?text=¡Conecta%202%20máquinas%20virtuales%20en%20Azure%20con%20una%20Red%20Virtual!%20a%20través%20de:%20-%20https://www.nickoelton.com/blog/red-virtual-en-azure-para-dos-vms"> <i class="fa fa-twitter"></i> </a>
                             <a href="whatsapp://send?text=Aquí%20te%20comparto%20un%20enlace:%20https://www.nickoelton.com/blog/red-virtual-en-azure-para-dos-vms"><i class="fa fa-whatsapp"></i></a>
                                                         
                             <!-- <span>Compartir en:</span>
