@@ -1,2 +1,4 @@
-User-agent: *
-Disallow: /
+User-agent: Twitterbot
+Disallow: *
+
+Allow: https://snz04pap002files.storage.live.com/
