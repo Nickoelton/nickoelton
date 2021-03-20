@@ -179,35 +179,250 @@
                         <div class="blog__details__text">
 
 
-                            <p style="text-align:justify;">Perame krnal, anda en construcción  .
+                            <p style="text-align:justify;">Bienvenidos a una nueva demostración, el día de hoy aprenderemos a como migrar una base de datos SQL Server a Azure, donde utilizaremos el 
+                                servicio de Azure SQL Database (PaaS). Para ello, primero debemos conocer <b>¿Qué es Azure SQL Database?</b>
+                            </p>
+                            <p style="text-align:justify;">
+                                Este es un servicio de motor de base de datos bajo el modelo de plataforma como servicio, el cual te asegura siempre de contar con un motor totalmente actualizado, sin 
+                                necesidad que te preocupes por el licenciamiento, con copias de seguridad para salvaguardar tus datos y sobre todo con un 99,99% de disponibilidad. En pocas palabras, 
+                                Azure SQL Database está basada en la versión más estable del motor de base de datos de Microsoft SQL Server.
+                            </p>
+                            <p style="text-align:justify;">
+                                Ahora, si bien muchas empresas aún siguen utilizando su servidor on-premise para almacenar sus datos, no quita que puedan evaluar la migración de sus datos a una nube. 
+                                Y si es Microsoft, definitivamente debemos de probar una migración de esas bases de datos hacia Azure. La verdad es muy sencilla de realizar, así que vamos a empezar con 
+                                nuestra primera migración.
                             </p>
 
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Microsoft Azure">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-
+                            
                             <div class="blog__details__text__item">
-                                <p style="text-align:justify;"><b>¿Cómo está conformado Power Automate?</b> Empecemos viendo las tres palabras que representan 
-                                    a la construcción de un flujo de trabajo en Power Automate o como antes se llamaba <i>"Microsoft Flow"</i>:
+                                <p style="text-align:justify;"><b>Primero debemos contar con algunos requisitos.</b>
                                 </p>
                                 <ul>
-                                    <li><b>Desencadenadores </b>También conocidos.</li>
-                                    <li><b>Acciones </b>Son eventos.</li>
-                                    <li><b>Conexiones </b>Son los.</li>
+                                    <li>1.	Debes contar con SQL Server en tu máquina, puedes contar con un paso a paso desde <a href="https://docs.microsoft.com/es-es/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15" target="_blank">aquí</a>.</li>
+                                    <li>2.	Debes contar con una base de datos, la cual la migraremos a la nube. Si no la tienes, te dejo un enlace <a href="https://docs.microsoft.com/es-es/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms" target="_blank">aquí</a> para que descargues una base de datos de ejemplo.</li>
+                                    <li>3.	Debes descargar la herramienta Data Migration Assistant desde <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53595" target="_blank">aquí</a>.</li>
                                 </ul>
                             </div>
+
+                            <p style="text-align:justify;">Sin más que añadir, <b>¡Iniciemos!</b>
+                                </br>Luego de instalar nuestro SQL Server, descargaremos nuestra base de datos de ejemplo, pero luego de descargarla tenemos que restaurarla para poderla usar, 
+                                para ello la almacenaremos en la ruta donde se encuentran los Backups de SQL Server:  
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mK7k18jncdLhkyqy4TKrGUqSR-ETwtkX46FuhK-7qM-plLXYhyDsRF0mrTKeD4zmswLHBe96LgfufvZyHCewttlsPMFOYKHYWkzg3bB5vYeJ_uW-GwWY-8HkGwhFboK7WSWEYUzxkMeJaM6Tzny4WgiwrU-xjd41hJjh9CGPYhm7Uha87YEhsTdzRvAJh4rlN?width=634&height=129&cropmode=none" 
+                                alt="Microsoft SQL Server Backup Location">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Para restaurar la base de datos, nos conectamos al motor de base de datos y clic derecho en la carpeta de “Databases” y seleccionaremos “Restore Database”.
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mc1geQkwGWE71QW9rLNDF5SnJN1Ahp4HTQpLbemq0qyP698xBXHkNKZuLk6onESNcbZ07rTvvxP15vEHUk9OSa_Gqxmnpnz1fFlRyQTJOG6a-dIng9YdnUrkqs_0wej2esKo7A9sG23E9CoeciD0OamtGnh5bSKECoxgLEVVv-WS4YYeiwvhuRQa1w6pl3Oid?width=726&height=471&cropmode=none" 
+                                alt="Microsoft SQL Server Restore Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Se abrirá la ventana de restauración, y en la opción de fuente seleccionaremos “Device” y daremos clic al botón de “…”, en la ventana de seleccionar backups, 
+                                daremos clic en “Add” y buscaremos el archivo .bak. En mi caso descargué una base de datos de ejemplo llamada “AdventureWorksDW2019.bak” la cual usaré en esta demostración. Finalmente 
+                                seleccionara daremos clic a OK..
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mVB6MHvhnVdmcUvJV9tzH66SKWfUSrq9nQxPajLlaaq3l6a8xC2QBBY05ht1AadnCMpHWyGU2eCXh_cZAJp_IbKQWxBEHcvrT876wbXY5GbpOkphCj0wCX7TT305C4k9JWBA6ODD-fnoj1fuqH8UibJvSIlvjAS7gxMg3fpyaplBDXlrryHIprAjJhoy4HkIc?width=1364&height=730&cropmode=none" 
+                                alt="Microsoft SQL Server Restore Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Microsoft SQL Server Management Studio se tomará unos segundos para validar el archivo y en la parte superior izquierda nos notificará que está listo para 
+                                continuar con la restauración, para iniciar con ello daremos clic en OK..
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mcJ4rsB1MXqY0JIvXtfaykZqByArqcbk7jHu3avbS7PMsLArHRDRGOrOAx90AAQpnJdRdm_HoUx7dCCnKkahTZKfVV-Ay3RZykrumfa9LpLKWklyuwvA_Z-fN31nQuUHYxPZLJCkAbo76aOFoLQF-M8HAXU8YSk9D87bBA8US9D0vTS94uBfW31sFkUlLM3hn?width=883&height=559&cropmode=none" 
+                                alt="Microsoft SQL Server Restore Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Una vez culminada, nos notificará que la restauración se realizó con éxito y podremos apreciar la base de datos restaurada en la parte izquierda de 
+                                nuestra pantalla, exactamente dentro del explorador de objetos.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mUE3EsYymGLBzN3WS2Os65Xja9HUos9YYyiF-FtaLP67-hD0nbTOmYQGSzjr9OAmemO4pkL7oQAi--0SKlV9Jebn_WvbDFyaL-cLaOPovqI1OPw2RY6XVeO6-HljUAwnW0oZXqSniGxq4Wnaz19sfbYlq6-p0vbN-jWpqfe-1yxFJcYjHnSGT9FRdB9Sp67wI?width=1208&height=683&cropmode=none" 
+                                alt="Microsoft SQL Server Restore Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora, creemos una nueva consulta (New Query) y hagamos un SELECT a cualquier tabla. En mi caso seleccioné la tabla empleados, la cual cuenta 
+                                con información que pareciera que es real jajaja, pero al ser una base de datos de ejemplo, nos trae información lista como para poder practicar. Entonces, llegado a 
+                                este punto <b>¡Ya tenemos una base de datos la cual migrar!</b>
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mhNY0aMGtmF1Gg5nfcaLDRSj1rl4gZQ7TBbLyDjx3wk5501dOGkLOteFE_0w9UiHrSDsc5psOqHgZbTao4FVH6Vs0RDzVtDSPHCDcqq5EtXCQQYtPcNirNTY32p1sOXWhTQ9aD_iFquJr91997J0Z6UmDIkC6rwa-obUkx8eFfA_MywBJtPkM0tgZXPG7M4CE?width=1366&height=710&cropmode=none" 
+                                alt="Microsoft SQL Server">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora.
+                            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             <div class="blog__details__quote">
                                 <div class="icon"><span class="icon_quotations"></span></div>
                                 <p>Ocúpate personalmente de lo importante y automatiza el resto.</p>
