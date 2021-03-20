@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- SEO -->
-    <title>Migración de una base de datos SQL a Azure - Elton Rodriguez™</title>
+    <title>Migración de una base de datos SQL Server a Azure SQL Database - Elton Rodriguez™</title>
     <meta name="description"
-        content="¿Cómo migrar una base de datos SQL on premisse a Azure? - by Elton Rodriguez™" />
+        content="¿Cómo migrar una base de datos SQL Server on premisse a Azure SQL Database? - by Elton Rodriguez™" />
     <meta name="keywords" content="Tecnología, Microsoft, Microsoft Azure, Azure SQL" />
     <meta name="robots" content="Mirgación de SQL a Azure, Elton Rodriguez"/>
     <meta name="referrer" content="always" />
@@ -162,7 +162,7 @@
                             <li><span class="icon_profile"></span> Elton Rodriguez</li>
                             <li><span class="icon_tags_alt"></span> Tecnología, Microsoft, Microsoft Azure, Azure SQL</li>
                         </ul>
-                        <h2>Migración de una base de datos SQL a Azure</h2>
+                        <h2>Migración de una base de datos SQL Server a Azure SQL Database</h2>
                     </div>
                 </div>
             </div>
@@ -260,180 +260,322 @@
                                 alt="Microsoft SQL Server">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">Ahora.
+                            <p style="text-align:justify;">Ahora nos toca descargar el Data Migration Assistant, el cual nos permitirá evaluar y migrar nuestras bases de datos.
                             </p>
                             
                             <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
+                                <img src="https://snz04pap002files.storage.live.com/y4mpSvYl_uxF0rJuK47o8FqzmEiUc5S9k77klxdugzvB2Bwp-5tR7KfV8Ml2rJWdvRH_E864vIly3njhIDO1OgwQ5M_m5-8b5pa-DDGE_tb8PCF4znEIA1TLcsnFdTsIUrlEpE3ISi7BnaRHPNu_S-1vnN53gVJxNppSZhVTmbAVTNgNhhkhdTXdy3VPwdMMazq?width=871&height=352&cropmode=none" 
+                                alt="Data Migration Assistant">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">Ahora.
+                            <p style="text-align:justify;">Una vez descargado, ejecutamos el archivo .exe y daremos clic en “Siguiente”.
                             </p>
                             
                             <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
+                                <img src="https://snz04pap002files.storage.live.com/y4mJuMf3bLNNGrh9XIl7uuCJ-AATD3EsXeoCbdoynA91VgrF7OR9j2avVMankleL7Z5AweC_xALcD7h_VA32YSm_10EQbqyTnimCut83lYCXbX77J_VUvwRMAC6SDACDj9J0jXIv0euZD3eDRx0P4H6Xs1ibF-Ah5mgoKHfDhkJxQoiJ0kTh7IDrqx5oucK0ftE?width=516&height=409&cropmode=none" 
+                                alt="Data Migration Assistant">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">Ahora.
+                            <p style="text-align:justify;">A continuación, aceptaremos los términos y condiciones y daremos clic en “Siguiente”.
                             </p>
                             
                             <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
+                                <img src="https://snz04pap002files.storage.live.com/y4mIIs4ep7WcmyfqVxqxcLCk4a0_bPkEgzr2h5urVQD9KeID3nT_VPxXexlIP3YWtSEQ2O-WILeymysyyv3RPaHFEmkCLBwjDXgzzIcdIVaqMOUJsnvCYPo1ovNlnYC-n1wbr0CbpK8-NQsWDZ8_f55BDnjVwMQHpLSsGfse75nfs1UFH5pvOjPvq_zY27hsg4x?width=518&height=409&cropmode=none" 
+                                alt="Data Migration Assistant">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">Ahora.
+                            <p style="text-align:justify;">Finalmente, daremos clic en “Instalar”.
                             </p>
                             
                             <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
+                                <img src="https://snz04pap002files.storage.live.com/y4mZ5WGTI5_kd0c8yj2yupcqoBgxWNPJRaUqnWz16CuPeMdte0q6HHaU9ZXp11cLGRN_SYv0WrXM1u85LjyiWl2V0t3P1oYDzBBmepN92IVgOtwn46eMEreYZZfNjgUhKOC_9eawDWXq3Il-6q9UYByi9QVY8CZTk6u47Vo0u7zKPkMzNm-T_YikeRKOVhoYbx6?width=513&height=408&cropmode=none" 
+                                alt="Data Migration Assistant">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">Ahora.
+                            <p style="text-align:justify;">Una vez que culmine la instalación, daremos clic en “Finalizar”.
                             </p>
                             
                             <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
+                                <img src="https://snz04pap002files.storage.live.com/y4mwAYBJS1P7etLA7gCn8mmRsG9Gt0OR3w1zkTWEiRlQAm-qrlbb03nQC7ax5HubYnKp1BmbdjA6P28GJUUhTLmikQ6lC-vNx4IjH4ZOzpKxJN4xj3yfnNi3w-t6kEfFuDDmQXKAEwHcgwyT_1kpuOTWqq-fLrjGzvwNk6Utbh-VsqpvQM5cHQu6F-q95vH9qRr?width=509&height=400&cropmode=none" 
+                                alt="Data Migration Assistant">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">Ahora.
+                            <p style="text-align:justify;">Ahora, en nuestro escritorio tendremos el programa “Microsoft Data Migration Assistant” el cual debemos de aperturar para crear nuestro primer proyecto de migración.
                             </p>
                             
                             <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
+                                <img src="https://snz04pap002files.storage.live.com/y4mYyukqHM5Doy2AOdNp06w_fL5mGNhhh87eJv7A_FA10Y-caOpRNx3_QHhpUb0cPoNtPdJjuFnJvf4wuzHprPCzRXZYSSL4qa5h4ZwsT_7dvn43qhThZd9Um5ZjxlwmoMjbLwLDlOjqOBlS1BhdjZfqfVMfFN5Nm8cWzt09CxtPPngNmrT41GG4s8acjSJR15W?width=1073&height=503&cropmode=none" 
+                                alt="Data Migration Assistant">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">Ahora.
+                            <p style="text-align:justify;">En la parte izquierda de la pantalla, daremos clic en el ícono de “+” para crear un nuevo proyecto.
                             </p>
                             
                             <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
+                                <img src="https://snz04pap002files.storage.live.com/y4mhEMtHRMZPzy0rgUE2MbNgW27OWGMmUrSZfZ-gTIiPEs7JZAPxk7hqUyjq7380k5UsTRYPfISqAt4QjjVP6NvMC1mi1wdKmAuoqUzZMxMcivhLVeEg2qLWaynqJbu9bP6TWhpQtJ2RP4hQ23bY3fEWk8Du8DZkLittlug8EUzqw_uO2hQnRVHqmnUkLYIu8V_?width=1044&height=631&cropmode=none" 
+                                alt="Data Migration Assistant">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-                            
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-                            
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-                            
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-                            
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-                            
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-                            
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-                            
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-                            
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-                            
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-                            
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
-                            </p>
-                            
-                            <div class="blog__details__pic">
-                                <img src="#" 
-                                alt="Azure SQL Database">
-                            </div> 
-                            </p>
-                            <p style="text-align:justify;">Ahora.
+                            <p style="text-align:justify;">A continuación, seleccionamos “Migración” y le brindaremos un nombre al proyecto. En mi caso el proyecto se llamará “SQLAzureMigrateDemo”. Luego, tendremos que 
+                                seleccionar el servidor fuente donde estará nuestra base de datos que será “SQL Server”, así mismo le indicamos que queremos migrar a “Azure SQL Database” como servidor destino y 
+                                finalmente, indicaremos que deseamos migrar, que en mi caso es el Esquema y los datos. Una vez completada esa información daremos clic en “Crear”.
                             </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4msJFKuAOBK5mdcKJj9pAHD83ro-8NOON0Bo4cLLy_f5E7yDcwQW_bm3aWZyUbpYqUvRhIMt__IL4_e4NxTE8m53gBEI6F8U6rYPyO54PGJlR9hJ73yeSh1vaAnEyZHvbysffJ6w3WTB5KbW4_uA7Q1zFesuKtC1FDz7b6Gr9BKtUE2ZyojFezsVVm8Nw-JDNz?width=1074&height=638&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            <p style="text-align:justify;">Ahora tendremos en la parte superior los 6 pasos que debemos de seguir. 
+                                </br>El primer paso es seleccionar la fuente, para ello nos conectaremos a nuestro servidor de base de datos y daremos clic en “Conectar”.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mZfyNR7Fxc7XUG5KAOMxlsowjnoYdhWEr7s7Jk7hyRJj1rg06XMMWVO3d1XYCN0Go7VeLCZH5qPx9cO0xHCpHfJ9b93HZGpricyAJ2N4bFIYrHZAeejSDh--kwtAEoKSQ1kds8YBpndD4gjrOEN3ZO3Y9oyxfWNdcOBcE0LS4eVndWWbHyXz3Y213YgC-Xzml?width=1366&height=736&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
 
                             <div class="blog__details__quote">
-                                <div class="icon"><span class="icon_quotations"></span></div>
-                                <p>Ocúpate personalmente de lo importante y automatiza el resto.</p>
+                                <div class="icon"><span class="icon_error-triangle"></span></div>
+                                <p>Estoy seguro de que tendrás un error similar al siguiente...</p>
                             </div>
-                            <p style="text-align:justify;">Para poder empezar solo debes dirigirte <a href="https://flow.microsoft.com/es-es/" target="_blank">aquí</a> 
-                                para luego iniciar sesión en una cuenta Microsoft <i>(de preferencia una cuenta empresarial)</i> donde podrás probar alguna. 
+                            <p style="text-align:justify;">Para solucionar este primer error de novato solo debes de marcar la casilla de “Trust server certificate”. La razón principal por la que se debe cifrar una conexión 
+                                entre una instancia de SQL Server y cualquier aplicación cliente es la comunicación autorizada entre ellas. Esta capa de seguridad puede evitar la filtración de datos 
+                                confidenciales no deseados o excluir la posibilidad de por ejemplo cualquier ataque de inyección SQL.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mejSybwD-6b4sxE8lvCjXe377od3337PtR05eP2xGLbGW5y385xZ_MDAk2k-vbSzDDCC_OOugIyPLt9t5qwdGhUJxnw_ScjFffnseIPf7j6lndRscXzp1B3AElD8Mm7BIWXgzLtKnZrqKRzkTgOeo4Cx-Ai7DaTDFyr2x5PpV7ylxmIGup3H4QU8WHXkL82RL?width=1366&height=735&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            <p style="text-align:justify;">Ahora sí, una vez conectados, procedemos a seleccionar la base de datos que deseamos migrar. En mi caso será la base de datos llamada “AdventureWorksDW2019” y daremos clic en “Siguiente”.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mkBlA9myvdIUqkcvLUZpdHUXyQp1XcBZLJ0StvjhADYW6dqwY8vOTLa5of2GUaeUsnobTCmt5vrIs8MyAC5bBcSvjG_rdJASVzLYVbp925uSQqfkcZ0yidzL7Fa1-8XxZstoPF2JKA-vY2ibuzKZMtjXyAsZSD3C2-HyNOmCflAs9WpqX9U4Uvc6D-stYF539?width=1366&height=738&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ya nos encontramos en el segundo paso de la migración, donde la herramienta nos pide el destino de migración. En nuestro caso nuestra fuente de destino es el servicio de Azure SQL Database, 
+                                para ello daremos clic el enlace que nos aparece al inicio, el cual nos llevará al portal de Azure.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mHwbqqC5U12dsIB9xrq8d04fL1pgRpbuswkX_4X23DRrQEhuqZmyExxGtof8qZDe1ZOthjhEEkcs4Pku6j9O6dUbzEP1Gho_AeBL1B88gcVgYeHjKMsbB8_8DFzT2Fty8PG9pL0vFRb3hpRdy2qodWNC_Gggugeb7Qy37qgUjWjWOEAk7VwGuMZK4BZcFDpZf?width=1023&height=609&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ya en Azure, crearemos una base de datos SQL, en mi caso estoy creando un nuevo grupo de recursos llamado “MigrateAzureSQL”, el nombre la base de datos en Azure será “AdventureWorksDW2019Azure” 
+                                y estoy creando un nuevo servidor, el cual se llamará “awdw2019”. Recuerda, los datos que coloques como el usuario y la contraseña del servidor guárdalos porque los necesitaremos mas adelante.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mjXiorC23yULkBjGaG9UOawNrILZtmtiEbSa7O9OYme4SGgHo2lmZgeqoR7V_PdYnaxKFtd3q1Old1r74q6QR89GMIewitEet6lK-86Ccp6lvG5cKXAimNJz9E8jba2-L1rWNkFxEJoDu8z6BL5GRtV-1SYxaqPT_vt82tFY4TF3TuSXcyhdLdsYuz4z4Q9iU?width=1366&height=660&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora configuraremos el tamaño de la base de datos, para ello en la sección de Proceso y almacenamiento daremos clic en la opción de “Configurar base de datos”.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mZbsO-cQLs9HSRs0HxaatIJds6vHyIh1cf4d2Pamox2aTiIsRCpSkZg-ftMM8Bgj2257YMjEHvLigoqA_ZNkh8g0Zo5ubxP215FRP0vJXBd_jyD-ex1cYbiLsXnV5hc3cH4KTQKK7JUqMOQ_I5SJnNQkFm-R6vUWp1j269TIbX3OWdmtk-9lZY-Llfc4Bjq2z?width=677&height=602&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Configurarlo es muy sencillo, para nuestro caso usaremos un esquema basado en unidades de transacción de datos (DTU). Para configurar ello, 
+                                seleccionaremos el nivel Estándar y para esta demo brindaremos unos 20 DTU con un tamaño de 250 GB. Finalmente damos clic en “Aplicar”.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mlTJkUcNz59Oe-o5z1stJhSllnsjKb76J6VcETNfOAmYFwnSmvdzK1XAnKwW2uBWihj2XXqe0h5Vi-2xAE2-eLJFL_6nM-FcWHa6XXSWRJcjt-i2JbtXeIpS4OjSfE6JWOeH_yfNLI_2zDx2HPgVYZh1mUWWKMgV4HXnyNyeGx8Uj9MKrueeHKOTkpnxJ8G0U?width=1364&height=613&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">A continuación, con toda la confianza del mundo, daremos clic en “Revisar y crear.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mcorKMBR3aMrx9KDEW1wy0kh2qICm3GQANTdW9VabQ_MbuVuM4hLdJbfJV3gs0zFaG-m2wmAUwbeyGifn4bsGaXxWULNgpUBL_BwysE20PaMuDk94EDu_YON2PjYI7y8x95aCjAUhibJHavCrjDI8gWMWGl6wu-cI1NwnfVWvLDdFX9fmmRCJ9SVmj006Yyfp?width=674&height=607&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Bueno, Microsoft nos muestra un resumen de lo que vamos a crear, así que solo daremos clic a “Crear” y a esperar…
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4m99X6jett5HcI5D1szl-YhaVs22LbTnxJezoSztwNlNytWFPi3Kc41iTEMB_zJ6eMjFSTN7EMpT25z1GWX5NJPtMmotCOgZAofCD5p_PH6HATdWTXtnhUMt-NeCHXE7RV6tTLhcuDCAIFwhyYxJUfcr0203N9yotEeacZrMXmw0jvBhSRl9Sj_l-fbi2B6jfI?width=1319&height=616&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Una vez finalizada la implementación, Azure nos notificará que la creación de primera máquina virtual se realizó exitosamente. Solo queda dar clic a “Ir al recurso”.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4muOZiogSXZV2wGDPvAHzf8-GXLB2Uoazw2WhlbONDUaKSDH1e3Ou9ThdTFnDs2u7C06llutyJMd-G3rMRvcddjIMCjIcfkYHmqaUfLVZHzJ7aCk8Ym-CBReJ1_FoLEuSjww9vLUI6V1oAwFCBlxrwwwE_wGd5Pcs4fYSNsTM8rUQZYqbpVGMzXEkaETB_TK3w?width=1366&height=428&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Dentro del recurso, en la sección de “Información general” tendremos que copiar el nombre del servidor, porque este es el nombre que colocaremos en el Data 
+                                Migration Assistant.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mQ6NvDq4yyOZpPpVvwrgyFQUAoxuJA2yRyn0NQL_DSeA3b-wr9kGxMFrOvD_Kbv3sMsj75mKoMNfIR7J_aZJXvXywGGqQYY-0k1TvYYpFh1bLqd8B0lnt6XYIIeot1ntMCn9y6cvdlTVDixiuwfVV9XhqeGciO3bQdT2yNfdSMAu8GXXGjmiwzed-ashs4Jjo?width=1343&height=597&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Pegamos el nombre del servidor copiado desde el portal de Azure en el Data Migration Assistant, indicamos el usuario que indicamos al momento de crear la 
+                                base de datos en Azure y daremos clic en “Conectar”.
                             </p>
 
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mUuNI79DJCAzLqSw8TMAS9BMB9FM8mHBwixIWjvOZNiQ7bsHRIOa0fuaUt_jcXRvlSewKHEIPukuW6O6Y-MlQ8m1WZ7Oywg8H-Sr1IFULas7S2fm8UqEemr66aUGKUTGMkZfUJWyAr09sNRHe2dRDTzcujg_lBtTMTAW7op_c8DDfaYMWHksUx_qauUAR2U7V?width=1366&height=738&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div>
+                            <div class="blog__details__quote">
+                                <div class="icon"><span class="icon_error-triangle"></span></div>
+                                <p>Estoy seguro de que tendrás otro error similar al siguiente...</p>
+                            </div> 
                             </p>
-                            <p style="text-align:justify;">Por lo tanto, sigue aprendiendo, sigue iniciando conversaciones y, sobre 
-                                todo, no te olvides de alinear tus metas a un bien común.
+                            <p style="text-align:justify;">A ver a ver ¿Qué pasó? La respuesta es sencilla, los servicios de Azure son seguros y es muy probable que la IP de tu máquina o servidor no esté reconocida para 
+                                conectarse como fuente segura al servidor de base de datos en Azure. Para solucionar esto debemos agregar la dirección IP cliente (Nuestra IP) a través de una regla de Firewall que nos 
+                                permita acceder al servidor de base de datos en Azure. .
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mb5y7c6lm8Bm9Gt5AgmiBYyxbtDeupUIsd3gfuNKXenMjMm1T0ceoeqz11PmCC2MhIOBxCvcN3GF-P98T87fq96uuTvr-PA_hVIk2ez_Bjn9OHCrG_FWxW82I3aQM41ildBvPXalbI7R8rcfvxvVkskcTn2Be137Uxl8zPA3yO1y63zMveSk7UII25w0ogNU2?width=1366&height=692&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Volvemos a Azure, y en la sección de “Información general” de la base de datos que hemos creado, daremos clic en la opción “Agregar la IP a la 
+                                lista de elementos permitidos del servidor.
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mz0M8ebXlA_nWgz4IX--ST7MA-6WVNlUtEJqHgs3GeLixZqVELLcMil_GWaSGcZRknpigU5ilkqqYvWLN9oZno9jaatFi2YXiTjbVbjJ59ovTHPVghJDuIjKM4MM34Ly_wtORTPK3FdjWGjyUNy7smUjXTVBbdjudegz2X8vSFAVkJSADGYBquEB8mP1Ackor?width=1366&height=330&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Ahora daremos clic en “Agregar IP de cliente”.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mc5niVCrQj1UiNd-T3wRBBSfe2TrfuSQIvJUaqwW-8Fva7VW299WRoDjkjttt0NNEFaXLYdbIG34ZW8VTepNNMA3_KU_ekN_5HwxxScEAt-gAmAcFavYm_eRrAZ0bKllDKF_KPZ9z8L7ts9dRmzC5owmPyZH6BWvHsNFcP8-VfBNlm7CIADHT8lV4m3axVX1k?width=637&height=575&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Podrás apreciar que en la pare inferior, en la sección de “Dirección IP  de cliente” se agregará una nueva regla automáticamente, una vez lista y sin modificar nada, 
+                                solo debemos dar clic en “Guardar”.
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mMvrIxlH9LCQnpj-e_X70e2gMfF-SrRYGuqze8fFAnliq62-_hDJw3f7iT_csd3ayJbUD_U-V7IgUrlm6sczBOQIJe2c6Q98lIrHnSdQWaiWAp49hfnnmNZVZ14HP2A7lVqOeXeNlYHGKBlP9ntp-_t_AZdOkxZ-TPSGmkn2SyClgJ0vvBSJqO2FivF0tjnUy?width=638&height=609&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Empezará la implementación de la regla de firewall agregando nuestra IP al servidor, con la finalidad de poder conectarnos a este. Una vez finalizado, podrás dar clic 
+                                en “Aceptar”.
+                            </p>
+                            
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mtzoHe9XIRL6sut9uVb0lbkhhO-JRzk2n7qXzFzhyDmrR6BI72zet13HvxLot0RdpJDQkiNpBzrYh0GQ7qzwAjB4sL_8NgD4lHQ6afTqwQlwxqqCBOIv91t1CJYHs_LJa-RpLysobtN5V0Z7earbLvc3EDNqSi_V-uCmO4alMd2XTBV6FcdzWtSZE6Xjt4m2w?width=1362&height=283&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Volvemos al Data Migration Assistant e intentamos dar clic nuevamente en “Conectar” y ahora sí, dentro del servidor en Azure podremos apreciar la base de datos que 
+                                hemos creado, en mi caso se llama “AdventureWorksDW2019Azure”. Solo la seleccionamos y daremos clic en “Siguiente”.
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4m7zbd4fPqF8GArS1TOPuyxaFqjPqCn0XPXNoCwCVfc2Dujn0mfA7lxuyn5jy0DXKJ6ScSTLygnNut-jILCpjh1Q3QIrFv_XmyC86CHsdSRdBHAFJoOFbZ78K2yaCera7szgKsYSgUif3MBLOds2saY65otgGBKWVZwI3p0hnmKGnquVGy90xdE-xmXQO81Wbe?width=1366&height=736&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Teniendo la fuente de ingreso y de destino, ahora nos toca seleccionar los objetos que deseamos migrar. En mi caso seleccioné todos, pero ustedes son libres 
+                                de seleccionar solo las tablas o solo las vistas o lo que necesiten. Finalmente daremos clic en “Generar Script SQL”.
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mgfEOj6Gtf1HwlsaOIXDBgcrO2JKehfmaOBv8zsrfX-rInb6fWN3Y2vm0ac1Ivl3ZF8l-VdBTt2vuUWNlOTl7nsOyS97TzPKqebFhj-cGrvSLJ5OYk3FrSwJeY_BkEtXiselLQexc_xDeE2rx5FW-yXcE8ESYbDNQ1-uVOueiRKYDQD2GaKdQhBF8D0gqlGKB?width=1366&height=738&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Una vez generado el script, es recomendable guardarlo, en caso de que nos pueda ocurrir algún error. Una vez validado todo, solo daremos clic en “Deploy schema”.
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mw1yPSVtLoFC2xZWver5vMwi0TBHOkklOdJVSIMam14xVR3BrTNdz5gy_uCwgbTHn1KZMNMbSij8ouKFLFjAg2s4_641b8117o_Kxsvn386st9gwLavgVSG4vCa74Mh5U8k39Bi0W18XfjzelUQ9PSXgz7NHh1wRkLNYbocuLU3NvTGtMOmlMHdl4zWkZGrpB?width=1366&height=737&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Acto seguido, se empezará con el despliegue del esquema. Mientras esto sucede solo nos queda esperar con la esperanza que todo saldrá bien jajaja...
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4m7dq4Lu87rbe6V_3EeZ_OZEtsF3fzB52hN92iVl1_Gg76C6SBJAUvghwP8sQvDXidJl8pjoacCRuG_aROosqtjUEYcgh4k9vOqWA3xnaUyELEoliyFZixw1VShVCNHQ0TihL8056ebxyV6VmrdLRsOYJBR4Dd0-Uj5-WCms45xmgCeU97R8y7ol7qAyHzyaa_?width=1366&height=735&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Una vez finalizado, les recomiendo guardar los logs de resultados del despliegue del esquema, solo deben darle clic a “Exportar” y 
+                                almacenar los logs donde gusten. Finalmente, para terminar tenemos que migrar la información, para ello daremos clic en “Migrate data”.
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mTY__E07Huv5HxsBXrVvIQpRfKPG8Rb2RWMRhWWppZq3YuuanEPvn9lsB1ijyTO9WtnRNUspcAYLVUSyOMOIQ4Ij4TGLL5AYc9S_45YIJiXJtH4Geuc2XOllob5L1FyO8KNvaGK-J7oEFf3A_KPFntQbNTO80b7OthaJpOzRINGaVmxXbYhcXi1z4rhbjpNUj?width=1366&height=737&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">El quinto paso es seleccionar las tablas de las que queremos migrar la información a nuestra base de datos 
+                                en Azure. En mi caso seleccionaré todas (Que son en total 30 tablas) y daremos clic en “Empezar con la migración de datos”.
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mr9aOiMtY6D5vqKpT-f5pWqKP8W6RNHj9DVLWFRY3dPweAZrsKoL1QGcjSrkdZ1dNL2YWKNo79_en9S2uyzkJlJnIBx9kAOvZKGjJFrxOibwPYB8ZGkAY3iVhHtTAYGDShOnwHHGgAn2M0DNxBKPgO7oUlFRiZuTM_uon4UWP2rzdAUdgA820Kf5Vba9GtqN_?width=1366&height=739&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;"> <b>¡Es tiempo de irnos por un café!</b>
+                                </br>Desde esta pantalla podremos visualizar el estado de la migración de la información que vamos teniendo. Este proceso demorará en base a la cantidad de datos que tengamos en nuestra 
+                                base de datos y de la calidad de conexión a internet que tengamos contratada.
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mEOkrGKx6b_2PQtXvb-pGnb2_Xd0JPOysgH2eXhsQEOvXyCxG_cX1NE4crj60zeCv8cOzjYGdJskS3OMSaXUb1cwzvazPYNhkhLZZQ0glAt_bFz13pYlapB9Fdxt635EaoT0_zf0FxEWuLb6BihAemm7j0hACnrQuVFPIlJWjPFNH8hIE-pq1h7cIWbwvr1O9?width=1366&height=734&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Una vez finalizado el proceso de migración de datos, en la parte inferior podremos corroborar el tiempo de duración de la migración.
+                                </br> <b>Ahora sí, ¡Estamos listos para validar la migración!</b>
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4m9FeFktghdIpt0nt6_KWLal6abd0Qf6cNuBlVx3kEHLGVKpREMiQWMzDmODrpR2yqC6fHnFFakxUjVLhhZ3bf-QKNgOsbHp0m6CmLi-hctxcnYtCFvf3BD9eh1gUVc-ffiLwD6fpG93L1kx9tNIo3nt07kFqxc8Q_436FfI8-BaMx-6lNkkWeHnq9bTi97h1P?width=1366&height=735&cropmode=none" 
+                                alt="Data Migration Assistant">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Regresamos a nuestro portal de Azure y en la sección de “Editor de consultas” iniciaremos sección con el usuario y la contraseña del servidor.
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mkyTT-2TAFhHp-7T2ducTtDrpesQgSR7AOV5j8fvclOeefNxytW5AI6-U00nN1YCf5EQ83JMQ3Rkx_tLccv-TDUDHjkS6xrG_mIDv5VKYskrGDJCumZl19uN4yR8Cao3ip33QuEXp4Uo3ar-ZWwv9q16ssLGYcXlJfmaEIv6hSHc8dYav_hR3aQj4n1jZn9eL?width=1366&height=598&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">¿Qué es esto? Si, es el editor de consultas de Azure SQL Database. En pocas palabras tu SSMS en la nube. Y como se puede apreciar, 
+                                desplegando la carpeta de “Tablas” se encuentran todas nuestras tablas tal cual como las teníamos en SQL Server. Y la pregunta del millón ¿Y 
+                                también se migró la data? Pues para corroborarlo ejecutemos una consulta, en mi caso haré el mismo SELECT a la tabla Empleados.
+                            </p>
+
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mGpnLnx-e38k-p1uVolqDbVRdJCCHY_5mBqQCk-JXtxVYDGWOULbYGCzcMvWypmMHwZCPPj_fBxA0vxfOreRwFOU-OuPbTiOrBqSVCFw8lOQCUyLVN1SEKzJoy5WtUOEHVVCeQO3Z1XcdoypziZwBWHa-9utrnq-wGZOA9OFTDWpNexDDlZQcV2rMmqkhDSK3?width=1366&height=616&cropmode=none" 
+                                alt="Azure SQL Database">
+                            </div> 
+                            </p>
+                            <p style="text-align:justify;">Y se puede apreciar que están los mismos datos, en el mismo orden y respetando si son campos nulos o no. Esto es emocionante, y ahora toca que puedan animarse 
+                                ustedes mismos a llevar su base de datos a la nube. Como comentario final, si estás pensando llevar una base de datos de producción a la nube, te recomiendo realizar antes una evaluación 
+                                de migración de SQL Server. Si quieres conocer mas acerca de cómo realizar esa evaluación antes de la migración, puedes entrar <a href="https://docs.microsoft.com/es-es/sql/dma/dma-assesssqlonprem?view=sql-server-ver15" target="_blank">aquí</a>.
+                            </p>
+
+                            <p style="text-align:justify;">No te olvides de compartir esta entrada para ayudar a más personas, hasta la próxima.
                             </p>
 
                         </div>
@@ -445,7 +587,7 @@
                             </div>
                             <br><br>
                             <span>Iniciar una conversación desde: </span>
-                            <a target="_blank" href="http://twitter.com/share?text=¡Deja%20de%20ser%20tan%20tóxico%20con%20tu%20tiempo!%20a%20través%20de:%20-%20https://www.nickoelton.com/blog/migracion-de-una-base-de-datos-sql-a-azure"> <i class="fa fa-twitter"></i> </a>
+                            <a target="_blank" href="http://twitter.com/share?text=¡Migra%20tu%20base%20de%20datos%20SQL%20Server%20hacia%20Azure%20a%20través%20de:%20-%20https://www.nickoelton.com/blog/migracion-de-una-base-de-datos-sql-a-azure"> <i class="fa fa-twitter"></i> </a>
                             <a href="whatsapp://send?text=Aquí%20te%20comparto%20un%20enlace:%20https://www.nickoelton.com/blog/migracion-de-una-base-de-datos-sql-a-azure"><i class="fa fa-whatsapp"></i></a>
                                                         
                             <!-- <span>Compartir en:</span>
