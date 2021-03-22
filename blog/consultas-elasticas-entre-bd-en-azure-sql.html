@@ -178,8 +178,19 @@
                     <div class="blog__details__content">
                         <div class="blog__details__text">
 
+                            <div class="blog__details__text__item">
+                                <p style="text-align:justify;">Bienvenido nuevamente a una nueva demostración. El día de hoy aprenderemos a realizar consultas elásticas entre 2 bases de datos en Azure SQL Database. Para ello, primero te indicaré cuales son los requisitos: 
+                                </p>
+                                <ul>
+                                    <li>1.	Descargar SQL Server Management Studio desde <a href="#" target="_blank">aquí</a>.</li>
+                                    <li>2.	Descargar el script desde <a href="#" target="_blank">aquí</a>.</li>
+                                    <li>3.	Contar con una suscripción de Azure activa.</li>
+                                </ul>
+                            </div>
+                            <p style="text-align:justify;">Sin más preámbulos <b>¡Iniciemos!</b>
+                            </p>
 
-                            <p style="text-align:justify;">0.
+                            <p style="text-align:justify;">Como primer paso debemos dirigirnos al portal de Azure y crear una base de datos llamada PEDIDOS. Así mismo, debemos crear un servidor para la base de datos, que en mi caso se llamará “elasticqueryserver”. No olvides que debes guardar los datos de usuario y contraseña del servidor.
                             </p>
 
                             <div class="blog__details__pic">
@@ -187,7 +198,7 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">01.
+                            <p style="text-align:justify;">La configuración de precios para esta base de datos llamada PEDIDOS debe ser de nivel Estándar. Para ello daremos clic en la opción de “Configurar base de datos”.
                             </p>
 
                             <div class="blog__details__pic">
@@ -195,7 +206,7 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">02.
+                            <p style="text-align:justify;">A continuación, seleccionaremos el nivel Estándar, con 20 DTU y 2 GB, finalmente daremos clic en “Aplicar”.
                             </p>
 
                             <div class="blog__details__pic">
@@ -203,7 +214,7 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">03.
+                            <p style="text-align:justify;">Una vez validado todo, daremos clic en “Revisar y crear”.
                             </p>
 
                             <div class="blog__details__pic">
@@ -211,15 +222,15 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">04.
+                            <p style="text-align:justify;">Una vez finalizada la implementación, Azure nos notificará que la creación de nuestra primera base de datos llamada PEDIDOS se creó exitosamente. Ahora, daremos clic en la “X”.
                             </p>
 
                             <div class="blog__details__pic">
-                                <img src="https://snz04pap002files.storage.live.com/y4mZ6wrpNwbnuToMllOgEZaJUPjGbY2jQeHWkGwFf233W8HBT3mq9TsJax772eTUQ-bwX0pHL9ZhCxJg1rfT-0Qv0jnTmc0TBjcTg9X0CMi-XlzFkh1asyxxmUfk-OMZabWQ4WOeiUjs0mmBLMjbIhXBMjniRVI-EYP7P2Os1wSC10cXl1zXxWGENV0VWhRAGjL?width=1364&height=396&cropmode=none" 
+                                <img src="https://snz04pap002files.storage.live.com/y4mspc-gka-89MzuEtSRJfr7rxHp6u7WpijajTtVODVMhGgkSSlHpPg3_hnN5oFNUx09M5uHUAkiWPEtnhDvyksCicEh95naGmaBezSw2aH8X_OPtzD18Uyhh2iPhGIVbLY7IHjIoZlj2R7UKLR1Zxf6ySOQtw0QnFFQnoBBLA4gcz_fzx3QYdoKZbZnnCumg5_?width=1703&height=494&cropmode=none" 
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">05.
+                            <p style="text-align:justify;">Ahora, nos dirigimos al grupo de recurso, que en mi caso se llama “ElasticQuerySQL” y daremos clic en “Agregar”.
                             </p>
 
                             <div class="blog__details__pic">
@@ -227,7 +238,7 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">06.
+                            <p style="text-align:justify;">En el Marketplace de Azure, seleccionaremos “SQL Database”.
                             </p>
 
                             <div class="blog__details__pic">
@@ -235,7 +246,7 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">07.
+                            <p style="text-align:justify;">Y crearemos una segunda base de datos llamada “CLIENTES”. Recuerda, debe estar en el mismo grupo de recursos, también debe estar bajo el mismo servidor de base de datos que previamente creamos en los primeros pasos y finalmente bajo el mismo nivel Estándar con 20 DTU y 2 GB. Ahora sí, daremos clic en “Revisar y crear”.
                             </p>
 
                             <div class="blog__details__pic">
@@ -243,7 +254,7 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">08.
+                            <p style="text-align:justify;">Una vez finalizada la implementación, Azure nos notificará que la creación de nuestra primera base de datos llamada CLIENTES se creó exitosamente. Ahora, daremos clic en la “X”.
                             </p>
 
                             <div class="blog__details__pic">
@@ -251,7 +262,7 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">09.
+                            <p style="text-align:justify;">Si vamos al grupo de recursos, debemos contar con una estructura similar la cual mostrará solo un servidor de base de datos, en mi caso llamado “elasticqueryserver” y dos bases de datos, llamadas PEDIDOS y CLIENTES.
                             </p>
 
                             <div class="blog__details__pic">
@@ -259,7 +270,13 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">10.5 y 10
+
+                            <div class="blog__details__quote">
+                                <div class="icon"><span class="icon_error-triangle"></span></div>
+                                <p>Mucha atención a lo siguiente...</p>
+                            </div>
+
+                            <p style="text-align:justify;">No hay que olvidarse de agregar nuestra IP en el servidor, para ello, en ambas bases de datos dale clic a la opción “Agregar la IP a la lista de elementos permitidos del servidor”.
                             </p>
 
                             <div class="blog__details__pic">
@@ -272,7 +289,7 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">11.
+                            <p style="text-align:justify;">Esto lo que hará es agregar nuestra IP bajo una regla de firewall con la finalidad de que podamos trabajar con estas dos bases de datos. Para ello en la ventana de Configuración de firewall debes dar clic en “Agregar IP de cliente”, veras como en la sección de Dirección IP de cliente se agregará una nueva regla y acto final, daremos clic en “Guardar”.
                             </p>
 
                             <div class="blog__details__pic">
@@ -280,7 +297,7 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">12.
+                            <p style="text-align:justify;">Ahora sí, antes de ir al SSMG nos vamos a la base de datos PEDIDOS y copiamos el “Nombre del Servidor”.
                             </p>
 
                             <div class="blog__details__pic">
@@ -288,7 +305,7 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">13.
+                            <p style="text-align:justify;">En nuestro SSMG, conectarse a una base de datos de Azure SQL es súper sencillo. En el nombre del servidor pegamos el nombre del servidor que hemos copiado en el paso anterior, acto seguido en el modo de autenticación seleccionamos SQL Server Auth y finalmente colocamos el usuario y la contraseña que colocamos al servidor en Azure.
                             </p>
 
                             <div class="blog__details__pic">
@@ -296,7 +313,7 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">14.
+                            <p style="text-align:justify;">Una vez conectamos se puede apreciar que bajo el mismo servidor de base de datos contamos con nuestras 2 bases de datos llamadas CLIENTES y PEDIDOS.
                             </p>
 
                             <div class="blog__details__pic">
@@ -304,55 +321,220 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">15.
+                            <p style="text-align:justify;">Ahora viene lo bueno. Primero daremos clic a “NewQuery”, luego nos aseguramos de utilizar la base de datos llamada PEDIDOS y ejecutaremos el siguiente comando que nos creará una tabla llamada “PedidoInformation” y la llenará con 5 filas de datos:
                             </p>
+
+                            <div class="row"    style="font-size: 12px; font-family: 'Nunito', sans-serif; color: #8d8d8d; ">    
+                                <div class="col-1">
+                                    <a title="¡Copiar!" onclick="copyToClipboard('#CodigoFuction')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
+                                        <i class="fa fa-clone" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col align-self-center">
+                                    Copiar el comando
+                                </div>
+                            </div>
+                            
+                            <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
+                                <code id="CodigoFuction" style="color: white;" >
+    CREATE TABLE [dbo].[PedidoInformation](
+        [PedidoID] [int] NOT NULL,
+        [ClienteID] [int] NOT NULL
+        )
+    INSERT INTO [dbo].[PedidoInformation] ([PedidoID], [ClienteID]) VALUES (123, 1)
+    INSERT INTO [dbo].[PedidoInformation] ([PedidoID], [ClienteID]) VALUES (149, 2)
+    INSERT INTO [dbo].[PedidoInformation] ([PedidoID], [ClienteID]) VALUES (857, 2)
+    INSERT INTO [dbo].[PedidoInformation] ([PedidoID], [ClienteID]) VALUES (321, 1)
+    INSERT INTO [dbo].[PedidoInformation] ([PedidoID], [ClienteID]) VALUES (564, 8)
+                                </code>
+                            </pre>
 
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4mAkUdyOn--ujTQ10PU66ZqCcM-TDaHgWRKBwsWCZweVOj1uQPAQA7LraeXyokYEfNl7TGj03vDjgZM7xA9t3DcU73sLWyd3B10Ucw5ESs_rNcTd2pVc9T7MaMnY3FKj07vqLxZCiXqg7_fulLops7wCB96K7yafwHTWROxz2wqIGiiyj0RkMZXS57J_nECGWH?width=1366&height=736&cropmode=none" 
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">16.
+                            <p style="text-align:justify;">Ahora ejecutaremos otro comando, pero esta vez en la base de datos de CLIENTES. Este comando nos creará una tabla llamada “ClienteInformation” y la llenará con 3 filas de datos:
                             </p>
+
+                            <div class="row"    style="font-size: 12px; font-family: 'Nunito', sans-serif; color: #8d8d8d; ">    
+                                <div class="col-1">
+                                    <a title="¡Copiar!" onclick="copyToClipboard('#CodigoFuction')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
+                                        <i class="fa fa-clone" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col align-self-center">
+                                    Copiar el comando
+                                </div>
+                            </div>
+                            
+                            <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
+                                <code id="CodigoFuction" style="color: white;" >
+    CREATE TABLE [dbo].[ClienteInformation](
+        [ClienteID] [int] NOT NULL,
+        [ClienteName] [varchar](50) NULL,
+        [Empresa] [varchar](50) NULL
+        CONSTRAINT [CustID] PRIMARY KEY CLUSTERED ([ClienteID] ASC)
+    )
+    INSERT INTO [dbo].[ClienteInformation] ([ClienteID], [ClienteName], [Empresa]) VALUES (1, 'Elton', 'Contoso SA')
+    INSERT INTO [dbo].[ClienteInformation] ([ClienteID], [ClienteName], [Empresa]) VALUES (2, 'Maria', 'Adventure Works SAC')
+    INSERT INTO [dbo].[ClienteInformation] ([ClienteID], [ClienteName], [Empresa]) VALUES (3, 'Alfredo', 'World Wide Importers SRL')
+                                </code>
+                            </pre>
 
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4mpoJpdYybc1bF051-lw87lJx--s3zoVhVQ4ObwjC0IzJFaVaInQYLL_Q_K7qTCUYjO_sqayPsMS0lmzzHDPocpPe2Exj3PrZKZD7JnWgJpUMLfhUCMY6IAfsaOFVGDp2tqXqxU3D4JWvJj17bpQi0sSFTuueayFWwTCGxzpP9HcnYfYrSQ-Q5KA6t_Om0CKpg?width=1366&height=738&cropmode=none" 
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">17.
+                            <p style="text-align:justify;">Ahora sí, volvemos a la base de datos PEDIDOS y ejecutaremos el siguiente comando que creará una clave maestra que se utiliza para proteger las claves privadas de los certificados y las claves asimétricas que están presentes.
                             </p>
+
+                            <div class="blog__details__text__item">
+                                <p style="text-align:justify;">Aquí un par de aclaraciones:  
+                                </p>
+                                <ul>
+                                    <li>-	"master_key_password" es una contraseña segura de su elección que se usa para cifrar las credenciales de conexión.</li>
+                                    <li>-	"username" y "password" deben ser el nombre de usuario y la contraseña que se utilizan para iniciar sesión en el servidor de base de datos creado en Azure.</li>
+                                </ul>
+                            </div>
+
+
+                            <div class="row"    style="font-size: 12px; font-family: 'Nunito', sans-serif; color: #8d8d8d; ">    
+                                <div class="col-1">
+                                    <a title="¡Copiar!" onclick="copyToClipboard('#CodigoFuction')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
+                                        <i class="fa fa-clone" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col align-self-center">
+                                    Copiar el comando
+                                </div>
+                            </div>
+                            
+                            <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
+                                <code id="CodigoFuction" style="color: white;" >
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<master_key_password>';
+    CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred
+    WITH IDENTITY = '<username>',
+    SECRET = '<password>';
+                                </code>
+                            </pre>
 
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4mzQtB6hxpHWa8iBTlCUy1a7uAwUZevHLITFmkI_bqfQsnJ78QXbBfBDVLW9De2Dz8_UbO5yV5HPAzOYDFmcyN8UGnvOZS9L0a9c57uordh8MGIn6TKpsZjqoaaV14iIhadTxEAz03IZXZ2o7IeRiwfyDaHbbOgRNzLRl331kUgmj1V2aGbVJuMPUxQoRic6nb?width=1366&height=736&cropmode=none" 
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">18.
+                            <p style="text-align:justify;">En la misma base de datos PEDIDOS nos toca ejecutar un comando que le permita a esta base de datos obtener información de orígenes de datos externos.
                             </p>
+
+                            <div class="blog__details__text__item">
+                                <p style="text-align:justify;">Aquí un par de aclaraciones:  
+                                </p>
+                                <ul>
+                                    <li>-	LOCATION es el nombre del servidor de Azure.</li>
+                                    <li>-	DATABASE_NAME es la base de datos donde se obtendrá la información, en nuestro caso es la base de datos llamada CLIENTES.</li>
+                                </ul>
+                            </div>
+
+                            <div class="row"    style="font-size: 12px; font-family: 'Nunito', sans-serif; color: #8d8d8d; ">    
+                                <div class="col-1">
+                                    <a title="¡Copiar!" onclick="copyToClipboard('#CodigoFuction')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
+                                        <i class="fa fa-clone" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col align-self-center">
+                                    Copiar el comando
+                                </div>
+                            </div>
+                            
+                            <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
+                                <code id="CodigoFuction" style="color: white;" >
+    CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
+        (TYPE = RDBMS,
+        LOCATION = '<server_name>.database.windows.net',
+        DATABASE_NAME = 'Clientes',
+        CREDENTIAL = ElasticDBQueryCred,
+    ) ;
+                                </code>
+                            </pre>
 
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4mrlXoxGz7aXW9wQm2SdqqDLhgSHv6ozafzHiomgyO111UwsLLxJ9Sz1uzYSC3HiwlteJzf6snYHVJLfyXcx0kOS2DW_4nsZyLZ9oZU5GDyqlbGP9UCTMl1EUz19epeDhgWEzGaS-2JBb6b27DawzISRQ0DOsd5ivEH_qgqskDXrF8thbTT4iClgwhxpTSbjQM?width=1364&height=735&cropmode=none" 
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">19.
+                            <p style="text-align:justify;">Como paso final, en la base de datos PEDIDOS ejecutaremos el siguiente comando que nos permitirá crear una tabla externa. Recordemos que esta tabla debe de coincidir en esquema con la tabla de “ClientesInformation” creada en la base de datos llamada CLIENTES.
                             </p>
+
+                            <div class="row"    style="font-size: 12px; font-family: 'Nunito', sans-serif; color: #8d8d8d; ">    
+                                <div class="col-1">
+                                    <a title="¡Copiar!" onclick="copyToClipboard('#CodigoFuction')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
+                                        <i class="fa fa-clone" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col align-self-center">
+                                    Copiar el comando
+                                </div>
+                            </div>
+                            
+                            <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
+                                <code id="CodigoFuction" style="color: white;" >
+    CREATE EXTERNAL TABLE [dbo].[ClienteInformation]
+    ( [ClienteID] [int] NOT NULL,
+        [ClienteName] [varchar](50) NOT NULL,
+        [Empresa] [varchar](50) NOT NULL)
+    WITH
+    ( DATA_SOURCE = MyElasticDBQueryDataSrc)
+                                </code>
+                            </pre>
 
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4m75PQsNaiyZo_i2BNBtgIACzogVwVdkhB9xntMBSFVvouiBpmJuqvgbzlQ8bufbx5USJxbNMCrduAxPJFJZyZlCFenC16FEfvPtL2cTMmvMjb1LV_-oR05oZ80---MAEzyTrqgqC0fodguMwoYB1r2fJ86yPlt_JLw3yFGxxSgfn7JDfQ9DfXQFVthfmXJ45x?width=1364&height=739&cropmode=none" 
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">20.
+
+                            <p style="text-align:justify;"> <b>¡YA TENEMOS TODO LISTO!</b>
+                            </p>
+                            <p style="text-align:justify;">Ahora sigue ejecutar nuestra consulta elástica. Para ello desde la misma base de datos PEDIDOS ejecutaremos el siguiente comando.
                             </p>
                             
+                            <div class="row"    style="font-size: 12px; font-family: 'Nunito', sans-serif; color: #8d8d8d; ">    
+                                <div class="col-1">
+                                    <a title="¡Copiar!" onclick="copyToClipboard('#CodigoFuction')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
+                                        <i class="fa fa-clone" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col align-self-center">
+                                    Copiar el comando
+                                </div>
+                            </div>
+                            
+                            <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
+                                <code id="CodigoFuction" style="color: white;" >
+    SELECT PedidoInformation.ClienteID, PedidoInformation.PedidoId, ClienteInformation.ClienteName, ClienteInformation.Empresa
+    FROM PedidoInformation
+    INNER JOIN ClienteInformation
+    ON ClienteInformation.ClienteID = PedidoInformation.ClienteID
+                                </code>
+                            </pre>
+
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4mSQlkXKrWE4MGsp-XW5xdkDYgRxwF0E-bJcJbTMfjkd9V1nRuFSK3w8o7L37SvIAkO702KjjAGQZyj6096GAwyB8xCcraD87-iCe0wJ_zMByFTwz4f1cCcEIX-51v9v3IqY5qkE3K8mmba3QK3SxDgy-a8T3po__Zxi2b_M58teEeWcY71c9kWxb9eb9vK7nD?width=1366&height=401&cropmode=none" 
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">21.
+
+                            <div class="blog__details__quote">
+                                <div class="icon"><span class="icon_error-triangle"></span></div>
+                                <p>¡Oh no!</p>
+                            </div>
+
+                            <p style="text-align:justify;">¿Qué paso? Al parecer nuestro SQL nos indica que existe una IP que no está permitida para acceder en nuestro servidor. Lo mejor de todo es que dentro del error nos brindará la IP, la cual debemos copiarla y agregarla en el Servidor bajo una regla de firewall.
+                            </p>
+
+                            <p style="text-align:justify;">En nuestro servidor nos vamos a la sección se seguridad y seleccionamos “Firewalls y redes virtuales”. Ahora manualmente agregamos primero un nombre a la regla y la misma IP del error como IP inicial e IP final. Finalmente daremos clic en “Guardar”.
                             </p>
                             
                             <div class="blog__details__pic">
@@ -360,47 +542,13 @@
                                 alt="Azure SQL Database">
                             </div> 
                             </p>
-                            <p style="text-align:justify;">22.
+                            <p style="text-align:justify;">Volvemos a ejecutar nuestra consulta elástica en la base de datos PEDIDOS y nos asombraremos con el resultado.
                             </p>
 
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4m0EOVf8gmGLNftXxWBdJxtqDQtkuQPNvEVYug5E-AbpFowQYTNJ7ufOqNQn90xmP9ps1EJ4GOfbqSlidDa_FrFiu3rRS2s3nGjDU-vHEUE-Go7GpV1vHFqyiB3JWn_fmCvxUI1u2hulHJVZBwxrLW3lAh99Ulj5xp3arz9HrqZotz4m_zo3onskXPx2_5E5hV?width=1363&height=739&cropmode=none" 
                                 alt="Azure SQL Database">
                             </div> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <div class="blog__details__text__item">
-                                <p style="text-align:justify;"><b>¿?</b> Empecemos 
-                                </p>
-                                <ul>
-                                    <li><b>Desencadenadores </b>También conocidos.</li>
-                                    <li><b>Acciones </b>Son eventos.</li>
-                                    <li><b>Conexiones </b>Son los.</li>
-                                </ul>
-                            </div>
-                            <div class="blog__details__quote">
-                                <div class="icon"><span class="icon_quotations"></span></div>
-                                <p>Comentario.</p>
-                            </div>
-                            <p style="text-align:justify;">Para poder empezar solo debes dirigirte <a href="#" target="_blank">aquí</a> 
-                                para luego iniciar sesión en una cuenta Microsoft <i>(de preferencia una cuenta empresarial)</i> donde podrás probar alguna. 
-                            </p>
 
                             </p>
                             <p style="text-align:justify;">Por lo tanto, sigue aprendiendo, sigue iniciando conversaciones y, sobre 
@@ -411,13 +559,13 @@
 
 
                         <div class="blog__details__tags">
-                            <div class="fb-share-button" data-href="https://www.nickoelton.com/blog/deja-de-ser-tan-toxico-con-tu-tiempo" data-layout="button" data-size="small">
-                                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nickoelton.com%2Fblog%2Fdeja-de-ser-tan-toxico-con-tu-tiempo&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a>
+                            <div class="fb-share-button" data-href="https://www.nickoelton.com/blog/consultas-elasticas-entre-bd-en-azure-sql" data-layout="button" data-size="small">
+                                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nickoelton.com%2Fblog%2Fconsultas-elasticas-entre-bd-en-azure-sql&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a>
                             </div>
                             <br><br>
                             <span>Iniciar una conversación desde: </span>
-                            <a target="_blank" href="http://twitter.com/share?text=¡Deja%20de%20ser%20tan%20tóxico%20con%20tu%20tiempo!%20a%20través%20de:%20-%20https://www.nickoelton.com/blog/deja-de-ser-tan-toxico-con-tu-tiempo"> <i class="fa fa-twitter"></i> </a>
-                            <a href="whatsapp://send?text=Aquí%20te%20comparto%20un%20enlace:%20https://www.nickoelton.com/blog/deja-de-ser-tan-toxico-con-tu-tiempo"><i class="fa fa-whatsapp"></i></a>
+                            <a target="_blank" href="http://twitter.com/share?text=¡Consultas%20elásticas%20entre%202%20bases%20de%20datos%20en%20Azure%20SQL!%20a%20través%20de:%20-%20https://www.nickoelton.com/blog/consultas-elasticas-entre-bd-en-azure-sql"> <i class="fa fa-twitter"></i> </a>
+                            <a href="whatsapp://send?text=Aquí%20te%20comparto%20un%20enlace:%20https://www.nickoelton.com/blog/consultas-elasticas-entre-bd-en-azure-sql"><i class="fa fa-whatsapp"></i></a>
                                                         
                             <!-- <span>Compartir en:</span>
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -433,9 +581,9 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <a href="./vuelvete-influencer-con-azure" class="blog__details__btns__item blog__details__btns__item--next">
+                                    <a href="#" class="blog__details__btns__item blog__details__btns__item--next">
                                         <p>Siguiente<span class="arrow_right"></span></p>
-                                        <h5>Vuélvete influencer con Azure</h5>
+                                        <h5>Próximamente</h5>
                                     </a>
                                 </div>
                             </div>
