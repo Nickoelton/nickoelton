@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- SEO -->
+    <title>Azure Static Web App para todos - Elton Rodriguez™</title>
+    <meta name="description"
+        content="Azure Static Web para todos - by Elton Rodriguez™" />
+    <meta name="keywords" content="Aplicaciones Web, Microsoft Azure" />
+    <meta name="robots" content="Aplicaciones Web, Microsoft Azure, Azure Static Web, Elton Rodriguez"/>
+    <meta name="referrer" content="always" />
+    <meta name="author" content="Elton Rodriguez™" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="../image/png" href="../img/favicon.png" sizes="32x32" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    
+    <!-- Google Ads -->
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v3.2'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="878576878965017" theme_color="#6763fd"
+        logged_in_greeting="¡Hola! como podemos ayudarte?" logged_out_greeting="¡Hola! como podemos ayudarte?">
+    </div>
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <!-- <div class="offcanvas__search">
+            <form action="#">
+                <input type="text" placeholder="Search and hit enter...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div> -->
+        <div class="offcanvas__logo">
+            <a href="https://www.nickoelton.com/"><img src="../img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__social">
+            <!-- <div class="header__right__social"> -->
+            <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
+            <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
+            <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
+            <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="header__logo">
+                        <a href="https://www.nickoelton.com/"><img src="../img/logo.png" alt=""></a>
+                    </div>
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="https://www.nickoelton.com/">Inicio</a></li>
+                            <li><a href="../about">Sobre mí</a></li>
+                            <li><a href="../podcast">Podcast</a></li>
+                            <li><a href="../gameplays">Gameplays</a></li>
+                            <li class="active"><a href="./">Blog</a></li>
+                            <!-- <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about.html">About</a></li>
+                                    <li><a href="./episodes-details.html">Episodes</a></li>
+                                    <li><a href="./blog.html">Blog</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../contact.html">Contact</a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-4">
+                    <div class="header__right">
+                        <!-- <div class="header__right__search">
+                            <form action="#">
+                                <input type="text" placeholder="Search and hit enter...">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div> -->
+                        <div class="header__right__social">
+                            <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
+                            <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
+                            <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
+                            <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="blog-details-hero spad set-bg" data-setbg="../img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="blog__hero__text">
+                        <ul>
+                            <li><span class="icon_calendar"></span> 20 Mar 2021 </li>
+                            <li><span class="icon_profile"></span> Elton Rodriguez</li>
+                            <li><span class="icon_tags_alt"></span> Aplicaciones Web, Microsoft Azure</li>
+                        </ul>
+                        <h2>Azure Static Web App para todos</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__text">
+
+
+                            <p style="text-align:justify;">Según Smartme Analytics dentro de su estudio sobre el impacto del Covid-19 en el 
+                                uso de dispositivos móviles, se halló que hizo crecer algunos sectores hasta en un 53.2%, teniendo una media 
+                                del 2.5% en tan solo 1 mes de confinamiento.
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="https://snz04pap002files.storage.live.com/y4mwDfNCR6HvFMphrj0TOsaWYqmpX9lgCWub9V1kc5trItcEziti5lQTJ5mxpIh_fk5vu3bC48S1skirmx7wbmcIkgO2aVCcdBMkssOeGJHtUtdqe7Lk7u87yRg82VPjsnKX2IZ2w4n-4zd816pLVqcm6nZTsLQi6UoA7bt4n7WU9fbtJXEYUpKq-gkCUVpV_7w?width=1171&height=659&cropmode=none" 
+                                alt="Impacto del Covid-19 en el uso de dispositivos móviles">
+                                <p style="text-align:right;"> <b>Fuente: </b> <a href="https://www.smartmeanalytics.com/public/resource/products-free/COVID_Informe_Smartme.pdf" target="_blank"> clic aquí</a>.</p>
+                            </div>
+
+                            <div class="blog__details__text__item">
+                                <p style="text-align:justify;"><b>¿Cómo está conformado Power Automate?</b> Empecemos viendo las tres palabras que representan 
+                                    a la construcción de un flujo de trabajo en Power Automate o como antes se llamaba <i>"Microsoft Flow"</i>:
+                                </p>
+                                <ul>
+                                    <li><b>Desencadenadores </b>También conocidos  conocido como Triggers, son disparadores que reconocen de manera automática un evento.</li>
+                                    <li><b>Acciones </b>Son eventos consecuentes de los Triggers, en el cual nos ayuda a poder definir los siguientes pasos.</li>
+                                    <li><b>Conexiones </b>Son los permisos que se necesitan para acceder a las cuentas o recursos que deseo utilizar.</li>
+                                </ul>
+                            </div>
+                            <div class="blog__details__quote">
+                                <div class="icon"><span class="icon_quotations"></span></div>
+                                <p>Ocúpate personalmente de lo importante y automatiza el resto.</p>
+                            </div>
+                            <p style="text-align:justify;">Para poder empezar solo debes dirigirte <a href="https://flow.microsoft.com/es-es/" target="_blank">aquí</a> 
+                                para luego iniciar sesión en una cuenta Microsoft <i>(de preferencia una cuenta empresarial)</i> donde podrás probar alguna de 
+                                las plantillas que ya están preconstruidas, las cuales solo les falta la configuración de las conexiones según los 
+                                servicios que necesite conectarse. 
+                            </p>
+
+                            </p>
+                            <p style="text-align:justify;">Por lo tanto, sigue aprendiendo, sigue iniciando conversaciones y, sobre 
+                                todo, no te olvides de alinear tus metas a un bien común.
+                            </p>
+
+                        </div>
+
+
+                        <div class="blog__details__tags">
+                            <div class="fb-share-button" data-href="https://www.nickoelton.com/blog/azure-static-web-para-todos" data-layout="button" data-size="small">
+                                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nickoelton.com%2Fblog%2Fazure-static-web-para-todos&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a>
+                            </div>
+                            <br><br>
+                            <span>Iniciar una conversación desde: </span>
+                            <a target="_blank" href="http://twitter.com/share?text=¡Azure%20Static%20Web%20App%20para%20todos!%20a%20través%20de:%20-%20https://www.nickoelton.com/blog/azure-static-web-para-todos"> <i class="fa fa-twitter"></i> </a>
+                            <a href="whatsapp://send?text=Aquí%20te%20comparto%20un%20enlace:%20https://www.nickoelton.com/blog/azure-static-web-para-todos"><i class="fa fa-whatsapp"></i></a>
+                                                        
+                            <!-- <span>Compartir en:</span>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-whatsapp"></i></a> -->
+                        </div>
+                        <div class="blog__details__btns">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="./" class="blog__details__btns__item">
+                                        <p><span class="arrow_left"></span> Regresar</p>
+                                        <h5>Mira todas las publicaciones</h5>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="./como-cuidarnos-de-la-ciberdelincuencia" class="blog__details__btns__item blog__details__btns__item--next">
+                                        <p>Siguiente<span class="arrow_right"></span></p>
+                                        <h5>¿Cómo cuidarnos de la ciberdelincuencia?</h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                            <!--PUBLICIDAD-->
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- Publicaciones horizontal -->
+                                <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-7645610318476370"
+                                    data-ad-slot="1261004415"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="../img/footer-bg.jpg">
+        <div class="container">
+            <div class="footer__subscriber">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="footer__subscriber__text">
+                            <h3>¡Mantente en contacto!</h3>
+                            <p>Suscríbite a mis canales o empieza una charla con la comunidad en Telegram</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 offset-lg-2">
+                        <form action="#" class="footer__subscriber__form">
+                            <input type="text" readonly="readonly" placeholder="Unirme al canal de Telegram">
+                            <button type="button" class="site-btn"
+                                onclick="location.href='https://t.me/nickogameplays'">🚀</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <div class="footer__widget">
+                        <div class="footer__logo">
+                            <a href="#"><img src="../img/logo.png" alt=""></a>
+                        </div>
+                        <p class="footer__copyright__text">Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved  <!--| Realizado con <i class="fa fa-heart-o"
+                                 aria-hidden="true"></i> por <a href="https://www.tecfines.com"
+                                target="_blank">Tecfines</a> -->
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <!-- <div class="footer__social"> -->
+                    <div class="header__right__social">
+                        <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
+                        <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
+                        <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
+                        <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+<!-- Js Plugins -->
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/mixitup.min.js"></script>
+<script src="../js/jquery.slicknav.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/main.js"></script>
+
+<!-- Music Plugin -->
+<script src="../js/jquery.jplayer.min.js"></script>
+<script src="../js/jplayerInit.js"></script>
+</body>
+
+</html>
