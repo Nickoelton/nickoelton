@@ -7,7 +7,7 @@
     --------------------*/
     $(window).on('load', function () {
         $(".loader").fadeOut();
-        $("#preloder").delay(100).fadeOut("slow");
+        $("#preloder").delay(0).fadeOut("fast");
 
         /*------------------
             Podcast filter
