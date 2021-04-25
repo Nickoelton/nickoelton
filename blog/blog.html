@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="refresh" content="0;URL=https://www.nickoelton.com/blog/">
 
     <!-- Limpieza de caché -->
     <meta http-equiv='cache-control' content='no-cache'>
@@ -70,8 +69,630 @@
     </script>
 
 </head>
-<body>
 
+<body style="font-family: Nunito, sans-serif !important;">
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v3.2'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="878576878965017" theme_color="#6763fd"
+        logged_in_greeting="¡Hola! como podemos ayudarte?" logged_out_greeting="¡Hola! como podemos ayudarte?">
+    </div>
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <!-- <div class="offcanvas__search">
+            <form action="#">
+                <input type="text" placeholder="Search and hit enter...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div> -->
+        <div class="offcanvas__logo">
+            <a href="https://www.nickoelton.com/"><img src="../img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__social">
+            <!-- <div class="header__right__social"> -->
+            <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
+            <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
+            <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
+            <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="header__logo">
+                        <a href="https://www.nickoelton.com/"><img src="../img/logo.png" alt=""></a>
+                    </div>
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="https://www.nickoelton.com/">Inicio</a></li>
+                            <li><a href="../about">Sobre mí</a></li>
+                            <li><a href="../podcast">Podcast</a></li>
+                            <li><a href="../gameplays">Gameplays</a></li>
+                            <li class="active"><a href="../blog">Blog</a></li>
+                            <!-- <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about.html">About</a></li>
+                                    <li><a href="./episodes-details.html">Episodes</a></li>
+                                    <li><a href="./blog.html">Blog</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./contact.html">Contact</a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-4">
+                    <div class="header__right">
+                        <!-- <div class="header__right__search">
+                            <form action="#">
+                                <input type="text" placeholder="Search and hit enter...">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div> -->
+                        <div class="header__right__social">
+                            <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
+                            <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
+                            <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
+                            <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-option  spad set-bg" data-setbg="../img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__text">
+                        <h2>Blog</h2>
+                        <div class="breadcrumb__links">
+                            <a style="color: #ffffff !important;" href="https://www.nickoelton.com/"><i class="fa fa-home"></i> Inicio</a>
+                            <span>Blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="single__track">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="single__track__item">
+                            <div class="single__track__item__pic">
+                                <img src="../img/hero/hero-track.jpg" alt="">
+                            </div>
+                            <div class="single__track__item__text">
+                                <h5>Te doy la bienvenida al Blog "La Bitácora"</h5>
+                                <span>Imagina, crea, documenta y comparte tus conocimientos en tecnología para democratizarla en personas, negocios y empresas.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="blog__item__list">
+                        
+
+                        <div class="blog__item">
+                            <a href="./vuelvete-influencer-con-azure">
+                                <div class="blog__item__pic set-bg" data-setbg="../img/proximamente.jpg">
+                                    <div class="label">Microsoft Azure</div>
+                                </div>
+                                <div class="blog__item__text">
+                                    <div class="blog__date"><span class="icon_calendar"></span> 02 Ene 2021</div>
+                                    <h4>Vuélvete influencer con Azure</h4>
+                                    <ul>
+                                        <li><span class="icon_profile"></span> Elton Rodriguez</li>
+                                    </ul>
+                                    <p>Una nueva era de la informática acaba de empezar, y no se trata de robots o viajes interestelares, sino de 
+                                        como aplicamos nuevos enfoques para construir aplicaciones nativas utilizando la nube.</p>
+                                    <a href="./vuelvete-influencer-con-azure">Leer más <span class="fa fa-angle-double-right"></span></a>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="blog__item">
+                            <a href="./deja-de-ser-tan-toxico-con-tu-tiempo">
+                                <div class="blog__item__pic set-bg" data-setbg="../img/proximamente.jpg">
+                                    <div class="label">Power Automate</div>
+                                </div>
+                                <div class="blog__item__text">
+                                    <div class="blog__date"><span class="icon_calendar"></span> 19 Dic 2020</div>
+                                    <h4>Deja de ser tóxico con tu tiempo</h4>
+                                    <ul>
+                                        <li><span class="icon_profile"></span> Elton Rodriguez</li>
+                                    </ul>
+                                    <p>Actualmente volverse tóxico/a es una costumbre, y no solo durante una relación, sino también en nuestras 
+                                        vidas. Te invito a dejar la toxicidad y a empezar a ganar más tiempo para ti y para los tuyos.</p>
+                                    <a href="./deja-de-ser-tan-toxico-con-tu-tiempo">Leer más <span class="fa fa-angle-double-right"></span></a>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="blog__item">
+                            <a href="./oprime-refrescar">
+                                <div class="blog__item__pic set-bg" data-setbg="../img/proximamente.jpg">
+                                    <div class="label">Geek</div>
+                                </div>
+                                <div class="blog__item__text">
+                                    <div class="blog__date"><span class="icon_calendar"></span> 05 Dic 2020</div>
+                                    <h4>Oprime refrescar</h4>
+                                    <ul>
+                                        <li><span class="icon_profile"></span> Elton Rodriguez</li>
+                                    </ul>
+                                    <p>Reinventarse es renacer. Te invito a que lo realices de manera diaria leyendo sobre 
+                                        alguna noticia referente al campo de estudio que prefieras, pero con el objetivo de seguir 
+                                        creciendo en este basto mundo.</p>
+                                    <a href="./oprime-refrescar">Leer más <span class="fa fa-angle-double-right"></span></a>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="blog__item">
+                            <a href="./captura-detonantes">
+                                <div class="blog__item__pic set-bg" data-setbg="../img/proximamente.jpg">
+                                    <div class="label">Geek</div>
+                                </div>
+                                <div class="blog__item__text">
+                                    <div class="blog__date"><span class="icon_calendar"></span> 21 Nov 2020</div>
+                                    <h4>Captura detonantes</h4>
+                                    <ul>
+                                        <li><span class="icon_profile"></span> Elton Rodriguez</li>
+                                    </ul>
+                                    <p>Este es un punto de partida donde explorarás los motivos principales que han 
+                                        estado detrás de mi interés por la tecnología con la finalidad de saber cómo podremos 
+                                        utilizar las tecnologías en nuestras vidas.</p>
+                                    <a href="./captura-detonantes">Leer más <span class="fa fa-angle-double-right"></span></a>
+                                </div>
+                            </a>
+                        </div>
+
+    <!--PUBLICIDAD-->
+                        <div>
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- Publicaciones horizontal -->
+                                <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-7645610318476370"
+                                    data-ad-slot="1261004415"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="sidebar">
+                        <!-- <div class="sidebar__search">
+                            <form action="#">
+                                <input type="text" placeholder="Search...">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div> -->
+                        <!-- <div class="sidebar__categories">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Entrepreneurship</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Media</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Tech</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Tutorials</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Business</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Entertainment</a></li>
+                            </ul>
+                        </div> -->
+
+    <!-- FAVORITOS-->
+                        <!-- <div class="sidebar__recent">
+                            <h4>Populares</h4>
+
+                            <a href="./captura-detonantes.html" class="sidebar__recent__item">
+                                <h6>Episodio 01: Captura detonantes</h6>
+                                <p><span class="icon_calendar"></span> 0 Nov 2020</p>
+                            </a>
+
+                            <a href="./oprime-refrescar.html" class="sidebar__recent__item">
+                                <h6>Episodio 02: Oprime refrescar</h6>
+                                <p><span class="icon_calendar"></span> 07 Nov 2020</p>
+                            </a> -->
+
+    <!--PUBLICIDAD-->
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- Publicaciones verticales -->
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-7645610318476370"
+                                 data-ad-slot="4573902779"
+                                 data-ad-format="auto"
+                                 data-full-width-responsive="true"></ins>
+                            <script>
+                                 (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                            
+                        </div>
+                        <!-- Google ADS AMP (Anuncio automatico) -->
+                        <div class="sidebar__recent">
+                            <amp-auto-ads type="adsense"
+                                data-ad-client="ca-pub-7645610318476370">
+                            </amp-auto-ads>
+                        </div>
+
+                        <a href="./podcast.html">
+                            <div class="sidebar__banner set-bg" data-setbg="../img/episodios/1.jpg">
+                                <span>Escucha el</span>
+                                <h2>Podcast</h2>
+                                <span>Próximamente</span>
+                            </div>
+                        </a>
+                        <!-- <div class="sidebar__tags">
+                            <h4>Popular Tags</h4>
+                            <a href="#">Episodes</a>
+                            <a href="#">Ideas</a>
+                            <a href="#">Podcasts</a>
+                            <a href="#">Video</a>
+                            <a href="#">Creative</a>
+                            <a href="#">Unique</a>
+                            <a href="#">Audio</a>
+                        </div> -->
+    <!-- HISTORIAL-->
+                        
+                        <div class="sidebar__recent">
+                            <h4>Recientes</h4>
+
+                            <a href="./notificaciones-push-en-powerapps" class="sidebar__recent__item">
+                                <h6>Notificaciones push en Power Apps</h6>
+                                <p><span class="icon_calendar"></span> 24 Abril 2021</p>
+                            </a>
+                            <a href="./como-cuidarnos-de-la-ciberdelincuencia" class="sidebar__recent__item">
+                                <h6>¿Cómo cuidarnos de la ciberdelincuencia?</h6>
+                                <p><span class="icon_calendar"></span> 10 Abril 2021</p>
+                            </a>
+                            
+                        </div>
+
+                        <a target="_blank" href="http://bit.ly/BlogLaBitacoraSuscripcion">
+                            <div class="sidebar__banner set-bg" data-setbg="../img/episodios/1.jpg">
+                                <h2>Suscríbite</h2>
+                                <span>Al blog para recibir contenido mensual</span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <section class="podcast podcast spad" style="padding-top: 0!important;" >
+        <div class="container">
+            <div class="podcast__top">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <h2>Historial de entradas</h2>
+                        <br>
+                        <table id="tablax" class="table table-striped table-bordered table table-hover" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th><i class="fa fa-hashtag" aria-hidden="true"></i></th>
+                                    <th>Título</th>
+                                    <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Fecha</th>
+                                    <th><i class="fa fa-eye" aria-hidden="true"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01</td>
+                                    <td>Captura detonantes</td>
+                                    <td>21 Noviembre 2020</td>
+                                    <td>
+                                        <a target="_blank" href="./captura-detonantes"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+        
+                                </tr>
+                                <tr>
+                                    <td>02</td>
+                                    <td>Oprime refrescar</td>
+                                    <td>05 Diciembre 2020</td>
+                                    <td>
+                                        <a target="_blank" href="./oprime-refrescar"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>03</td>
+                                    <td>Deja de ser tóxico con tu tiempo</td>
+                                    <td>19 Diciembre 2020</td>
+                                    <td>
+                                        <a target="_blank" href="./deja-de-ser-tan-toxico-con-tu-tiempo"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>04</td>
+                                    <td>Vuélvete influencer con Azure</td>
+                                    <td>02 Enero 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./vuelvete-influencer-con-azure"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr>
+                                <tr> 
+                                    <td>05</td>
+                                    <td>Mi primer Azure Functions</td>
+                                    <td>16 Enero 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./mi-primer-azure-functions"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>06</td>
+                                    <td>Emisión de certificados con Power Automate</td>
+                                    <td>30 Enero 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./emision-de-certificados-con-power-automate"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>07</td>
+                                    <td>Red virtual en Azure para dos Virtual Machines</td>
+                                    <td>13 Febrero 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./red-virtual-en-azure-para-dos-vms"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>08</td>
+                                    <td>¿Qué es Microsoft Power Platform?</td>
+                                    <td>27 Febrero 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./que-es-power-platform"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>09</td>
+                                    <td>Migración de una base de datos SQL Server a Azure SQL</td>
+                                    <td>13 Marzo 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./migracion-de-una-base-de-datos-sql-a-azure"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Consultas elásticas entre 2 bases de datos en Azure SQL</td>
+                                    <td>27 Marzo 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./consultas-elasticas-entre-bd-en-azure-sql"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>¿Cómo cuidarnos de la ciberdelincuencia?</td>
+                                    <td>10 Abril 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./como-cuidarnos-de-la-ciberdelincuencia"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>Notificaciones push en Power Apps</td>
+                                    <td>24 Abril 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./notificaciones-push-en-powerapps"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr>
+                                <!-- <tr>
+                                    <td>13</td>
+                                    <td>Azure Static Web App para todos</td>
+                                    <td>08 Mayo 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./azure-static-web-para-todos"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr> -->
+                                <!-- <tr>
+                                    <td>14</td>
+                                    <td>Aspectos básicos de una aplicación en Power Apps</td>
+                                    <td>22 Mayo 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./aspectos-basicos-de-una-app-en-powerapps"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr> -->
+                                <!-- <tr>
+                                    <td>15</td>
+                                    <td>¿Qué es Azure y cómo funciona?</td>
+                                    <td>05 Junio 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./que-es-azure-y-como-funciona"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr> -->
+                                <!-- <tr>
+                                    <td>16</td>
+                                    <td>Pop-ups en aplicaciones de Power Apps</td>
+                                    <td>19 Junio 2021</td>
+                                    <td>
+                                        <a target="_blank" href="./pop-ups-en-aplicaciones-de-powerapps"> <i class="fa fa-external-link" aria-hidden="true"></i> </a> 
+                                    </td>
+                                </tr> -->
+
+        
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th><i class="fa fa-hashtag" aria-hidden="true"></i></th>
+                                    <th>Título</th>
+                                    <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Fecha</th>
+                                    <th><i class="fa fa-eye" aria-hidden="true"></i></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="../img/footer-bg.jpg">
+        <div class="container">
+            <div class="footer__subscriber">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="footer__subscriber__text">
+                            <h3>¡Mantente en contacto!</h3>
+                            <p>Suscríbite a mis canales o empieza una charla con la comunidad en Telegram</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 offset-lg-2">
+                        <form action="#" class="footer__subscriber__form">
+                            <input type="text" readonly="readonly" placeholder="Unirme al canal de Telegram">
+                            <button type="button" class="site-btn"
+                                onclick="location.href='https://t.me/nickogameplays'">🚀</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <div class="footer__widget">
+                        <div class="footer__logo">
+                            <a href="#"><img src="../img/logo.png" alt=""></a>
+                        </div>
+                        <p class="footer__copyright__text">Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved  <!--| Realizado con <i class="fa fa-heart-o"
+                                 aria-hidden="true"></i> por <a href="https://www.tecfines.com"
+                                target="_blank">Tecfines</a> -->
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <!-- <div class="footer__social"> -->
+                    <div class="header__right__social">
+                        <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
+                        <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
+                        <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
+                        <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/mixitup.min.js"></script>
+    <script src="../js/jquery.slicknav.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <!-- Solo DataTables -->
+    <!-- <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script> -->
+
+    <!-- BootStrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+
+    <script>
+            $(document).ready( function () {
+        $('#tablax').DataTable({
+            order: [[ 0, "desc" ]],
+            language: {
+                processing: "Cargando...",
+                search: "Buscar&nbsp;:",
+                lengthMenu: "Mostrar por _MENU_ registros",
+                info: "Mostrando del _START_ al _END_ de un total de _TOTAL_",
+                infoEmpty: "No existen datos.",
+                infoFiltered: "(filtrado de _MAX_ elementos en total)",
+                infoPostFix: "",
+                loadingRecords: "Cargando...",
+                zeroRecords: "¡Ups! No se encontraron datos con tu búsqueda",
+                emptyTable: "No hay datos disponibles en la tabla",
+                paginate: {
+                    first: "Primero",
+                    previous: "Anterior",
+                    next: "Siguiente",
+                    last: "Último"
+                },
+                aria: {
+                    sortAscending: ": Ascendente",
+                    sortDescending: ": Descendente"
+                }
+            },
+            scrollY: 250,
+            lengthMenu: [ [5, 10, -1], [5, 10, "Todo"] ],
+        });
+    } );
+    </script>
+
+    <!-- Music Plugin -->
+    <script src="../js/jquery.jplayer.min.js"></script>
+    <script src="../js/jplayerInit.js"></script>
 </body>
 
 </html>
