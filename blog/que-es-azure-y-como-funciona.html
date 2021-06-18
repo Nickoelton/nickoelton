@@ -180,35 +180,60 @@
                     <div class="blog__details__content">
                         <div class="blog__details__text">
 
-
-                            <p style="text-align:justify;">Próximamente.
+                            <p style="text-align:justify;">En algún momento todos nos hemos puesto a pensar sobre que es Azure, y muchos nos hemos podido topar con las simples respuestas de “Azure es la nube de 
+                                Microsoft que alquila servicios informáticos como servidores, almacenamiento, bases de datos, redes, software, análisis e inteligencia”. Pero la verdad, para poder entenderlo mejor, 
+                                hay que entender cómo funciona.
+                            </p> 
+                            <p style="text-align:justify;">Para ello, debemos conocer la palabra clave la cual es <b>Virtualización</b>. Esta separa el acoplamiento existente entre el hardware de un equipo de 
+                                cómputo y su sistema operativo utilizando un nivel de abstracción denominado <b>hipervisor</b>. Este a su vez emula todas las funciones de un equipo real en una o varias 
+                                <b>Máquinas Virtuales</b>.
                             </p>
-                            <!-- <div class="blog__details__pic">
-                                <img src="https://snz04pap002files.storage.live.com/y4mwDfNCR6HvFMphrj0TOsaWYqmpX9lgCWub9V1kc5trItcEziti5lQTJ5mxpIh_fk5vu3bC48S1skirmx7wbmcIkgO2aVCcdBMkssOeGJHtUtdqe7Lk7u87yRg82VPjsnKX2IZ2w4n-4zd816pLVqcm6nZTsLQi6UoA7bt4n7WU9fbtJXEYUpKq-gkCUVpV_7w?width=1171&height=659&cropmode=none" 
-                                alt="Impacto del Covid-19 en el uso de dispositivos móviles">
-                                <p style="text-align:right;"> <b>Fuente: </b> <a href="https://www.smartmeanalytics.com/public/resource/products-free/COVID_Informe_Smartme.pdf" target="_blank"> clic aquí</a>.</p>
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure1">
                             </div>
-
+                            <p style="text-align:justify;">Pero después de entender cómo funciona la virtualización ¿Cómo se logra esto a gran escala?
+                            </p> 
+                            <p style="text-align:justify;">Pues aquí la cosa se pone más candente, porque ya no hablamos de simples máquinas o equipos de cómputo, hablamos de conectar varios servidores. 
+                                ¿Y cómo logramos conectar todos los servidores de una granja?, pues cada servidor aparte de incluir un hipervisor para ejecutar una o varias máquinas virtuales, 
+                                están conectados con otros servidores a través de un <b>conmutador de red</b> (<i>Ahora si podemos hacer ping entre servidores jajaja</i>) pero ¿Cómo se controla que parte especial 
+                                del software del hipervisor se debe ejecutar? Es aquí donde entran los <b>controladores de fabrica</b> que es un software especial instalado dentro de cada servidor capas de 
+                                conectarse con el <b>orquestador</b> quien finalmente es el responsable de administrar todo lo que ocurre en Azure mediante solicitudes a través de una API y finalmente terminar 
+                                en una interfaz de usuario como el Portal de Azure.
+                            </p>
+                            <div class="blog__details__pic">
+                                <img src="#" 
+                                alt="Azure2">
+                            </div>
+                            <p style="text-align:justify;">En conclusión, la creación de máquinas virtuales es solo el principio de una larga cadena de entrega de máquinas virtualizadas 
+                                que hace un proveedor de servicio a través del internet para ofrecer la libertad de compilar, administrar e implementar aplicaciones en una red global masiva.
+                            </p>
+                            <p style="text-align:justify;">Entonces ¿Por qué deberíamos de migrar a la nube?
+                            </p>
                             <div class="blog__details__text__item">
-                                <p style="text-align:justify;"><b>¿Cómo?</b> Se llama <i>"Microsoft "</i>:
+                                <p style="text-align:justify;">Sinceramente, podríamos estar varios minutos explicando sobre la cantidad de beneficios en los múltiples escenarios que se puede 
+                                    aplicar la nube, pero en lo personal considero que deberíamos de quedarnos con estas 4 principales palabras:
                                 </p>
                                 <ul>
-                                    <li><b>Desencadenadores </b>También.</li>
-                                    <li><b>Acciones </b>Son .</li>
-                                    <li><b>Conexiones </b>Son .</li>
+                                    <li><b>Disponibilidad: </b>A medida que los tiempos fueron cambiando, los usuarios (Nosotros) consumidores compulsivos del internet forzamos a que los sistemas en línea 
+                                        tengan continuidad, y para las empresas es muy importante resolver los incidentes críticos en el menor tiempo posible. La nube nos brinda la posibilidad de contar 
+                                        con una alta disponibilidad en caso de que un sistema falle o deje de estar disponible por riesgos que en su momento parecían imposibles que ocurran.</li>
+                                    <li><b>Simplificación: </b>Todos sabemos que cada año las tecnologías cambian, sean en hardware o software, pero la nube a través de sus modelos de “Tecnología 
+                                        como servicio” nos pueden proveer de infraestructura, plataformas y software actualizados, logrando así mitigar la complejidad de las implementaciones y el 
+                                        crecimiento de las adquisiciones de capitales.</li>
+                                    <li><b>Seguridad: </b>Las áreas de TI al implementar una nube privada en sus organizaciones debían de considerar una infraestructura de seguridad, pero esto era 
+                                        solo accesible para grandes organizaciones. Hoy gracias a la nube podemos encontrar la Seguridad como un servicio para nuestra infraestructura, aplicaciones 
+                                        o software alojadas en la nube a un coste accesible ayudando así a reducir los ciberataques que podrían perjudicarnos.</li>
+                                    <li><b>Gastos Operativos (OpEX): </b>Con cada año que pasa debemos de invertir en repotenciar hardware o actualizaciones de software, pero ¿Por qué no pagar solo por 
+                                        lo que usamos? Es aquí donde entra el modelo de negocio de la nube, que te ofrece lo que la empresa necesita prorrateando los costos de hardware, software, 
+                                        actualizaciones, mantenimientos, seguridad, etc., con la finalidad de solo preocuparnos de lo que deseamos lograr u obtener con esos servicios.</li>
                                 </ul>
                             </div>
-                            <div class="blog__details__quote">
-                                <div class="icon"><span class="icon_quotations"></span></div>
-                                <p>Ocúpate personalmente de lo importante y automatiza el resto.</p>
-                            </div>
-                            <p style="text-align:justify;">Para poder empezar solo debes dirigirte <a href="https://flow.microsoft.com/es-es/" target="_blank">aquí</a> 
-                                para <i>(de preferencia una cuenta empresarial)</i> donde. 
+
+                            <p style="text-align:justify;">¿Deseas conocer más sobre Azure? Te invito a que sigas este módulo de aprendizaje <a href="https://docs.microsoft.com/es-es/learn/modules/intro-to-azure-fundamentals/introduction" target="_blank">aquí</a>.
                             </p>
 
-                            </p>
-                            <p style="text-align:justify;">Por.
-                            </p> -->
+                        </br></br>
 
                         </div>
 
