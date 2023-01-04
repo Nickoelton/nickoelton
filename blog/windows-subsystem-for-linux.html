@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="Elton Rodriguez" />
     <meta property="og:title" content="Windows Subsystem for Linux - Elton Rodriguez™" />
     <meta property="og:description" content="Windows Subsystem for Linux ¿En serio podemos correr Linux en Windows? - by Elton Rodriguez™" />
-    <meta property="og:image" content="#" />
+    <meta property="og:image" content="https://snz04pap002files.storage.live.com/y4mcuxSIy8nJKhRU-HJ74tGofVPHYtTeKIoNBXJbiEZPrIwNqmLy1Asew_q1IXQggWvj33bOTF5oQcOZjyJSQMN7tu3IzbDCm57waybr5V0t-b-Pwf5RLM7Hz0gGqhiGbHjzzJhKoEv4dvvye2eyn4pl8FTugvNirNBcYxfSBHh_zZ4hOnOciiXxgMOWy1omk7-?width=1151&height=518&cropmode=none" />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="960" />
     <meta property="og:url" content="https://www.nickoelton.com/blog/#" />
@@ -193,8 +193,33 @@
                         <div class="blog__details__text">
 
 
-                            <p style="text-align:justify;">Hola.
+                            <p style="text-align:justify;">Hola estimada o estimado lector. Como dice el título de esta entrada, vamos empezar a dar nuestros primeros pasos en Ubuntu conociendo Windows Subsystem for Linux (WSL) o como se dice en español el Subsistema de Windows para Linux. Para lograr ello, 
+                                es importante que conozcamos a detalle de que se trata y cual es la forma correcta de configurarlo. </br></br>
+                                Empecemos definiendo que es WSL, el cual es un entorno dentro de Windows que permite a los usuarios o desarrolladores ejecutar distribuciones de GNU/Linux, las cuales pueden ser escogidas desde el Microsoft Store (Entre ellas se encuentra Ubuntu, SUSE, Kali, entre otras). </br></br>
+                                Para iniciar con la instalación y configuración, debemos cumplir con el siguiente requisito: La máquina que utlizaremos debe ejecutar Windows 10 version 2004 (Compilación 19041) o superior.
                             </p>
+
+                            <p style="text-align:justify;"> Lo siguiente es ejecutar la siguiente linea de comando desde PowerShell (No te olvides de ejecutar PowerShell como Administrador).
+                            </p>
+                            <div class="row"    style="font-size: 12px; font-family: 'Nunito', sans-serif; color: #8d8d8d; ">    
+                                <div class="col-1">
+                                    <a title="¡Copiar!" onclick="copyToClipboard('#CodigoFuction')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
+                                        <i class="fa fa-clone" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col align-self-center">
+                                    Copiar el código
+                                </div>
+                            </div>
+                            
+                            <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
+
+                                <code id="CodigoFuction" style="color: white;" >
+        wsl --install
+
+                                </code>
+                            </pre>
+
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4m2CQtAYFvE4JIN05Jpog7UJuTh_syImMHLwcQD0vYMQohEHB1zXuorhJ6HKffxSJ12LwC9TpZtkW1J0BM9qe5sM9_S815I_9sYvvO6YXYuuFgQGHEYbQDg3CJN6cZQkk6dSFUafKZ38bLoq-alZft2w-A8qrbrdM0ewktw1-H0AUElqs334yTrAz2fSUiPfgg?width=877&height=335&cropmode=none"
                                  alt="Powershell">
