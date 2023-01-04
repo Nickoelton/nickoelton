@@ -215,8 +215,7 @@
                             <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
 
                                 <code id="CodigoFuction" style="color: white;" >
-        wsl --install
-
+    wsl --install
                                 </code>
                             </pre>
 
@@ -224,31 +223,67 @@
                                 <img src="https://snz04pap002files.storage.live.com/y4m2CQtAYFvE4JIN05Jpog7UJuTh_syImMHLwcQD0vYMQohEHB1zXuorhJ6HKffxSJ12LwC9TpZtkW1J0BM9qe5sM9_S815I_9sYvvO6YXYuuFgQGHEYbQDg3CJN6cZQkk6dSFUafKZ38bLoq-alZft2w-A8qrbrdM0ewktw1-H0AUElqs334yTrAz2fSUiPfgg?width=877&height=335&cropmode=none"
                                  alt="Powershell">
                             </div>
-                            <p style="text-align:justify;">Hola.
+                            <p style="text-align:justify;">Esperamos la descarga... y una vez finalizado nos aparecerá un mensaje que diga "La operación se realizó correctamente. Los cambios se aplicarán cuando se reinicie el sistema".
                             </p>
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4mZ4AlcMpck3YCsllb4P3T6MEPbzuxuLW5rtbtsNudTvEpAwSnCTVMilhl1aATFtBhOqF_iAA7B06eoYIhBpfW2wzltUb-WZsZyTdw6eXZ-GFj2w3tqJhSHB5F4MGbpDsDp5NCZRspDGcwyDanrgqOWfym9ibP6vGUfjRIP-IzEC9lHlKyGDuxuYkXg1ITcx6f?width=888&height=310&cropmode=none"
                                  alt="Powershell">
                             </div>
-                            <p style="text-align:justify;">Hola.
+                            <p style="text-align:justify;"> A continuación, debemos ejecutar la siguiente linea de comando desde PowerShell, el cual habilitará las características necesarias para ejecutar WSL.
                             </p>
+                            <div class="row"    style="font-size: 12px; font-family: 'Nunito', sans-serif; color: #8d8d8d; ">    
+                                <div class="col-1">
+                                    <a title="¡Copiar!" onclick="copyToClipboard('#CodigoFuction')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
+                                        <i class="fa fa-clone" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col align-self-center">
+                                    Copiar el código
+                                </div>
+                            </div>
+                            
+                            <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
+
+                                <code id="CodigoFuction" style="color: white;" >
+    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+                                </code>
+                            </pre>
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4m6Kx_bW-R_7tY6USfoAJ5OeckwO_7aoqNKEiFZeA4aV2Cg9XJSX-nJt7QiyqEDddUnj08X6rrERhtqcqN8sC0qEAC-wRAVKINe64RVzwI_5uXu2ft4vUPdX8cesGXYQOBlk-7xAdkksEgQ0cTmZ3D8C_7GMZ3bsgMxKl6vfmVd4XFZrVwBNPhhUDWBQD5tmF3?width=883&height=363&cropmode=none"
                                  alt="Powershell">
                             </div>
-                            <p style="text-align:justify;">Hola.
+                            <p style="text-align:justify;">Una ves completado, debemos indicarle a WSL que versión utilizará. En este caso usaremos la mas reciente, la cual es WSL2.
                             </p>
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4mBr47jvRR72jEGr7qhMBp7wFXmbQSJ11SVDZIK7R4vjeUJ28S-PoviY8bar7mrpbq3lvfJb1Mv6v1dL00nqF8cguW8JOR5ucDCDhcq1skkLZF1D8UWwU9vAMyysZ-FEetjEwVpX8et9-HLsSffXEYmemZdipeIynB23EoeQilvta11LnuyphBuMatNwTmYtlL?width=915&height=383&cropmode=none"
                                  alt="Powershell">
                             </div>
-                            <p style="text-align:justify;">Hola.
+                            <p style="text-align:justify;">Para ello, nos toca ejecutar la siguiente linea de comando desde PowerShell.
                             </p>
+                            <div class="row"    style="font-size: 12px; font-family: 'Nunito', sans-serif; color: #8d8d8d; ">    
+                                <div class="col-1">
+                                    <a title="¡Copiar!" onclick="copyToClipboard('#CodigoFuction')" class="primary-btn white-btn" style=" display: inline-block; margin: 0px; padding: 10px;" >
+                                        <i class="fa fa-clone" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col align-self-center">
+                                    Copiar el código
+                                </div>
+                            </div>
+                            
+                            <pre style="background: rgba(0,0,0,0.77); border-radius: 20px;" >
+
+                                <code id="CodigoFuction" style="color: white;" >
+    wsl --set-default-version-2
+                                </code>
+                            </pre>
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4m4OgyMljj4tyYdBSfhpRtwNMOAUo-xH_cYR85MZRTxBE4mWuWzWkjHSprw4sKgD3oFYKeGQHwKABMPCYPFAA1VUOmgSA-pbSjJ5oVzEFTXRULzBBVktGTQIrGzJMoLBbw2Dqpr9lNnhrk6wke_JBR-j2-xKt_LwrQwLa9OcfJi3Cc92pqNdZT_xMWA4X2MH6j?width=644&height=202&cropmode=none"
                                  alt="Powershell">
                             </div>
-                            <p style="text-align:justify;">Hola.
+                            <p style="text-align:justify;">Una vez finalizado, podremos salir de PowerShell con el comando "Exit". </br></br>
+                                Acto seguido, nos dirigimos al Microsoft Store y buscamos instalar el Sistema Operativo de preferencia, que para esta demostración utilizaremos Ubuntu 20.04 LTS (Su versión mas reciente y estable).
+                                Puedes ingresar directamente desde aquí para descargar Ubuntu 20.04 LTS.
                             </p>
                             <div class="blog__details__pic">
                                 <img src="https://snz04pap002files.storage.live.com/y4m3Ms-oxbyY6LhM37HbFtKxcg7CYsq20p3hBq8ltNB2Znd-d4_-Ahwz3_0tVPO7tjTMVuQZxdxr4iEYcIjBbxYCYF5jCY4WsfJ0UFZkt3LbuXNScNcJ4o5Mww2q7Yn2eRmlmcteOqymHQRTPDD3fDIV5xN64SaUf5OpmRoDEcpFgfKjJCZOC1XLkfmcPJhwINh?width=1915&height=1046&cropmode=none"
