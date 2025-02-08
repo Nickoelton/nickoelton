@@ -1245,3 +1245,6 @@ pre {
 code {
     color: white;
 }
+.ad-vertical {
+    display: block;
+}
