@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Limpieza de caché -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
     <!-- SEO -->
     <title>Vuélvete influencer con Azure - Elton Rodriguez™</title>
     <meta name="description"
@@ -26,239 +33,188 @@
     <meta property="fb:pages" content="878576878965017"/>
     <meta property="fb:app_id" content="241148980445035" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="../image/png" href="../img/favicon.png" sizes="32x32" />
+ <!-- Favicon -->
+ <link rel="icon" type="../image/png" href="../assets/images/favicon.png" sizes="32x32" />
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap"
-        rel="stylesheet">
+ <!-- ShareThis Reactions -->
+ <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=609d413b9c605400117b1856&product=analytics' async='async'></script>
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
-    
-    <!-- Google Ads -->
-    <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
+ <!-- Bootstrap core CSS -->
+ <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
 
-    <!-- ShareThis Reactions -->
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=609d413b9c605400117b1856&product=analytics' async='async'></script>
+ <!-- Google Ads -->
+ <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+ </script>
+
+ <!-- Font Awesome -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+ <!-- Additional CSS Files -->
+ <link rel="stylesheet" href="../assets/css/custom.css">
+ <link rel="stylesheet" href="../assets/css/fontawesome.css">
+ <!-- <link rel="stylesheet" href="assets/css/templatemo-stand-blog-dark.css"> -->
+ <link id="themeStylesheet" rel="stylesheet" href="../assets/css/templatemo-stand-blog.css">
+ <link rel="stylesheet" href="../assets/css/owl.css">
+
+ <script data-ad-client="ca-pub-7645610318476370" async
+ src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
 
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                xfbml: true,
-                version: 'v3.2'
-            });
-        };
+ <!-- ***** Preloader Start ***** -->
+ <div id="preloader">
+     <div class="jumper">
+         <div></div>
+         <div></div>
+         <div></div>
+     </div>
+ </div>  
+ <!-- ***** Preloader End ***** -->
 
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+<!-- Header -->
+<header>
+ <nav class="navbar navbar-expand-lg">
+   <div class="container">
+     <a class="navbar-brand" href="https://www.nickoelton.com/"><h2>nickoelton Blog<em>.</em></h2></a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarResponsive">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item">
+           <a class="nav-link" href="https://www.nickoelton.com/">Inicio</a>
+         </li> 
+         <li class="nav-item">
+           <a class="nav-link" href="https://www.nickoelton.com/blog">Glosario</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="https://www.nickoelton.com/one-shots">One-Shots</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="https://www.nickoelton.com/about">Sobre mí</a>
+         </li>
+         <li class="nav-item">
+           <!-- Contenedor del Toggle y los íconos -->
+           <div class="toggle-container">
+             <i class="fas fa-sun sun-icon"></i>
+             <label class="switch">
+               <input type="checkbox" id="themeToggle" title="Cambiar tema">
+               <span class="slider"></span>
+             </label>
+             <i class="fas fa-moon moon-icon"></i>
+           </div>
+         </li>
+       </ul>
+     </div>
+   </div>
+ </nav>
+</header>
 
-    <!-- Your customer chat code -->
-    <div class="fb-customerchat" attribution=setup_tool page_id="878576878965017" theme_color="#6763fd"
-        logged_in_greeting="¡Hola! como podemos ayudarte?" logged_out_greeting="¡Hola! como podemos ayudarte?">
-    </div>
-
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Offcanvas Menu Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <!-- <div class="offcanvas__search">
-            <form action="#">
-                <input type="text" placeholder="Search and hit enter...">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div> -->
-        <div class="offcanvas__logo">
-            <a href="https://www.nickoelton.com/"><img src="../img/logo.png" alt=""></a>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-        <div class="offcanvas__social">
-            <!-- <div class="header__right__social"> -->
-            <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
-            <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
-            <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
-            <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
-            <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
-        </div>
-    </div>
-    <!-- Offcanvas Menu End -->
-
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container-fluid">
+      <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="heading-page header-text">
+        <section class="page-heading">
+          <div class="container">
             <div class="row">
-                <div class="col-lg-8">
-                    <div class="header__logo">
-                        <a href="https://www.nickoelton.com/"><img src="../img/logo.png" alt=""></a>
-                    </div>
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li><a href="https://www.nickoelton.com/">Inicio</a></li>
-                            <li><a href="../about">Sobre mí</a></li>
-                            <li><a href="../podcast">Podcast</a></li>
-                            <li><a href="../gameplays">Gameplays</a></li>
-                            <li class="active"><a href="../blog">Blog</a></li>
-                            <!-- <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="./about.html">About</a></li>
-                                    <li><a href="./episodes-details.html">Episodes</a></li>
-                                    <li><a href="./blog.html">Blog</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="../contact.html">Contact</a></li> -->
-                        </ul>
-                    </nav>
+              <div class="col-lg-12">
+                <div class="text-content">
+                  <h4>Entrada #04</h4>
+                  <h2>Vuélvete influencer con Azure</h2>
                 </div>
-                <div class="col-lg-4">
-                    <div class="header__right">
-                        <!-- <div class="header__right__search">
-                            <form action="#">
-                                <input type="text" placeholder="Search and hit enter...">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div> -->
-                        <div class="header__right__social">
-                            <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
-                            <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
-                            <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
-                            <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
-                            <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
-                            <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="canvas__open"><i class="fa fa-bars"></i></div>
-        </div>
-    </header>
-    <!-- Header Section End -->
+          </div>
+        </section>
+      </div>    
+      <!-- Banner Ends Here -->
 
-    <!-- Breadcrumb Section Begin -->
-    <section class="blog-details-hero spad set-bg" data-setbg="../img/breadcrumb-bg.jpg">
+
+
+      <section class="blog-posts grid-system">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="blog__hero__text">
-                        <ul>
-                            <li><span class="icon_calendar"></span> 02 Enero 2021 </li>
-                            <li><span class="icon_profile"></span> Elton Rodriguez</li>
-                            <li><span class="icon_tags_alt"></span> Tecnología, Microsoft Azure, Serverless</li>
-                        </ul>
-                        <h2>Vuélvete influencer con Azure</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Breadcrumb Section End -->
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="all-blog-posts">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="blog-post">
+                      <div class="down-content">
+                        <!-- <span>Título de la publicación</span> -->
 
-    <!-- Blog Details Section Begin -->
-    <section class="blog-details spad">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-8">
-                    <div class="blog__details__content">
-                        <div class="blog__details__text">
-
-                            <p style="text-align:justify;">Dentro del mundo pragmático en el que vivimos, muchas personas, lugares o cosas están en constante 
+                            <p>Dentro del mundo pragmático en el que vivimos, muchas personas, lugares o cosas están en constante 
                                 cambio. Esto nos hace meditar a cada momento y en el transcurso de ello hasta logramos pensar algunas ideas como: "Ser un experto 
                                 en nuevas tecnologías me pondrá a la vanguardia" o "Tan pronto salga al mercado laboral podré aprender" o "Ahora que uso la nube, 
                                 las expectativas de éxito son mucho más altas" o "Me gustaría crear sistemas que sean imposibles de hackear"... todas estas ideas 
                                 trabajan con un solo fin, el cual es INFLUENCIAR en tu vida/familia/trabajo con el objetivo de alcanzar un punto al que determinas 
                                 es "El éxito". Pero ¿Cómo podemos hacer para que la tecnología influya en nuestras vidas de formas no convencionales?                                 
                             </p>
-                            <p style="text-align: justify;"> Primero hablemos de un poco de historia. 
-                            </p>
+                            <p> Primero hablemos de un poco de historia.
                             <div class="blog__details__text__item">
                                 <ul>
                                     <li><b>1970s - Mainframe era:</b> Ya con el éxito de la mecánica y la industria en el mundo, nace la necesidad de automatizar
                                         tareas repetitivas que pueda reemplazar a una persona aumentando las operaciones dentro de una organización. Con ayuda de 
                                         los algoritmos se empezó a trabajar con cálculos o trabajos en paralelo, ya sea con el fin de crear una calculadora o 
-                                        un sistema de marcado de tarjetas de asistencia que diferencie el día de la semana por si sola. 
+                                        un sistema de marcado de tarjetas de asistencia que diferencie el día de la semana por si sola.
+                                        <br><br>
                                     </li>
                                     <li><b>1980s - Personal computer era:</b> Ya las computadoras existían, pero tenía una interfaz que no atractiva hacia los usuarios
                                         finales. Fue en este año cuando un sueño de un joven <i>(Bill Gates)</i> crea MS-DOS, un sistema operativo que en conjunto con la computadora 
                                         personal de IBM dominaron el mercado bajo una visión: "Una computadora en cada escritorio y en cada hogar".
+                                        <br><br>
                                     </li>
                                     <li><b>2000s - Mobility era:</b> Muchos piensan que fue Steve Jobs con el popular iPhone cuando pasamos a un mundo móvil, pero en realidad 
                                         pasó justo un par de años antes, donde en un dispositivo portátil podíamos tener el calendario, reloj, agenda de eventos, correo y fax. 
                                         Esto bajo una pantalla monocromática, la cual sirvió de inspiración para crear las tan preciadas pantallas táctiles que hoy vemos por doquier.
+                                        <br><br>
                                     </li>
                                     <li><b>2010s - Cloud era:</b> El cloud computing ya había nacido, pero no fue hasta este punto que lo que se discutía a finales de los 90's 
                                         comenzó a evidenciarse a través del ROI que generaba una arquitectura 100% nube. Esto conllevó a que muchas pequeñas y medianas empresas <i>(PYMES)</i> 
                                         comiencen a adoptar en sus áreas de TI tecnologías cloud con la finalidad de subcontratar algunas responsabilidades que tenían. Esto hoy en día,  
                                         y aunque aún no lo sepas, ahora mismo estas usando la nube.
+                                        <br><br>
                                     </li>
                                     <li><b>2020s - Ubiquty era:</b> Tan solo estamos a unos meses de este post en el cual inició el 2020, pero fué por la pandemia del Covid-19 que 
                                         el mundo comenzó a utilizar más las TELCO. Muchas empresas tuvieron que pasar por un proceso de reinvención, el teletrabajo llegó para quedarse y 
                                         la dependencia de los amigos de TI aumentó en casi un 300%. En resumen, el área de TI paso de ser un proceso de apoyo a un proceso gerencial,  
                                         donde se logró entender que lo más importante no son los sistemas, sino los datos. Y con una era de ubicuidad, donde podemos entrar a Facebook desde 
                                         cualquier dispositivo con internet o podemos trabajar a través de una llamada de Microsoft Teams, nos dimos cuenta de que la transformación digital quedó atrás.
+                                        <br><br>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="blog__details__pic">
+                            <div class="blog-thumb">
                                 <img src="https://snz04pap002files.storage.live.com/y4mliw5B85wWHPLNCsti7HX2Em0bKVLbwPgFozWYHe5imAlJkfnsLN-cC2p-tnDTfHHl-qpfhnzvKa8JQ6Zjpqi4Snf_jlqGwG5MeQkyWe8Wlce-uwkn76ZzXSuAy9GE_55H41v4LuZ42ATnI7I4q0Al-rXM-6TcQaiaWOiYz-B6wQnxGFZCOOfWZy7kCTLkM1g?width=1920&height=1080&cropmode=none" 
                                 alt="Nueva era de la informática">
                             </div>
-                            <p style="text-align: justify;"> Pero a todo esto, nos surge una cuestión: 
-                            </p>
-                            <div class="blog__details__quote">
-                                <p>¿Cómo los desarrolladores podemos aportar en esta era de ubicuidad?</p>
-                            </div>
-                            <p style="text-align: justify;"> Estimado lector, la vida moderna se ejecuta en código. Por detrás de TODAS nuestras aplicaciones favoritas cuentan con un extenso 
+                            <p> Pero a todo esto, nos surge una cuestión: 
+                                <br><br>
+                                <b>¿Cómo los desarrolladores podemos aportar en esta era de ubicuidad?</b>
+                            
+                                <br><br>
+                            Estimado lector, la vida moderna se ejecuta en código. Por detrás de TODAS nuestras aplicaciones favoritas cuentan con un extenso 
                                 archivo que a primera vista podría ser texto, pero que las máquinas computaciones pueden interpretar como un lenguaje. Un ejemplo es un Avión Boeing 787, el cual 
                                 para poder volar su consola principal cuenta con aproximadamente 6.5 millones de líneas de código. El Rover Curiosity que fue enviado a Marte cuenta con 5 
                                 millones de líneas de código... Sin ir muy lejos, la aplicación de Facebook que usan a diario cuenta con más de 62 millones de líneas de código, que son 
-                                utilizadas por millones de personas en el globo. Puedes conocer más <a href="https://informationisbeautiful.net/visualizations/million-lines-of-code/" target="_blank" >aquí</a>.
+                                utilizadas por millones de personas en el globo. Puedes conocer más <a href="https://informationisbeautiful.net/visualizations/million-lines-of-code/" target="_blank" rel="noopener">aquí</a>.
                             </p>
-                            <p style="text-align: justify;"> La informática sin servidor <i>(Serverless)</i> permite a los desarrolladores crear aplicaciones más mucho más rápidas, ya que no es necesario que administren la 
+                            <p> La informática sin servidor <i>(Serverless)</i> permite a los desarrolladores crear aplicaciones más mucho más rápidas, ya que no es necesario que administren la 
                                 infraestructura. Con estas aplicaciones sin servidor, acompañadas de un proveedor de servicios en la nube confiable y seguro, la escalabilidad y la administración automática 
                                 de la infraestructura necesaria para ejecutar el código de nuestra aplicación se vuelve funcional.
                             </p>
-                            <p style="text-align: justify;"> Un ejemplo es el cómo programábamos antes vs ahora. Antes, nuestra aplicación contaba con un entorno monolítico donde alojábamos en 
+                            <p> Un ejemplo es el cómo programábamos antes vs ahora. Antes, nuestra aplicación contaba con un entorno monolítico donde alojábamos en 
                                 una sola solución el código de nuestra aplicación, las cuales la volvían dependiente de la infraestructura, pesada, lenta y difícil de mantener. Ahora con la 
                                 llegada del Serverless podemos crear distintas soluciones livianas e independientes, conectadas entre sí y sin depender de costos CapEx.
                             </p>
-                            <div class="blog__details__pic">
+                            <div class="blog-thumb">
                                 <img src="https://snz04pap002files.storage.live.com/y4mGXaLlfVhf6siCeTcNRvC54SY2VXnkcMDT3H-x7tijdjh7y3cQYFQsBq42tJMJDXksy2UiHqzhNA3Yy1q4TcgPEkcItvMCrT860bayzm1NXY2G3A31hFU4PUslJ6pYJjAMuZ9Ka1nfq6MEvX-OziMqeFRHMtQIx7u3LYAx-HuG7aSoYI6o6-R_rxL6kuFFZEa?width=1920&height=1080&cropmode=none"
                                  alt="Enfoque de aplicaciones nativas en la nube">
                             </div>
-                            <p style="text-align: justify;"> ¿Pero qué beneficios trae utilizar Serverless en la nube? 
+                            <p> ¿Pero qué beneficios trae utilizar Serverless en la nube? 
                             </p>
-                            <div class="blog__details__text__item">
+                            <div>
                                 <ul>
                                     <li>Escalamiento automático.</li>
                                     <li>Sin dependencia de infraestructura.</li>
@@ -266,160 +222,249 @@
                                     <li>Un modelo de programación basado en eventos.</li>
                                 </ul>
                             </div>
-                            <p style="text-align: justify;"> Todo esto puede traer grandes beneficios para las empresas o para los desarrolladores independientes, los cuales ahora solo tendrán que 
+                            <p> Todo esto puede traer grandes beneficios para las empresas o para los desarrolladores independientes, los cuales ahora solo tendrán que 
                                 prestar atención en la carga de trabajo que necesitan, sin preocuparse por la gestión del CapEx o desperdiciar recursos físicos o humanos. Podrán obtener la flexibilidad 
                                 necesaria para administrar sus entornos de desarrollo, ya sea trabajando con diferentes lenguajes de programación o teniendo opciones de alojamiento del código. Finalmente 
                                 aumentarán la eficiencia del código utilizando un modelo de programación basado en eventos <i>(Con desencadenantes y acciones)</i> que brindarán una experiencia de comodidad a 
                                 cualquier desarrollador.
                             </p>
-                            <p style="text-align: justify;"> Y de manera personal... 
+                            <p> Y de manera personal... 
+                                <br>
+                                <b>¿Cómo podemos utilizar Serverless para volvernos unos influencers?</b>
                             </p>
-                            <div class="blog__details__quote">
-                                <p>¿Cómo podemos utilizar Serverless para volvernos unos influencers?</p>
-                            </div>
-                            <p style="text-align: justify;"> Hoy te contaré como conseguí superar los 10k tweets en mi cuenta de <a href="https://twitter.com/nickoelton" target="_blank" >Twitter</a> 
+
+                            <p> Hoy te contaré como conseguí superar los 10k tweets en mi cuenta de <a href="https://twitter.com/nickoelton" target="_blank" rel="noopener" >Twitter</a> 
                                 sin necesidad de mover un dedo y solo retuiteando contenido de mi interés. 
                             </p>
-                            <p style="text-align: justify;"> Hablemos de <a href="https://azure.microsoft.com/es-es/services/logic-apps/" target="_blank" >Azure Logic Apps</a>, el cual es un servicio en Azure bajo un modelo de arquitectura sin servidor, muy parecido a Power Automate, 
+                            <p> Hablemos de <a href="https://azure.microsoft.com/es-es/services/logic-apps/" target="_blank" rel="noopener">Azure Logic Apps</a>, el cual es un servicio en Azure bajo un modelo de arquitectura sin servidor, muy parecido a Power Automate, 
                                 pero con la ventaja de utilizar aplicaciones en la nube. Este servicio nos ayudará a crear integraciones entre nuestras aplicaciones sin necesidad de depender de tantas 
                                 líneas de código y solo centrarnos en la automatización de los flujos de información que necesitamos dentro de nuestra solución. Utilizar este servicio tiene ventajas 
                                 como: crear de manera visual nuestros flujos o procesos con la finalidad de integrar una o varias soluciones, integrarse con un SaaS como la suite de Office o Microsoft 365, 
-                                herramientas locales como de terceros y muchos más <i>(Puedes consultar la lista de conectores <a href="https://docs.microsoft.com/es-es/azure/connectors/apis-list" target="_blank" >aquí</a>)</i>. Finalmente, aprovecharemos la potencia de la nube con la finalidad de 
+                                herramientas locales como de terceros y muchos más <i>(Puedes consultar la lista de conectores <a href="https://docs.microsoft.com/es-es/azure/connectors/apis-list" target="_blank" rel="noopener">aquí</a>)</i>. Finalmente, aprovecharemos la potencia de la nube con la finalidad de 
                                 ampliar nuestros escenarios de integración y así explorar la información hallada para tomar las mejores decisiones empresariales. 
                             </p>
 
-
-
-                            <p style="text-align:justify;">En conclusión, utilizar Serverless brindará un nuevo enfoque a los desarrolladores, los equipos y las organizaciones 
-                                a contar con un nivel de abstracción que les permite minimizar el tiempo y los recursos invertidos en la administración de la infraestructura de TI.
-
-                        </div>
-                        <div class="blog__details__pic">
+                            <p>En conclusión, utilizar Serverless brindará un nuevo enfoque a los desarrolladores, los equipos y las organizaciones 
+                                a contar con un nivel de abstracción que les permite minimizar el tiempo y los recursos invertidos en la administración de la infraestructura de TI.</p>
+                        <div class="blog-thumb">
                             <img src="https://snz04pap002files.storage.live.com/y4mAWz_ptfFxcMGtfGM-driNxMeG3b05Vc0kp2Pr8VY5zYJYDfKAelpPH7MauryY8HdZ41rJW189FHk4b59uJMWn5u9YFWcNaejWUTgzaA_OVDKsH0s_gZjfNzD458tyMzqN8bMYswtVCH8RKMQJwyJDu9FJ51itN9a7Jtig0ncFsf8xH8Nv174CU-QnENuLYIL?width=1920&height=1080&cropmode=none" 
                             alt="Beneficios de Serverless">
                         </div>
-
-                        
-                        <div class="blog__details__tags">
-                            <span>¿Qué te pareció ésta entrada?</span>
-                            <br><br>
-                            <!-- ShareThis BEGIN -->
-                            <div class="sharethis-inline-reaction-buttons"></div>
-                            <!-- ShareThis END -->
-                            <br>
-                        <!-- </div>
-                        <div class="blog__details__tags"> -->
-                            <br>
-                            <span>Ayuda a otros compartiendo esta entrada en: </span>
-                            <br><br>
-                            <!-- ShareThis BEGIN -->
-                            <div class="sharethis-inline-share-buttons"></div>
-                            <!-- ShareThis END -->
-                        </div>
-
-                        
-                        <div class="blog__details__btns">
+                        <div class="post-options">
                             <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <a href="../blog" class="blog__details__btns__item">
-                                        <p><span class="arrow_left"></span> Regresar</p>
-                                        <h5>Mira todas las publicaciones</h5>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <a href="./mi-primer-azure-functions" class="blog__details__btns__item blog__details__btns__item--next">
-                                        <p>Siguiente<span class="arrow_right"></span></p>
-                                        <h5>Mi primer Azure Functions</h5>
-                                    </a>
-                                </div>
+                              <div class="col-6">
+                                <ul class="post-tags">
+                                  <li><i class="fa fa-tags"></i></li>
+                                  <li><a>Tecnolgía</a>,</li>
+                                  <li><a>Microsoft Azure</a>,</li>
+                                  <li><a>Serverless</a></li>
+                                </ul>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                            <!--PUBLICIDAD-->
-                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- Publicaciones horizontal -->
-                            <ins class="adsbygoogle"
-                                style="display:block"
-                                data-ad-client="ca-pub-7645610318476370"
-                                data-ad-slot="1261004415"
-                                data-ad-format="auto"
-                                data-full-width-responsive="true"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Blog Details Section End -->
-
-    <!-- Footer Section Begin -->
-    <footer class="footer set-bg" data-setbg="../img/footer-bg.jpg">
-        <div class="container">
-            <div class="footer__subscriber">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="footer__subscriber__text">
-                            <h3>¡Mantente en contacto!</h3>
-                            <p>Suscríbite a mis canales o empieza una charla con la comunidad en Telegram</p>
+              </div>
+              <div class="col-lg-4">
+                <div class="sidebar">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="sidebar-item recent-posts">
+                        <div class="sidebar-heading">
+                          <h2>🔥Entradas populares🔥</h2>
                         </div>
+                        <div class="content">
+                          <ul>
+                            <li><a href="https://www.nickoelton.com/blog/como-cuidarnos-de-la-ciberdelincuencia">
+                              <h5>👉 ¿Cómo cuidarnos de la ciberdelincuencia?</h5>
+                              <span>20/12/2024</span>
+                            </a></li>
+                            <li><a href="https://www.nickoelton.com/blog/que-es-azure-y-como-funciona">
+                              <h5>👉 ¿Qué es Azure y cómo funciona?</h5>
+                              <span>17/01/2025</span>
+                            </a></li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-lg-4 offset-lg-2">
-                        <form action="#" class="footer__subscriber__form">
-                            <input type="text" readonly="readonly" placeholder="Unirme al canal de Telegram">
-                            <button type="button" class="site-btn"
-                                onclick="location.href='https://t.me/nickogameplays'">🚀</button>
-                        </form>
+      
+                    <!-- PUBLICIDAD verticales -->
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7645610318476370" crossorigin="anonymous"></script>
+                    <!-- Publicaciones verticales -->
+                    <ins class="adsbygoogle ad-vertical"
+                        data-ad-client="ca-pub-7645610318476370"
+                        data-ad-slot="4573902779"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+      
+                    <div class="col-lg-12">
+                      <div class="sidebar-item tags">
+                        <div class="sidebar-heading">
+                          <h2>Suscríbete al contenido mensual</h2>
+                        </div>
+                        <div class="content">
+                          <ul>
+                            <li><a target="_blank" rel="noopener noreferrer" href="http://bit.ly/BlogDeNickoelton">Suscríbete aquí</a></li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
+      
+                    <!-- PUBLICIDAD verticales -->
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7645610318476370" crossorigin="anonymous"></script>
+                    <!-- Publicaciones verticales -->
+                    <ins class="adsbygoogle ad-vertical"
+                        data-ad-client="ca-pub-7645610318476370"
+                        data-ad-slot="4573902779"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    
+                  </div>
                 </div>
+              </div>
             </div>
+              <br>
+              <br>
+              <div class="blog__details__tags">
+                <span>¿Qué te pareció ésta entrada?</span>
+                <br><br>
+                <!-- ShareThis BEGIN -->
+                <div class="sharethis-inline-reaction-buttons"></div>
+                <!-- ShareThis END -->
+                <br><br>
+                <span>Ayuda a otros compartiendo esta entrada en: </span>
+                <br><br>
+                <!-- ShareThis BEGIN -->
+                <div class="sharethis-inline-share-buttons"></div>
+                <!-- ShareThis END -->
+            </div>
+          </div>
+        </section>
+      
+        <footer>
+          <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-8">
-                    <div class="footer__widget">
-                        <div class="footer__logo">
-                            <a href="#"><img src="../img/logo.png" alt=""></a>
-                        </div>
-                        <p class="footer__copyright__text">Copyright ©
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> All rights reserved  <!--| Realizado con <i class="fa fa-heart-o"
-                                 aria-hidden="true"></i> por <a href="https://www.tecfines.com"
-                                target="_blank">Tecfines</a> -->
-                        </p>
-                    </div>
+              <div class="col-lg-12">
+                <ul class="social-icons">
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nickoelton" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/nickoelton" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/nickoelton" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/nickoelton" title="GitHub"><i class="fa fa-github"></i></a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://www.twitch.tv/nickoelton" title="Twitch"><i class="fa fa-twitch"></i></a></li>
+                </ul>
+              </div>
+              <div class="col-lg-12">
+                <div class="copyright-text">
+                  <p>Copyright ©
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> All rights reserved</p>
                 </div>
-                <div class="col-lg-4 col-md-4">
-                    <!-- <div class="footer__social"> -->
-                    <div class="header__right__social">
-                        <a href="https://www.linkedin.com/in/nickoelton"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/nickoelton"><i class="fa fa-facebook"></i></a>
-                        <a href="https://twitter.com/nickoelton"><i class="fa fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/nickoelton"><i class="fa fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/nickoelton"><i class="fa fa-youtube-play"></i></a>
-                        <a href="https://nickoelton.tumblr.com"><i class="fa fa-tumblr"></i></a>
-                        <a href="https://es.pinterest.com/nickoelton/"><i class="fa fa-pinterest"></i></a>
-                        <a href="https://github.com/nickoelton"><i class="fa fa-github"></i></a>
-                        <a href="https://www.twitch.tv/nickoelton"><i class="fa fa-twitch"></i></a>
-                    </div>
-                </div>
+              </div>
             </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
-
-<!-- Js Plugins -->
-<script src="../js/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.magnific-popup.min.js"></script>
-<script src="../js/mixitup.min.js"></script>
-<script src="../js/jquery.slicknav.js"></script>
-<script src="../js/owl.carousel.min.js"></script>
-<script src="../js/main.js"></script>
-
-<!-- Music Plugin -->
-<script src="../js/jquery.jplayer.min.js"></script>
-<script src="../js/jplayerInit.js"></script>
-</body>
-
-</html>
+          </div>
+        </footer>
+      
+        <!-- Bootstrap core JavaScript -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      
+        <!-- BootStrap 4 -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+      
+        <!-- Additional Scripts -->
+        <script src="../assets/js/custom.js"></script>
+        <script src="../assets/js/owl.js"></script>
+        <script src="../assets/js/slick.js"></script>
+        <script src="../assets/js/isotope.js"></script>
+        <script src="../assets/js/accordions.js"></script>
+        <script src="../js/theme-toggle.js"></script>
+      
+        <script language = "text/Javascript"> 
+          cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+          function clearField(t){                   //declaring the array outside of the
+          if(! cleared[t.id]){                      // function makes it static and global
+              cleared[t.id] = 1;  // you could use true and false, but that's more typing
+              t.value='';         // with more chance of typos
+              t.style.color='#fff';
+              }
+          }
+        </script>
+      
+        <script>
+          const toggle = document.getElementById('themeToggle');
+          const themeStylesheet = document.getElementById('themeStylesheet');
+          const sunIcon = document.querySelector('.sun-icon');
+          const moonIcon = document.querySelector('.moon-icon');
+      
+          // Comprobar el estado guardado del tema en localStorage
+          if (localStorage.getItem('theme') === 'dark') {
+              toggle.checked = true;
+              themeStylesheet.href = "../assets/css/templatemo-stand-blog-dark.css";
+              sunIcon.style.opacity = "0";  // Ocultar el sol
+              moonIcon.style.opacity = "1"; // Mostrar la luna
+          } else {
+              themeStylesheet.href = "../assets/css/templatemo-stand-blog.css";
+              sunIcon.style.opacity = "1";  // Mostrar el sol
+              moonIcon.style.opacity = "0"; // Ocultar la luna
+          }
+      
+          // Agregar el event listener al toggle
+          toggle.addEventListener('change', () => {
+              if (toggle.checked) {
+                  themeStylesheet.href = "../assets/css/templatemo-stand-blog-dark.css";
+                  sunIcon.style.opacity = "0"; // Ocultar el sol
+                  moonIcon.style.opacity = "1"; // Mostrar la luna
+                  localStorage.setItem('theme', 'dark'); // Guardar preferencia de tema oscuro
+              } else {
+                  themeStylesheet.href = "../assets/css/templatemo-stand-blog.css";
+                  sunIcon.style.opacity = "1"; // Mostrar el sol
+                  moonIcon.style.opacity = "0"; // Ocultar la luna
+                  localStorage.setItem('theme', 'light'); // Guardar preferencia de tema claro
+              }
+          });
+        </script>
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            function copyToClipboard(element, btn) {
+                var $temp = $('<textarea>');
+                var brRegex = /<br\s*[\/]?>/gi;
+                $('body').append($temp);
+                $temp.val($(element).html().replace(brRegex, '\r\n')).select();
+                document.execCommand('copy');
+                $temp.remove();
+                
+                // Cambio de icono temporal
+                var icon = $(btn).find('i');
+                icon.removeClass('fas fa-clone').addClass('fas fa-check animate__animated animate__bounceIn');
+                
+                // Restaurar icono después de 1.5 segundos
+                setTimeout(function () {
+                    icon.removeClass('fas fa-check animate__bounceIn').addClass('fas fa-clone');
+                }, 1500);
+                
+                // Alerta
+                swal({
+                    title: '¡Copiado!',
+                    text: 'Ahora pega el código donde lo necesites',
+                    icon: 'success',
+                });
+            }
+        </script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      </body>
+      </html>
